@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="btnenviacID" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="720.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fulltime.fullarm.simulador.controles.Controler">
+<AnchorPane fx:id="btnenviacID" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="720.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fulltime.fullarm.simulador.application.controles.Controler">
    <children>
       <Pane layoutX="10.0" layoutY="10.0" prefHeight="90.0" prefWidth="700.0" style="-fx-background-color: #C0C0C0#C0C0C0;">
          <children>
@@ -196,12 +196,6 @@
                      </font>
                   </Label>
                   <Circle fill="#ff1f1f" layoutX="30.0" layoutY="30.0" onMouseClicked="#abrirtodaszonas" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="#fff600" layoutX="142.5" layoutY="30.0" onMouseClicked="#disparatodaszonas" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="165.0" layoutY="22.5" text="Disparar Zona">
-                     <font>
-                        <Font name="Corbel Light" size="12.0" />
-                     </font>
-                  </Label>
                   <Label layoutX="165.0" layoutY="82.5" text="Inibir Zona">
                      <font>
                         <Font name="Corbel Light" size="12.0" />
