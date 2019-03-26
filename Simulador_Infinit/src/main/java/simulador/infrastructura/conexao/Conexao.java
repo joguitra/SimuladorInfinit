@@ -1,5 +1,6 @@
 package simulador.infrastructura.conexao;
 
+import javafx.scene.control.ChoiceBox;
 import simulador.application.controles.Mensagem;
 import simulador.application.circle.ConectadoCircle;
 import simulador.application.controles.EsconderPane;
@@ -24,16 +25,20 @@ public class Conexao {
     private EsconderPane esconderPane;
     private Label labeldesconectado;
     private ConectadoCircle conectado;
+    private TextField imei;
+    private ChoiceBox<String> tipodconexao;
     private  int portanumerica;
     private  String ipnumerico;
     private PrintStream saida;
-    private  int time;
+    private  String usuariocompleto;
     private Socket socket;
     private boolean desconetado;
     private InputStream entrada;
 
 
-    public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal, EsconderPane esconderPane, Label labeldesconectado, ConectadoCircle conectado){
+    public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
+                          EsconderPane esconderPane, Label labeldesconectado, ConectadoCircle conectado, TextField imei , ChoiceBox<String> tipodeconexao){
+        this.tipodconexao = tipodeconexao;
         this.ip = ip;
         this.porta = porta;
         this.usuario = usuario;
@@ -43,6 +48,8 @@ public class Conexao {
         this.labeldesconectado = labeldesconectado;
 
         this.conectado = conectado;
+        this.imei = imei;
+        this.tipodconexao = tipodconexao;
     }
 
 
@@ -59,7 +66,9 @@ public class Conexao {
     }
 
     public boolean auntetificarConta(){
-        saida.print(usuario.getText());
+        if(tipodconexao.getSelectionModel().getSelectedItem().equals("E - Ethernet")) usuariocompleto ="#"+usuario.getText()+"E";
+        if(tipodconexao.getSelectionModel().getSelectedItem().equals("G - GPRS")) usuariocompleto = "#"+ usuario.getText()+"G";
+        saida.print(usuariocompleto);
         return true;
     }
 
@@ -104,6 +113,11 @@ public class Conexao {
 
 
     }
+    public void enviarIMEI(){
+        imei.getText();
+        saida.print("I"+imei.getText());
+    }
+
 
 
     public void ativarKeepAlive ()  {

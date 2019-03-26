@@ -19,8 +19,11 @@ public class Particao  {
         particaocircle = new ParticaoCircle(circle,numeroindetificador);
     }
 
-    public void adicionarZonas(Circle circle , int numerozona){
-        zonaCircle = new ZonaCircle(circle, numerozona);
+    public void adicionarDuplaZonas(Circle circle1 , int numerozona1 , Circle circle2 , int numerozona2){
+        zonaCircle = new ZonaCircle(circle1, numerozona1);
+        listazonas.add(zonaCircle);
+
+        zonaCircle = new ZonaCircle(circle2, numerozona2);
         listazonas.add(zonaCircle);
     }
 
@@ -47,7 +50,7 @@ public class Particao  {
     public String checkoutZonaAberta() {
         zonasstatusfechada = null;
         for (ZonaCircle zona : listazonas) {
-            if (StatusZona.Fechado.equals(zona.getStatus())) {
+            if (StatusZona.Aberto.equals(zona.getStatus())) {
                 if(zonasstatusfechada != null)
                 zonasstatusfechada += zona + " ";
                 else

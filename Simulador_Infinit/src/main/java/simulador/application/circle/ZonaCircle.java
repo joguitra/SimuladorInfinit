@@ -26,8 +26,8 @@ public class ZonaCircle extends CircleStatus {
                 status = Fechado;
                 break;
             case Inibido:
-                setarcor.alterarCorBranca(circle);
-                status = Inibido;
+                setarcor.alterarCorVermelha(circle);
+                status = Aberto;
         }
     }
 

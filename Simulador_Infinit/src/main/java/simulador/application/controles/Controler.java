@@ -43,7 +43,11 @@ public class Controler implements Initializable {
     private ConectadoCircle statusconectar;
     private Mensagem mensagem = new Mensagem();
 
+    @FXML
+    private TextField tfimei;
 
+    @FXML
+    private ChoiceBox<String> cbtipoconexao;
 
     @FXML
     private AnchorPane btnenviacID;
@@ -248,6 +252,17 @@ public class Controler implements Initializable {
 
     @FXML
     private TextField tftimekeepalive;
+
+    @FXML
+    void digitarImei(KeyEvent event) {
+        String regexNumero = "\\d+";
+        tfimei.textProperty().addListener( (observableList, valorAntigo, novoValor) -> {
+            boolean ehNumero = novoValor.matches(regexNumero);
+            if( !ehNumero ){
+                tfimei.setText(valorAntigo);
+            }
+        });
+    }
 
     @FXML
     void digitaporta(KeyEvent event) {
@@ -583,6 +598,7 @@ public class Controler implements Initializable {
 
                 conectado = conexao.conectarServidor();
                 conexao.recebendoResposta();
+                conexao.enviarIMEI();
                 conectado = conexao.auntetificarConta();
 
                 if(conectado){
@@ -597,18 +613,20 @@ public class Controler implements Initializable {
                     terminal.limparTerminal();
                     btnconectar.setText("Desconectar");
 
+                }else {
+                    conectado=false;
+                    mensagem.messagemErroAuntetificar();
+                    conectado =conexao.desconectarServidor();
+                    btnconectar.setText("Conectar");
+                }
             }else {
-                        mensagem.messagemErroAuntetificar();
-                        conectado =conexao.desconectarServidor();
-                        btnconectar.setText("Conectar");
-                    }
-            }else {
-               mensagem.mensagemDesconectado();
-               conectado = conexao.desconectarServidor();
-               btnconectar.setText("Conectar");
+                mensagem.mensagemDesconectado();
+                conectado = conexao.desconectarServidor();
+                btnconectar.setText("Conectar");
 
             }
         } catch (IOException erroservidor) {
+            conectado = false;
             mensagem.mensagemErroConectar();
         }
 }
@@ -668,6 +686,9 @@ public class Controler implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         lvqualificador.getItems().addAll("E 3","R 1");
+        cbtipoconexao.getItems().addAll("E - Ethernet","G - GPRS");
+
+
         statusconectar = new ConectadoCircle(efzconectado,1);
         statusconectar.definirLabel(lconctado);
 
@@ -684,27 +705,19 @@ public class Controler implements Initializable {
         pgm1.adicionarPGM(efzp8,8);
 
 
-        particao1.adicionarZonas(efz1,1);
-        particao1.adicionarZonas(efz2,2);
-        particao1.adicionarZonas(efz3,3);
-        particao1.adicionarZonas(efz4,4);
-        particao1.adicionarZonas(efz5,5);
-        particao1.adicionarZonas(efz6,6);
-        particao1.adicionarZonas(efz7,7);
-        particao1.adicionarZonas(efz8,8);
+        particao1.adicionarDuplaZonas(efz1,1,efz2,2 );
+        particao1.adicionarDuplaZonas(efz3,3,efz4,4);
+        particao1.adicionarDuplaZonas(efz5,5,efz6,6);
+        particao1.adicionarDuplaZonas(efz7,7,efz8,8);
 
-        particao2.adicionarZonas(efz9,9);
-        particao2.adicionarZonas(efz10,10);
-        particao2.adicionarZonas(efz11,11);
-        particao2.adicionarZonas(efz12,12);
-        particao2.adicionarZonas(efz13,13);
-        particao2.adicionarZonas(efz14,14);
-        particao2.adicionarZonas(efz15,15);
-        particao2.adicionarZonas(efz16,16);
+        particao2.adicionarDuplaZonas(efz9,9,efz10,10);
+        particao2.adicionarDuplaZonas(efz11,11,efz12,12);
+        particao2.adicionarDuplaZonas(efz13,13,efz13,14);
+        particao2.adicionarDuplaZonas(efz15,15,efz16,16);
 
         terminal.definirTerminal(taterminal);
 
-        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar);
+        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao);
 
         esconderpane.definirPane(paneprincipal,panelog,panepesquisa);
         esconderpane.definirParticao(panezona,panezona2,lparticao,imagemview1,imagemview2,efzping);

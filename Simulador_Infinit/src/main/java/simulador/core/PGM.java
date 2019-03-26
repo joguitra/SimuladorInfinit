@@ -24,9 +24,9 @@ public class PGM {
                 break;
             }
         }
-        if(acionado) return "A0"+numeroidentificador;
+        if(acionado) return "W"+numeroidentificador+"OR";
 
-        if(!acionado) return  "D0"+numeroidentificador;
+        if(!acionado) return  "W"+numeroidentificador+"CR";
                 return null;
     }
 
