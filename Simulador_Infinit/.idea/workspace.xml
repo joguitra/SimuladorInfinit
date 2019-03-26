@@ -1,51 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7ce5dd2-97ec-485c-a8e9-3bf0bfde619e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/CircleStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ConectadoCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/PGMCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ParticaoCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/SetColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ZonaCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/controles/Controler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/controles/EsconderPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/controles/Mensagem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/pesquisacid/CodigoCID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/pesquisacid/ConfirmaPesquisa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/pesquisacid/ListaCodigo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/terminal/Terminal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/PGM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/Particao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/StatusPGM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/StatusParticao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/StatusZona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infrastructura/conexao/Conexao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infrastructura/enviocontactid/FormarContactID.java" afterDir="false" />
+    <list default="true" id="05764392-188c-4b98-9ad2-b9618fcea8de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/lista.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/Interface.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/cadeado.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/fechado.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/JFXSimuladorPainel.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/listadecomando.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/out/production/JFXSimuladorPainel/br/com/fulltime/fullarm/simulador/Aleatorio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/out/production/JFXSimuladorPainel/br/com/fulltime/fullarm/simulador/Controle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/out/production/JFXSimuladorPainel/br/com/fulltime/fullarm/simulador/InterfaceSP.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/out/production/JFXSimuladorPainel/br/com/fulltime/fullarm/simulador/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/out/production/JFXSimuladorPainel/br/com/fulltime/fullarm/simulador/SimuladorPainel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/src/br/com/fulltime/fullarm/simulador/Aleatorio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/src/br/com/fulltime/fullarm/simulador/Controle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/src/br/com/fulltime/fullarm/simulador/InterfaceSP.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/src/br/com/fulltime/fullarm/simulador/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JFXSimuladorPainel/src/br/com/fulltime/fullarm/simulador/SimuladorPainel.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simuladorinfinit/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simuladorinfinit/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simuladorinfinit/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simuladorinfinit/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simuladorinfinit/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Autentificao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/LeitorPainel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Leitores/LeitorCodigo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Leitores/LeitorParticao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Leitores/LeitorSequencia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Leitores/LeitorSetor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Leitores/PrintEvento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Leitores/Utility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Painel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/painel/Servidor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/servidor/Controle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/servidor/Interface.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/out/production/JFXSimplesServer/Servidor/br/com/fulltime/fullarm/servidor/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/Autentificao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/LeitorPainel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/Painel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/Servidor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/leitor/LeitorCodigo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/leitor/LeitorParticao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/leitor/LeitorSequencia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/leitor/LeitorSetor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/leitor/PrintEvento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/painel/leitor/Utility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/servidor/Controle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/servidor/Interface.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimplesServer/src/servido/br/com/fulltime/fullarm/servidor/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimuladorPainel/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JFX/JFXSimuladorPainel/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimuladorPainel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JFX/JFXSimuladorPainel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JFX/JFXSimuladorPainel/out/production/JFXSimuladorPainel/META-INF/JFXSimuladorPainel.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Projeto" beforeDir="false" afterPath="$PROJECT_DIR$/../../Projeto" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -56,225 +55,72 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/SimplePaneSimulator$Main.ic" NAME="Main Coverage Results" MODIFIED="1553101947826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>br.com.fulltime.fullarm.simulador.pesquisacid.*</FILTER>
-    </SUITE>
-  </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="185" />
-  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SimplePaneSimulator" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/controles/Controler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="323" column="9" lean-forward="true" selection-start-line="323" selection-start-column="9" selection-end-line="323" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11496#11497#0" expanded="true" />
-                <element signature="e#15491#15492#0" expanded="true" />
-                <element signature="e#15814#15815#0" expanded="true" />
-                <element signature="e#15939#15940#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/Particao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ZonaCircle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/particao/ParticaoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/OrdemStatusZona.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/particao/OrdemStatusZona.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/zona/OrdemStatusZona.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/pgm/pgm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/Particao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/zona/OrdemStatusParticao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/pgm/StatusPGM7.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/OrdemStatusParticao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/StatusParticao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/zona/Zona.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/StatusColor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/ParticaoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/pgm/StatusPGM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/zona/StatusZona.java" />
-        <option value="$PROJECT_DIR$/out/production/resources/Interface.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/SetColor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/zona/ZonaCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/pesquisacid/ConfirmaPesquisa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/CircleStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/pgm/PGM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/pgm/PGMCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/ConectadoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/StatusConectado/ConectadoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/statusconectado/StatusConectado.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/statusconectado/ConectadoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/pesquisacid/ListaCodigo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/Mensagem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/conexao/Conexao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/controles/Mensagem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/controles/EsconderPane.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/controles/Controler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/particaocircle/ParticaoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/enviocontactid/FormarContactID.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infrastructura/enviocontactid/FormarContactID.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/pesquisacid/ConfirmaPesquisa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/statusconectado/ConectadoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/PGMCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/particao/Particao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/PGM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/ZonaCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/PGMCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/ParticaoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/CircleStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/Particao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/SetColor.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/Interface.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ParticaoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/Particao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ZonaCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/controles/Controler.java" />
-      </list>
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="31" />
-    <option name="y" value="24" />
-    <option name="width" value="787" />
-    <option name="height" value="735" />
+    <option name="x" value="660" />
+    <option name="y" value="80" />
+    <option name="width" value="697" />
+    <option name="height" value="701" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Simulador_Infinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Simulador_Infinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Simulador_Infinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Simulador_Infinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simulador" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Simulador_Infinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="simulador" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Simulador_Infinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="simulador" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="circle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simulador" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="controles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Simulador_Infinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -282,38 +128,20 @@
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Simulador_Infinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SimplePaneSimulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_Painel_Simulador" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="simulador" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructura" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553599885674" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="restartRequiresConfirmation" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\joao.tramontini\Projeto_Painel_Simulador\Projeto_Painel_Simulador\src\main\resources" />
-      <recent name="C:\Users\joao.tramontini\Projeto_Painel_Simulador\Projeto_Painel_Simulador" />
-      <recent name="C:\Users\joao.tramontini\Projeto_Painel_Simulador\Projeto_Painel_Simulador\src\main\java\br\com\fulltime\fullarm\simulador\Controles" />
-      <recent name="C:\Users\joao.tramontini\Projeto_Painel_Simulador\Projeto_Painel_Simulador\src\main\java" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -327,528 +155,50 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.fulltime.fullarm.simulador.Main" />
-      <module name="br.com.fulltime.fullarm.SimplePaneSimulator.SimplePaneSimulator.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.fulltime.fullarm.simulador.pesquisacid.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TextMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.fulltime.fullarm.simulador.pesquisacid.TextMain" />
-      <module name="br.com.fulltime.fullarm.SimplePaneSimulator.SimplePaneSimulator.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.fulltime.fullarm.simulador.pesquisacid.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="SimplePaneSimulator" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="SimplePaneSimulator" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TextMain" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e7ce5dd2-97ec-485c-a8e9-3bf0bfde619e" name="Default Changelist" comment="" />
-      <created>1552309557446</created>
+      <changelist id="05764392-188c-4b98-9ad2-b9618fcea8de" name="Default Changelist" comment="" />
+      <created>1553600439741</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1552309557446</updated>
+      <updated>1553600439741</updated>
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2579425" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4945055" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.3289689" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.29459903" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39934534" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.49590835" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3289689" />
-      <window_info anchor="bottom" id="Build" order="11" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" visible="true" weight="0.32890365" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" weight="0.32980332" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32980332" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24659607" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.3289689" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.49590835" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39934534" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.49590835" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Build" order="11" visible="true" weight="0.3289689" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" weight="0.32980332" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32980332" />
-    </layout-to-restore>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/controles/Controle.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/pesquisacid/MainControlerPCDI.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/PesquisaContactaID.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/InterfaceSP.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/zona.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/shape/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4469">
-          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/pesquisacid/ControlerPCDI.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="1136" column="22" selection-start-line="1136" selection-start-column="22" selection-end-line="1136" selection-end-column="22" />
-          <folding>
-            <element signature="e#48219#48220#0" expanded="true" />
-            <element signature="e#48263#48264#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/enviocontactid/Condicao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/conexao/KeepAlive.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/com/sun/javafx/text/GlyphLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/com/sun/javafx/text/PrismTextLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="754" selection-start-line="754" selection-end-line="754" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/SimuladorPainel.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/Status.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Enum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="155" column="40" selection-start-line="155" selection-start-column="14" selection-end-line="155" selection-end-column="40" />
-          <folding>
-            <element signature="e#4357#4358#0" expanded="true" />
-            <element signature="e#4391#4392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="171" selection-start-line="11" selection-start-column="171" selection-end-line="11" selection-end-column="171" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="13" column="171" selection-start-line="13" selection-start-column="171" selection-end-line="13" selection-end-column="171" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/resources/Interface.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="178" column="112" selection-start-line="178" selection-start-column="112" selection-end-line="178" selection-end-column="112" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cadeado.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fechado.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/image/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/beans/value/WritableObjectValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/image/ImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="188" column="26" selection-start-line="188" selection-start-column="26" selection-end-line="188" selection-end-column="26" />
-          <folding>
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/control/SelectionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="174" column="57" lean-forward="true" selection-start-line="174" selection-start-column="57" selection-end-line="174" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/circle/statusconectado/StatusConectado.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="1002" column="32" selection-start-line="1002" selection-start-column="32" selection-end-line="1002" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/terminal/Terminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/controles/Mensagem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/controles/EsconderPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="96" column="60" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infrastructura/conexao/Conexao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infrastructura/enviocontactid/FormarContactID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/pesquisacid/CodigoCID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/pesquisacid/ListaCodigo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/pesquisacid/ConfirmaPesquisa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/StatusParticao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/StatusPGM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/SetColor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/PGM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/StatusZona.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ParticaoCircle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Interface.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="205" column="14" selection-start-line="205" selection-start-column="14" selection-end-line="205" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/PGMCircle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ConectadoCircle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/CircleStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/input/MouseButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/controles/Controler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="323" column="9" lean-forward="true" selection-start-line="323" selection-start-column="9" selection-end-line="323" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11496#11497#0" expanded="true" />
-            <element signature="e#15491#15492#0" expanded="true" />
-            <element signature="e#15814#15815#0" expanded="true" />
-            <element signature="e#15939#15940#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/core/Particao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/application/circle/ZonaCircle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

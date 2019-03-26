@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'br.com.fulltime.fullarm.SimplePaneSimulator'
-version '0.1.0-SNAPSHOT'
+group 'br.com.fulltime.fullarm.simuladorinifinit'
+version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
