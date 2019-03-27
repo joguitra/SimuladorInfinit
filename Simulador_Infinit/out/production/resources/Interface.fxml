@@ -11,10 +11,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="btnenviacID" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="720.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simulador.application.controles.Controler">
    <children>
+      <Label fx:id="ldesconectado" layoutX="67.0" layoutY="318.0" text="Desconectado">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
       <Pane layoutX="10.0" layoutY="10.0" prefHeight="90.0" prefWidth="700.0" style="-fx-background-color: #C0C0C0#C0C0C0;">
          <children>
             <Pane layoutX="355.0" layoutY="10.0" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: #FFFAFA;">
@@ -77,28 +83,16 @@
       </Pane>
       <Pane fx:id="paneprincipal" layoutX="10.0" layoutY="108.0" prefHeight="280.0" prefWidth="700.0" style="-fx-background-color: #C0C0C0#C0C0C0;">
          <children>
-            <Pane fx:id="paneenviarcomando" layoutX="440.0" layoutY="10.0" prefHeight="95.0" prefWidth="250.0" style="-fx-background-color: #FFFAFA;">
-               <children>
-                  <TextField fx:id="tfconta" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="40.0" text="0001" />
-                  <TextField fx:id="tfevento" layoutX="115.0" layoutY="5.0" onKeyPressed="#digitarevento" prefHeight="25.0" prefWidth="35.0" text="401" />
-                  <TextField fx:id="tfevento1" layoutX="165.0" layoutY="5.0" onKeyPressed="#digitarparticao" prefHeight="25.0" prefWidth="30.0" text="01" />
-                  <TextField fx:id="tfevento2" layoutX="205.0" layoutY="5.0" onKeyPressed="#digitarsetor" prefHeight="25.0" prefWidth="32.5" text="001" />
-                  <Button fx:id="btnbuscaCID" layoutX="5.0" layoutY="52.5" minWidth="49.0" mnemonicParsing="false" onAction="#btnbuscarCID" prefHeight="30.0" prefWidth="49.0" text="PCID" />
-                  <Button fx:id="btnenviarCID" layoutX="125.0" layoutY="52.5" mnemonicParsing="false" onAction="#enviarCID" text="Enviar Contact ID" />
-                  <ListView fx:id="lvqualificador" layoutX="60.0" layoutY="6.0" prefHeight="50.0" prefWidth="49.0" />
-               </children>
-            </Pane>
-            <Circle fx:id="efzping" fill="WHITE" layoutX="240.0" layoutY="175.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
             <Pane fx:id="panezona" layoutX="180.0" layoutY="145.0" prefHeight="125.0" prefWidth="250.0" style="-fx-background-color: #FFFAFA;">
                <children>
-                  <Circle fx:id="efz1" fill="#1beb00" layoutX="20.0" layoutY="65.0" onMouseClicked="#alterarzona1" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz2" fill="#1beb00" layoutX="50.0" layoutY="65.0" onMouseClicked="#alterarzona2" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz3" fill="#1beb00" layoutX="80.0" layoutY="65.0" onMouseClicked="#alterarzona3" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz4" fill="#1beb00" layoutX="110.0" layoutY="65.0" onMouseClicked="#alterarzona4" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz5" fill="#1beb00" layoutX="140.0" layoutY="65.0" onMouseClicked="#alterarzona5" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz6" fill="#1beb00" layoutX="170.0" layoutY="65.0" onMouseClicked="#alterarzona6" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz7" fill="#1beb00" layoutX="200.0" layoutY="65.0" onMouseClicked="#alterarzona7" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz8" fill="#1beb00" layoutX="230.0" layoutY="65.0" onMouseClicked="#alterzona8" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz1" fill="#1beb00" layoutX="20.0" layoutY="65.0" onMouseClicked="#alterarzona1" onMousePressed="#taperzona1" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz2" fill="#1beb00" layoutX="50.0" layoutY="65.0" onMouseClicked="#alterarzona2" onMousePressed="#taperzona2" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz3" fill="#1beb00" layoutX="80.0" layoutY="65.0" onMouseClicked="#alterarzona3" onMousePressed="#taperzona3" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz4" fill="#1beb00" layoutX="110.0" layoutY="65.0" onMouseClicked="#alterarzona4" onMousePressed="#taperzona4" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz5" fill="#1beb00" layoutX="140.0" layoutY="65.0" onMouseClicked="#alterarzona5" onMousePressed="#taperzona5" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz6" fill="#1beb00" layoutX="170.0" layoutY="65.0" onMouseClicked="#alterarzona6" onMousePressed="#taperzona6" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz7" fill="#1beb00" layoutX="200.0" layoutY="65.0" onMouseClicked="#alterarzona7" onMousePressed="#taperzona7" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz8" fill="#1beb00" layoutX="230.0" layoutY="65.0" onMouseClicked="#alterzona8" onMousePressed="#taperzona8" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="90.0" layoutY="15.0" text="ZONAS">
                      <font>
                         <Font name="Corbel Light" size="24.0" />
@@ -112,33 +106,28 @@
                   <Label layoutX="162.5" layoutY="80.0" text="06" />
                   <Label layoutX="192.5" layoutY="80.0" text="07" />
                   <Label layoutX="222.5" layoutY="80.0" text="08" />
+                  <Line fx:id="zonataper1" endX="12.0" layoutX="17.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper2" endX="12.0" layoutX="47.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper3" endX="12.0" layoutX="77.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper4" endX="12.0" layoutX="107.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper5" endX="12.0" layoutX="137.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper6" endX="12.0" layoutX="167.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper7" endX="12.0" layoutX="197.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper8" endX="12.0" layoutX="227.5" layoutY="65.0" startX="-7.0" />
                </children>
             </Pane>
-            <Pane fx:id="panezona2" layoutX="180.0" layoutY="145.0" prefHeight="125.0" prefWidth="250.0" style="-fx-background-color: #FFFAFA;">
+            <Pane fx:id="paneenviarcomando" layoutX="440.0" layoutY="10.0" prefHeight="95.0" prefWidth="250.0" style="-fx-background-color: #FFFAFA;">
                <children>
-                  <Circle fx:id="efz9" fill="#1beb00" layoutX="20.0" layoutY="65.0" onMouseClicked="#alterarzona9" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz10" fill="#1beb00" layoutX="50.0" layoutY="65.0" onMouseClicked="#alterarzona10" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz11" fill="#1beb00" layoutX="80.0" layoutY="65.0" onMouseClicked="#alterarzona11" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz12" fill="#1beb00" layoutX="110.0" layoutY="65.0" onMouseClicked="#alterarzona12" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz13" fill="#1beb00" layoutX="140.0" layoutY="65.0" onMouseClicked="#alterarzona13" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz14" fill="#1beb00" layoutX="170.0" layoutY="65.0" onMouseClicked="#alterarzona14" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz15" fill="#1beb00" layoutX="200.0" layoutY="65.0" onMouseClicked="#alterarzona15" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="efz16" fill="#1beb00" layoutX="230.0" layoutY="65.0" onMouseClicked="#alterarzona16" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="90.0" layoutY="15.0" text="ZONAS">
-                     <font>
-                        <Font name="Corbel Light" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="12.5" layoutY="80.0" text="09" />
-                  <Label layoutX="42.5" layoutY="80.0" text="10" />
-                  <Label layoutX="72.5" layoutY="80.0" text="11" />
-                  <Label layoutX="102.5" layoutY="80.0" text="12" />
-                  <Label layoutX="132.5" layoutY="80.0" text="13" />
-                  <Label layoutX="162.5" layoutY="80.0" text="14" />
-                  <Label layoutX="192.5" layoutY="80.0" text="15" />
-                  <Label layoutX="222.5" layoutY="80.0" text="16" />
+                  <TextField fx:id="tfconta" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="40.0" text="0001" />
+                  <TextField fx:id="tfevento" layoutX="115.0" layoutY="5.0" onKeyPressed="#digitarevento" prefHeight="25.0" prefWidth="35.0" text="401" />
+                  <TextField fx:id="tfevento1" layoutX="165.0" layoutY="5.0" onKeyPressed="#digitarparticao" prefHeight="25.0" prefWidth="30.0" text="01" />
+                  <TextField fx:id="tfevento2" layoutX="205.0" layoutY="5.0" onKeyPressed="#digitarsetor" prefHeight="25.0" prefWidth="32.5" text="001" />
+                  <Button fx:id="btnbuscaCID" layoutX="5.0" layoutY="52.5" minWidth="49.0" mnemonicParsing="false" onAction="#btnbuscarCID" prefHeight="30.0" prefWidth="49.0" text="PCID" />
+                  <Button fx:id="btnenviarCID" layoutX="125.0" layoutY="52.5" mnemonicParsing="false" onAction="#enviarCID" text="Enviar Contact ID" />
+                  <ListView fx:id="lvqualificador" layoutX="60.0" layoutY="6.0" prefHeight="50.0" prefWidth="49.0" />
                </children>
             </Pane>
+            <Circle fx:id="efzping" fill="WHITE" layoutX="240.0" layoutY="175.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
             <Pane fx:id="panepgn" layoutX="180.0" layoutY="10.0" prefHeight="125.0" prefWidth="250.0" style="-fx-background-color: #FFFAFA;">
                <children>
                   <Circle fx:id="efzp1" fill="#ff1f1f" layoutX="20.0" layoutY="65.0" onMouseClicked="#alterarpgm1" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
@@ -215,6 +204,55 @@
                         <Font name="Corbel Light" size="12.0" />
                      </font>
                   </Label>
+                  <Line endX="20.0" layoutX="133.0" layoutY="89.0" startX="-6.0" />
+                  <Label layoutX="155.0" layoutY="84.0" text="Zona Em Tamper">
+                     <font>
+                        <Font name="Corbel Light" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="146.0" layoutY="6.0" text="(botão  de direto do mouse)">
+                     <font>
+                        <Font name="Corbel Light" size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="140.0" layoutY="69.0" text="(botão de meio do mouse)">
+                     <font>
+                        <Font name="Corbel Light" size="9.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="panezona2" layoutX="180.0" layoutY="145.0" prefHeight="125.0" prefWidth="250.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <Circle fx:id="efz9" fill="#1beb00" layoutX="20.0" layoutY="65.0" onMouseClicked="#alterarzona9" onMousePressed="#taperzona9" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz10" fill="#1beb00" layoutX="50.0" layoutY="65.0" onMouseClicked="#alterarzona10" onMousePressed="#taperzona10" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz11" fill="#1beb00" layoutX="80.0" layoutY="65.0" onMouseClicked="#alterarzona11" onMousePressed="#taperzona11" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz12" fill="#1beb00" layoutX="110.0" layoutY="65.0" onMouseClicked="#alterarzona12" onMousePressed="#taperzona12" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz13" fill="#1beb00" layoutX="140.0" layoutY="65.0" onMouseClicked="#alterarzona13" onMousePressed="#taperzona13" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz14" fill="#1beb00" layoutX="170.0" layoutY="65.0" onMouseClicked="#alterarzona14" onMousePressed="#taperzona14" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz15" fill="#1beb00" layoutX="200.0" layoutY="65.0" onMouseClicked="#alterarzona15" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="efz16" fill="#1beb00" layoutX="230.0" layoutY="65.0" onMouseClicked="#alterarzona16" onMousePressed="#taperzona16" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="90.0" layoutY="15.0" text="ZONAS">
+                     <font>
+                        <Font name="Corbel Light" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.5" layoutY="80.0" text="09" />
+                  <Label layoutX="42.5" layoutY="80.0" text="10" />
+                  <Label layoutX="72.5" layoutY="80.0" text="11" />
+                  <Label layoutX="102.5" layoutY="80.0" text="12" />
+                  <Label layoutX="132.5" layoutY="80.0" text="13" />
+                  <Label layoutX="162.5" layoutY="80.0" text="14" />
+                  <Label layoutX="192.5" layoutY="80.0" text="15" />
+                  <Label layoutX="222.5" layoutY="80.0" text="16" />
+                  <Line fx:id="zonataper9" endX="12.0" layoutX="17.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper10" endX="12.0" layoutX="47.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper11" endX="12.0" layoutX="77.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper12" endX="12.0" layoutX="107.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper13" endX="12.0" layoutX="137.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper14" endX="12.0" layoutX="167.5" layoutY="65.0" startX="-7.0" />
+                  <Line fx:id="zonataper15" endX="12.0" layoutX="197.5" layoutY="65.0" onMousePressed="#taperzona15" startX="-7.0" />
+                  <Line fx:id="zonataper16" endX="12.0" layoutX="227.5" layoutY="65.0" startX="-7.0" />
                </children>
             </Pane>
             <Pane fx:id="panepesquisa" layoutX="50.0" prefHeight="280.0" prefWidth="380.0" style="-fx-background-color: #C0C0C0;">
@@ -242,10 +280,5 @@
             <Button fx:id="btnlimpar" layoutX="625.0" layoutY="195.0" mnemonicParsing="false" onAction="#limparterminal" text="Limpar" />
          </children>
       </Pane>
-      <Label fx:id="ldesconectado" layoutX="67.0" layoutY="318.0" text="Desconectado">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
