@@ -71,10 +71,12 @@ public class Particao  {
         for (DuplaZona duplazona : listaduplazonas) {
             for (ZonaCircle zona : duplazona.getZona()) {
                 if (StatusZona.Aberto.equals(zona.getStatus())) {
-                    if (zonasstatusfechada != null)
-                        zonasstatusfechada += zona + " ";
-                    else
-                        zonasstatusfechada = zona + " ";
+
+                    if(!zona.getStatusinibido())
+                        if (zonasstatusfechada != null)
+                            zonasstatusfechada += zona + " ";
+                        else
+                            zonasstatusfechada = zona + " ";
                 }
             }
         }
@@ -88,7 +90,7 @@ public class Particao  {
         if(armado.equals("Desarmado")){
             for (DuplaZona duplazona:listaduplazonas) {
                 for (ZonaCircle zona:duplazona.getZona()) {
-                    if(StatusZona.Inibido.equals(zona.getStatus())){
+                    if(zona.getStatusinibido()){
                         zona.alterarStatusEspecificoZona(StatusZona.Aberto);
                     }
                 }
