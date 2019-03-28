@@ -11,7 +11,7 @@ public class Particao  {
 
 
     private ArrayList<DuplaZona> listaduplazonas = new ArrayList<>();
-    private String zonasstatusfechada;
+    private String zonasstatusaberta;
     private ParticaoCircle particaocircle;
 
 
@@ -43,8 +43,13 @@ public class Particao  {
     public void alterarZona(Circle circle){
         for (DuplaZona duplazona:listaduplazonas) {
             for (ZonaCircle zona:duplazona.getZona()) {
-                if(zona.getCircle().equals(circle))
+                if(zona.getCircle().equals(circle)) {
                     zona.alterarOrdemStatusZona();
+                    if(StatusParticao.Armado.equals(particaocircle.getStatusParticao())){
+                        zona.zonaArmada();
+                    }
+                }
+
             }
         }
     }
@@ -67,20 +72,20 @@ public class Particao  {
     }
 
     public String checkoutZonaAberta() {
-        zonasstatusfechada = null;
+        zonasstatusaberta = null;
         for (DuplaZona duplazona : listaduplazonas) {
             for (ZonaCircle zona : duplazona.getZona()) {
                 if (StatusZona.Aberto.equals(zona.getStatus())) {
 
                     if(!zona.getStatusinibido())
-                        if (zonasstatusfechada != null)
-                            zonasstatusfechada += zona + " ";
+                        if (zonasstatusaberta != null)
+                            zonasstatusaberta += zona + " ";
                         else
-                            zonasstatusfechada = zona + " ";
+                            zonasstatusaberta = zona + " ";
                 }
             }
         }
-        return zonasstatusfechada;
+        return zonasstatusaberta;
     }
 
 
@@ -90,6 +95,7 @@ public class Particao  {
         if(armado.equals("Desarmado")){
             for (DuplaZona duplazona:listaduplazonas) {
                 for (ZonaCircle zona:duplazona.getZona()) {
+                    zona.zonaDesarmada();
                     if(zona.getStatusinibido()){
                         zona.alterarStatusEspecificoZona(StatusZona.Aberto);
                     }
@@ -100,12 +106,12 @@ public class Particao  {
     }
 
     public  void reiniciarParticao(){
-
         particaocircle.reiniciarParticao();
-        for (DuplaZona duplazona:listaduplazonas)
-            for (ZonaCircle zona:duplazona.getZona()) {
+        for (DuplaZona duplazona:listaduplazonas) {
+            for (ZonaCircle zona : duplazona.getZona()) {
                 zona.reiniciarzona();
             }
+        }
     }
 
     public  void ativarping(){

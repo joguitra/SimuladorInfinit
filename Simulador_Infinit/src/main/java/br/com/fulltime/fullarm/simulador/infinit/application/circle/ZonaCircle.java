@@ -15,6 +15,8 @@ public class ZonaCircle extends CircleStatus {
      private Line tamper;
      private Boolean statustamper = false;
      private Boolean statusinibido = false;
+     private Boolean statusarmado = false;
+
 
     public ZonaCircle(Circle circle, int numeroidentificador) {
         super(circle, numeroidentificador);
@@ -24,8 +26,17 @@ public class ZonaCircle extends CircleStatus {
         tamper.setVisible(false);
         statustamper=false;
         statusinibido = false;
+
         alterarStatusEspecificoZona(Fechado);
 
+    }
+
+    public void zonaArmada(){
+        statusarmado =true;
+    }
+
+    public void zonaDesarmada(){
+        statusarmado = false;
     }
 
     public void adicinarTamper(Line tamper){
@@ -101,5 +112,9 @@ public class ZonaCircle extends CircleStatus {
 
     public Boolean getStatusinibido() {
         return statusinibido;
+    }
+
+    public Boolean getStatusarmado() {
+        return statusarmado;
     }
 }

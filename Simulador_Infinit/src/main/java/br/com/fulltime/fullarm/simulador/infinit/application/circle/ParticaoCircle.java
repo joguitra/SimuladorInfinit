@@ -75,4 +75,8 @@ public class ParticaoCircle extends CircleStatus {
     public String toString() {
         return super.toString();
     }
+
+    public StatusParticao getStatusParticao() {
+        return statusParticao;
+    }
 }

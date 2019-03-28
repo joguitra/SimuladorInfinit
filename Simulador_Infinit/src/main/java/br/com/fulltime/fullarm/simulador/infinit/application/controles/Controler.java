@@ -398,7 +398,6 @@ public class Controler implements Initializable {
         Thread.sleep(1000);
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
-        particao1.statusParticao();
 
     }
     @FXML
@@ -889,7 +888,7 @@ public class Controler implements Initializable {
 
         terminal.definirTerminal(taterminal);
 
-        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao);
+        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao,particao1,particao2,pgm1);
 
         esconderpane.definirPane(paneprincipal,panelog,panepesquisa);
         esconderpane.definirParticao(panezona,panezona2,lparticao,imagemview1,imagemview2,efzping);

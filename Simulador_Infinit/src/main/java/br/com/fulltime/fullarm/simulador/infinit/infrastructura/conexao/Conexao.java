@@ -1,5 +1,7 @@
 package br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao;
 
+import br.com.fulltime.fullarm.simulador.infinit.core.PGM;
+import br.com.fulltime.fullarm.simulador.infinit.core.Particao;
 import javafx.scene.control.ChoiceBox;
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ConectadoCircle;
 import br.com.fulltime.fullarm.simulador.infinit.application.controles.EsconderPane;
@@ -24,6 +26,9 @@ public class Conexao {
     private Label labeldesconectado;
     private ConectadoCircle conectado;
     private TextField imei;
+    private Particao particao1;
+    private Particao particao2;
+    private PGM pgm;
     private ChoiceBox<String> tipodconexao;
     private  int portanumerica;
     private  String ipnumerico;
@@ -37,7 +42,9 @@ public class Conexao {
 
 
     public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
-                          EsconderPane esconderPane, Label labeldesconectado, ConectadoCircle conectado, TextField imei , ChoiceBox<String> tipodeconexao){
+                          EsconderPane esconderPane, Label labeldesconectado, ConectadoCircle conectado,
+                          TextField imei , ChoiceBox<String> tipodeconexao,
+                          Particao particao1,Particao particao2, PGM pgm){
         this.tipodconexao = tipodeconexao;
         this.ip = ip;
         this.porta = porta;
@@ -48,6 +55,9 @@ public class Conexao {
         this.labeldesconectado = labeldesconectado;
         this.conectado = conectado;
         this.imei = imei;
+        this.particao2 = particao2;
+        this.particao1 = particao1;
+        this.pgm = pgm;
         this.tipodconexao = tipodconexao;
     }
 
@@ -81,7 +91,7 @@ public class Conexao {
 
     public void recebendoResposta ()  {
         Thread recebercomando = new Thread( ()-> {
-            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado);
+            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,particao1,particao2,pgm);
             recebendoComando.receberResposta();
     });
         recebercomando.start();

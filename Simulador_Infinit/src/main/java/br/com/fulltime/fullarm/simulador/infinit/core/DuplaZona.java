@@ -48,8 +48,8 @@ public class DuplaZona {
        if(zona1.getStatusinibido()) {statuszona1 +=2;}
        if(zona2.getStatusinibido()) {statuszona2 +=2;}
 
-       if(zona1.getStatus().equals(StatusZona.Disparado)) {statuszona1 +=1;}
-       if(zona2.getStatus().equals(StatusZona.Disparado)) {statuszona2 +=1;}
+       if(zona1.getStatusarmado()) {statuszona1 +=1;}
+       if(zona2.getStatusarmado()) {statuszona2 +=1;}
 
        statuszonahexdecimal1 =hexTraducao.convertorHexDecimal(statuszona1);
        statuszonahexdecimal2 =hexTraducao.convertorHexDecimal(statuszona2);
