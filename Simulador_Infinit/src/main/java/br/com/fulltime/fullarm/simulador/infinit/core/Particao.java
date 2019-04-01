@@ -9,6 +9,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Circle;
 
 import java.util.ArrayList;
+import java.util.BitSet;
 
 public class Particao  {
 
@@ -17,7 +18,7 @@ public class Particao  {
     private String zonasstatusaberta;
     private ParticaoCircle particaocircle;
     private ImageView image;
-    private Boolean statusarmada,statusmemoria,statushabilitar, statuspronta;
+    private Boolean statusarmada =false,statusmemoria =false,statushabilitar=true, statuspronta=true;
 
 
     public Particao (Circle circle ,int numeroindetificador , ImageView image){
@@ -32,14 +33,17 @@ public class Particao  {
 
 
     public void statusParticao(){
-        int i =0;
-        for (DuplaZona duplazona:listaduplazonas) {
-            i++;
-            System.out.print(i);
 
-//            String text =duplazona.statusZonaHexDecimalCompleto();
-//            text =Integer.toHexString(Integer.valueOf(text));
-//            System.out.print(text);
+        BitSet bitSet = BitSet.valueOf(new byte[4]);
+        bitSet.set(0, statusarmada);
+        bitSet.set(1, statushabilitar);
+        bitSet.set(2, statuspronta);
+        bitSet.set(3, statusmemoria);
+
+        System.out.print(bitSet.toString());
+
+        for (DuplaZona duplazona:listaduplazonas) {
+            System.out.print(duplazona.statusZonaHexDecimalCompleto());
 
         }
     }
@@ -58,7 +62,7 @@ public class Particao  {
             for (ZonaCircle zona:duplazona.getZona()) {
                 if(zona.getCircle().equals(circle)) {
                     zona.alterarOrdemStatusZona();
-                    if(StatusParticao.Armado.equals(particaocircle.getStatusParticao())){
+                    if(statusarmada){
                         zona.zonaArmada();
                         statusmemoria=true;
                         image.setImage(new Image("megafone.jpg"));
@@ -105,15 +109,19 @@ public class Particao  {
 
 
 
-    public  String alterarStatusParticao(){
-        String armado =particaocircle.alterarStatusParticao(checkoutZonaAberta());
-        if(armado.equals("Desarmado")){
-            armarParticao();
+    public  Boolean alterarStatusParticao(){
+       Boolean armado =particaocircle.armarParticao(checkoutZonaAberta());
+        if(armado) {
+            if (!statusarmada) {
+                armarParticao();
+                return statusarmada;
+            }
         }
-        if(armado.equals("Armado")){
+        if (statusarmada) {
             desarmaParticao();
+            return statusarmada;
         }
-        return armado ;
+       return  null;
     }
 
     public String armarParticao(){
@@ -176,7 +184,11 @@ public class Particao  {
 
 
     public  void reiniciarParticao(){
-        particaocircle.reiniciarParticao();
+        image.setImage(new Image("cadeado.jpg"));
+        statusarmada =false;
+        statusmemoria =false;
+        statushabilitar=true;
+        statuspronta=true;
         for (DuplaZona duplazona:listaduplazonas) {
             for (ZonaCircle zona : duplazona.getZona()) {
                 zona.reiniciarzona();

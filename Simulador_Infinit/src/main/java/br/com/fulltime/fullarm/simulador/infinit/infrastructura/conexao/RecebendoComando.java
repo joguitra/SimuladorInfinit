@@ -129,7 +129,7 @@ public class RecebendoComando {
         for (Particao particao: listaparticao) {
             i++;
             if(i==Integer.valueOf(numeroidentificador)){
-                particao.desarmaParticao();
+                particao.statusParticao();
             }
         }
     }

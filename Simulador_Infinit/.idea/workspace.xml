@@ -2,36 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05764392-188c-4b98-9ad2-b9618fcea8de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log_infinit_broker.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/CircleStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/CircleStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/PGMCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/PGMCircle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ZonaCircle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ZonaCircle$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ZonaCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ZonaCircle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/DuplaZona.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/PGM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/PGM.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/Particao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/Particao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/StatusZona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/StatusZona.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/Conexao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/Conexao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/StatusParticao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/Interface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/Interface.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/CircleStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/CircleStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/PGMCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/PGMCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ZonaCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ZonaCircle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/DuplaZona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/PGM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/PGM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/StatusZona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/StatusZona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/Conexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/Conexao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/StatusParticao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Interface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Interface.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -66,59 +53,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="148" column="22" lean-forward="true" selection-start-line="148" selection-end-line="149" />
+            <state relative-caret-position="182">
+              <caret line="112" column="47" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
               <folding>
-                <element signature="e#5234#5235#0" expanded="true" />
-                <element signature="e#5268#5269#0" expanded="true" />
-                <element signature="e#5313#5314#0" expanded="true" />
-                <element signature="e#5339#5340#0" expanded="true" />
-                <element signature="e#5395#5396#0" expanded="true" />
-                <element signature="e#5432#5433#0" expanded="true" />
-                <element signature="e#6078#6079#0" expanded="true" />
+                <element signature="e#5065#5066#0" expanded="true" />
+                <element signature="e#5100#5101#0" expanded="true" />
+                <element signature="e#5140#5141#0" expanded="true" />
+                <element signature="e#5176#5177#0" expanded="true" />
+                <element signature="e#5218#5219#0" expanded="true" />
+                <element signature="e#5263#5264#0" expanded="true" />
+                <element signature="e#6365#6366#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ZonaCircle.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-              <folding>
-                <element signature="method#reiniciarzona#0;class#ZonaCircle#0" />
-                <element signature="e#1116#1117#0" expanded="true" />
-                <element signature="e#1153#1154#0" expanded="true" />
-                <element signature="method#adicinarTamper#0;class#ZonaCircle#0" />
-                <element signature="method#alterarTamper#0;class#ZonaCircle#0" />
-                <element signature="method#alterarStatusEspecificoZona#0;class#ZonaCircle#0" />
-                <element signature="method#ativarPing#0;class#ZonaCircle#0" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/StatusPGM.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="63">
+              <caret line="805" selection-start-line="805" selection-end-line="805" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="291">
+              <caret line="40" column="46" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -126,11 +101,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="43">
+              <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
               <folding>
-                <element signature="e#2415#2416#0" expanded="true" />
-                <element signature="e#2452#2453#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="188" selection-start-line="188" selection-end-line="188" />
+            <state relative-caret-position="162">
+              <caret line="59" lean-forward="true" selection-start-line="58" selection-end-line="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,10 +132,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log_infinit_broker.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="820" column="43" selection-start-line="820" selection-start-column="43" selection-end-line="820" selection-end-column="43" />
+            <state relative-caret-position="-1343">
+              <caret line="50" column="65" lean-forward="true" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -191,16 +174,17 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/StatusZona.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ZonaCircle.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/Conexao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/CircleStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/PGMCircle.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/PGM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java" />
       </list>
     </option>
   </component>
@@ -211,10 +195,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-125" />
-    <option name="y" value="134" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="697" />
-    <option name="height" value="735" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -274,7 +258,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="infinit" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="circle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="infinit" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simulador_Infinit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="infinit" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="pesquisacid" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
@@ -340,7 +344,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554129204854" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554138229276" />
     <property name="last_opened_file_path" value="$USER_HOME$/Projeto_Painel_Simulador/Projeto_Painel_Simulador" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
@@ -447,7 +451,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23600605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23600605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -478,6 +482,94 @@
     </layout>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.java</url>
+          <line>157</line>
+          <properties />
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>114</line>
+          <properties />
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>115</line>
+          <properties />
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="228" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="statuszona1" language="JAVA" />
@@ -485,6 +577,7 @@
         <watch expression="particao.particaocircle" />
         <watch expression="statuszona1" language="JAVA" />
         <watch expression="this" />
+        <watch expression="particaocircle" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -531,13 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -600,17 +686,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/megafone.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cadeado.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fechado.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/megafone.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/StatusPGM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="820" column="43" selection-start-line="820" selection-start-column="43" selection-end-line="820" selection-end-column="43" />
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -630,68 +721,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/megafone.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cadeado.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fechado.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/megafone.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/StatusPGM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#2415#2416#0" expanded="true" />
-            <element signature="e#2452#2453#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="43">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="148" column="22" lean-forward="true" selection-start-line="148" selection-end-line="149" />
+        <state relative-caret-position="182">
+          <caret line="112" column="47" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
           <folding>
-            <element signature="e#5234#5235#0" expanded="true" />
-            <element signature="e#5268#5269#0" expanded="true" />
-            <element signature="e#5313#5314#0" expanded="true" />
-            <element signature="e#5339#5340#0" expanded="true" />
-            <element signature="e#5395#5396#0" expanded="true" />
-            <element signature="e#5432#5433#0" expanded="true" />
-            <element signature="e#6078#6079#0" expanded="true" />
+            <element signature="e#5065#5066#0" expanded="true" />
+            <element signature="e#5100#5101#0" expanded="true" />
+            <element signature="e#5140#5141#0" expanded="true" />
+            <element signature="e#5176#5177#0" expanded="true" />
+            <element signature="e#5218#5219#0" expanded="true" />
+            <element signature="e#5263#5264#0" expanded="true" />
+            <element signature="e#6365#6366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="805" selection-start-line="805" selection-end-line="805" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="40" column="46" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="59" lean-forward="true" selection-start-line="58" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log_infinit_broker.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1343">
+          <caret line="50" column="65" lean-forward="true" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -804,10 +804,7 @@ public class Controler implements Initializable {
     void btnarmartodos(ActionEvent event) {
         if(trocarzona == 1){
             String codigo =formarcontactid.formacodigoCompleto(particao1.alterarStatusParticao(),particao1.toString());
-            if(codigo.length()>3) {
-
-//                if(codigo.substring(4,5).equals("3")) { imagemview1.setImage(new Image("fechado.jpg"));}
-//                if(codigo.substring(4,5).equals("1")) {imagemview1.setImage(new Image("cadeado.jpg"));}
+           if(codigo != null){
                 conexao.printSaida(codigo);
                 terminal.printTerminal(codigo);
             }
@@ -816,8 +813,7 @@ public class Controler implements Initializable {
         if(trocarzona == 2){
             String codigo =formarcontactid.formacodigoCompleto(particao2.alterarStatusParticao(),particao2.toString());
             if(codigo.length()>3) {
-//                if(codigo.substring(4,5).equals("3")) { imagemview2.setImage(new Image("fechado.jpg"));}
-//                if(codigo.substring(4,5).equals("1")) {imagemview2.setImage(new Image("cadeado.jpg"));}
+//
                 conexao.printSaida(codigo);
                 terminal.printTerminal(codigo);
             }

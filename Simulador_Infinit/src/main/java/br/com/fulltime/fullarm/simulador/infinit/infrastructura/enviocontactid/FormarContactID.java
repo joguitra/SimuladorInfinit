@@ -54,19 +54,18 @@ public class FormarContactID {
         }
         return sequencia;
     }
-    public String formacodigoCompleto(String estaarmado,String particao){
-        codigo =null;
-        if(estaarmado.equals("Armado")) {
-             codigo= usuario.getText() + "3"+"4010"+particao +setor.getText()+sequencia;
-            sequenciaCodigo();
-        }
-        if(estaarmado.equals("Desarmado")) {
-             codigo= usuario.getText() + "1"+"4010"+particao +setor.getText()+sequencia;
-            sequenciaCodigo();
-        }
-
-        return codigo;
-
+    public String formacodigoCompleto(Boolean estaarmado,String particao){
+        try {
+            if (estaarmado) {
+                codigo = usuario.getText() + "3" + "4010" + particao + setor.getText() + sequencia;
+                sequenciaCodigo();
+            }
+            if (!estaarmado) {
+                codigo = usuario.getText() + "1" + "4010" + particao + setor.getText() + sequencia;
+                sequenciaCodigo();
+            }
+            return codigo;
+        }catch (NullPointerException ignorar){return null;}
     }
 
 }

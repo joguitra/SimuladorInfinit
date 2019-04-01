@@ -1,40 +1,17 @@
 package br.com.fulltime.fullarm.simulador.infinit.application.circle;
 
-import br.com.fulltime.fullarm.simulador.infinit.core.StatusParticao;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.shape.Circle;
-import static br.com.fulltime.fullarm.simulador.infinit.core.StatusParticao.*;
 
 public class ParticaoCircle extends CircleStatus {
 
 
-    private SetColor setarcor = new SetColor();
     private  String statusarmado;
-    private StatusParticao statusParticao = StatusParticao.Desarmado;
 
     public ParticaoCircle(Circle circle, int numeroidentificador) {
         super(circle, numeroidentificador);
     }
-
-
-    public String alterarStatusParticao(String zonaaberta){
-            switch (statusParticao) {
-                case Desarmado:
-                    if (armarParticao(zonaaberta)) {
-                        setarcor.alterarCorVermelha(circle);
-                        statusParticao = Armado;
-                        return "Armado";
-                    }
-                    break;
-                case Armado:
-                    setarcor.alterarCorVerde(circle);
-                    statusParticao = Desarmado;
-                    return "Desarmado";
-            }
-            return  "Armação Cancelada";
-    }
-
 
     public boolean armarParticao(String zonaaberta){
 
@@ -51,7 +28,7 @@ public class ParticaoCircle extends CircleStatus {
         }
         else {
             return true;
-        }
+    }
         return  false;
     }
 
@@ -67,17 +44,10 @@ public class ParticaoCircle extends CircleStatus {
         return statusarmado;
     }
 
-    public void reiniciarParticao(){
-        statusParticao = Desarmado;
-        setarcor.alterarCorVerde(circle);
-    }
 
     @Override
     public String toString() {
         return super.toString();
     }
 
-    public StatusParticao getStatusParticao() {
-        return statusParticao;
-    }
 }

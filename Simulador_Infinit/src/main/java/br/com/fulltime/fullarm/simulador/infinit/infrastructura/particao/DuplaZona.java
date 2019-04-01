@@ -44,7 +44,8 @@ public class DuplaZona {
 
        byte[] pacoteAEnviar = bitSet.toByteArray();
 
+       System.out.print(bitSet.toString());
        statuszonaparaservidor = new String(pacoteAEnviar);
        return statuszonaparaservidor;
-    }
-}
+        }
+        }
