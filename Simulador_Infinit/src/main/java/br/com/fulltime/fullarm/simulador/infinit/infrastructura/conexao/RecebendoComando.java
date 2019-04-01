@@ -12,6 +12,7 @@ import br.com.fulltime.fullarm.simulador.infinit.application.controles.Mensagem;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class RecebendoComando {
@@ -26,6 +27,7 @@ public class RecebendoComando {
     private Label labeldesconectado;
     private Particao particao1;
     private Particao particao2;
+    private PrintStream saida;
     private PGM pgm;
     private String primeirodigito,seguendodigito;
     private String linha;
@@ -36,7 +38,8 @@ public class RecebendoComando {
 
 
     public void definirResposta (InputStream entrada, Terminal terminal, EsconderPane esconderPane,
-                                 ConectadoCircle conectado, Label labeldesconectado, Particao particao1,Particao particao2, PGM pgm) {
+                                 ConectadoCircle conectado, Label labeldesconectado, Particao particao1,
+                                 Particao particao2, PGM pgm , PrintStream saida) {
         this.entrada = entrada;
         this.terminal = terminal;
         this.esconderPane = esconderPane;
@@ -44,6 +47,7 @@ public class RecebendoComando {
         this.labeldesconectado = labeldesconectado;
         this.particao1 = particao1;
         this.particao2 = particao2;
+        this.saida = saida;
         listaparticao.add(particao1);
         listaparticao.add(particao2);
         this.pgm = pgm;
@@ -64,21 +68,20 @@ public class RecebendoComando {
                     linha = tradutor.traduzirCodigoHex(linha);
 
                     terminal.printResposta(linha);
-                    Platform.runLater(() -> {
-                       try {
-                            primeirodigito = linha.substring(0,1);
-                            i=0;
-                            switch (primeirodigito) {
-                                case "-":
-                                    desconecteServidor();
-                                    break;
-                                case "W":
-                                    diferenciadorPGMParticao();
-                                    break;
 
+                    try {
+                        primeirodigito = linha.substring(0,1);
+                        i=0;
+                        switch (primeirodigito) {
+                            case "-":
+                                desconecteServidor();
+                                break;
+                            case "W":
+                                diferenciadorPGMParticao();
+                                break;
                             }
-                        }catch (Exception ignorarr){}
-                    });
+                    }catch (Exception ignorarr){}
+
                 }
             }
 
@@ -107,50 +110,86 @@ public class RecebendoComando {
             case "S":
                 pedirStatusParticao();
                 break;
-            case "E":
+            case "A":
                 armaParticao();
+                break;
+            case "D":
+                desarmeParticao();
+                break;
+            case "P":
+                mapaParticaoSetor();
+                break;
             default:
                 alterarPGM();
         }
     }
 
     public void pedirStatusParticao(){
-        if(linha.length() == 4){
-            numeroidentificador = linha.substring(2,3);
-            for (Particao particao: listaparticao) {
-                i++;
-                if(i==Integer.valueOf(numeroidentificador)){
-                    particao.statusParticao();
-                }
-            }
-        }
-        else {
-            numeroidentificador = linha.substring(2,4);
-            for (Particao particao: listaparticao) {
-                i++;
-                if(i==Integer.valueOf(numeroidentificador)){
-                    particao.statusParticao();
-                }
+        separaNumeroIdetificador();
+        for (Particao particao: listaparticao) {
+            i++;
+            if(i==Integer.valueOf(numeroidentificador)){
+                particao.desarmaParticao();
             }
         }
     }
     public void armaParticao(){
-        if(linha.length() == 4){
-            numeroidentificador = linha.substring(2,3);
-        }
-        else {
-            numeroidentificador = linha.substring(2,4);
+        separaNumeroIdetificador();
+        for (Particao particao: listaparticao) {
+            i++;
+            if(i==Integer.valueOf(numeroidentificador)){
+                particao.armarParticao();
+                break;
+            }
         }
 
     }
     public void alterarPGM(){
         if(linha.length() == 4){
-            numeroidentificador = linha.substring(2,3);
+            numeroidentificador = linha.substring(1,2);
+            pedidoservidorpgm = linha.substring(2,3);
+        }
+        else {
+            numeroidentificador = linha.substring (1,3);
             pedidoservidorpgm = linha.substring(3,4);
+        }
+        switch (pedidoservidorpgm){
+            case "S":
+                String text =(pgm.statusPGM(numeroidentificador));
+                terminal.printTerminal(text);
+                saida.print(text);
+                break;
+            case "E":
+                String text1 =(pgm.alterarStatusServidor(numeroidentificador));
+                terminal.printTerminal(text1);
+                saida.print(text1);
+                break;
+        }
+    }
+    public void desarmeParticao(){
+        separaNumeroIdetificador();
+        for (Particao particao: listaparticao) {
+            i++;
+            if(i==Integer.valueOf(numeroidentificador)){
+                particao.desarmaParticao();
+                break;
+            }
+        }
+    }
+
+    public void mapaParticaoSetor(){
+        for (Particao particao: listaparticao) {
+            particao.statusParticao();
+        }
+    }
+
+    public void separaNumeroIdetificador() {
+        if(linha.length() == 4){
+            numeroidentificador = linha.substring(2,3);
+
         }
         else {
             numeroidentificador = linha.substring(2,4);
-            pedidoservidorpgm = linha.substring(4,5);
         }
     }
 

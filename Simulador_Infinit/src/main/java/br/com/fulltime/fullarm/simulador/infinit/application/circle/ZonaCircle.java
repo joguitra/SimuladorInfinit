@@ -15,7 +15,8 @@ public class ZonaCircle extends CircleStatus {
      private Line tamper;
      private Boolean statustamper = false;
      private Boolean statusinibido = false;
-     private Boolean statusarmado = false;
+     private Boolean statusmemoria = false;
+     private Boolean statusaberto = false;
 
 
     public ZonaCircle(Circle circle, int numeroidentificador) {
@@ -24,19 +25,20 @@ public class ZonaCircle extends CircleStatus {
 
     public void reiniciarzona(){
         tamper.setVisible(false);
-        statustamper=false;
+        statustamper = false;
         statusinibido = false;
+        statusaberto = false;
 
         alterarStatusEspecificoZona(Fechado);
 
     }
 
     public void zonaArmada(){
-        statusarmado =true;
+        statusmemoria =true;
     }
 
     public void zonaDesarmada(){
-        statusarmado = false;
+        statusmemoria = false;
     }
 
     public void adicinarTamper(Line tamper){
@@ -60,17 +62,17 @@ public class ZonaCircle extends CircleStatus {
             case Fechado:
                 setarcor.alterarCorVermelha(circle);
                 status= Aberto;
+                statusaberto = true;
                 statusinibido =false;
                 break;
             case Aberto:
                 setarcor.alterarCorVerde(circle);
                 statusinibido =false;
+                statusaberto = false;
                 status = Fechado;
                 break;
         }
     }
-
-
 
     public void alterarStatusEspecificoZona(StatusZona statusespecifico){
         switch (statusespecifico){
@@ -88,7 +90,6 @@ public class ZonaCircle extends CircleStatus {
                 break;
             }
     }
-
 
     public void ativarPing(){
         ScaleTransition scaleTransition = new ScaleTransition();
@@ -109,12 +110,15 @@ public class ZonaCircle extends CircleStatus {
         return statustamper;
     }
 
-
     public Boolean getStatusinibido() {
         return statusinibido;
     }
 
-    public Boolean getStatusarmado() {
-        return statusarmado;
+    public Boolean getStatusmemoria() {
+        return statusmemoria;
+    }
+
+    public Boolean getStatusaberto() {
+        return statusaberto;
     }
 }

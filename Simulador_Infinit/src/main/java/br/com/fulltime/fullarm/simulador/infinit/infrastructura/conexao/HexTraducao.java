@@ -3,15 +3,12 @@ package br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao;
 public class HexTraducao {
 
     public int i;
-    private String codigotraduzido;
-    private String partecodigo;
-    private String codigorescrito;
-    private String numerohexdecimal;
-    public String traduzirCodigoHex(String codigosemtraducao){
 
+    public String traduzirCodigoHex(String codigosemtraducao){
+            String codigotraduzido = new String();
             for (i=0; i<=codigosemtraducao.length();i++ ) {
                 try {
-                    partecodigo = codigosemtraducao.substring(i, i + 1);
+                     String partecodigo = codigosemtraducao.substring(i, i + 1);
                     switch (partecodigo) {
                         case ":":
                             partecodigo = "A";
@@ -46,6 +43,7 @@ public class HexTraducao {
         }
 
         public String convertorHexDecimal (int numerodecimal){
+            String numerohexdecimal = new String();
             switch (numerodecimal) {
                 case 10:
                     numerohexdecimal = "A";
@@ -71,7 +69,9 @@ public class HexTraducao {
             return  numerohexdecimal;
         }
         public String rescritaHexCodigo (String codigonormal){
-            for (i=0; i<=codigonormal.length();i++ ) {
+        String partecodigo = new String();
+        String codigorescrito = new String();
+        for (i=0; i<=codigonormal.length();i++ ) {
                 try {
                     partecodigo = codigonormal.substring(i, i + 1);
                     switch (partecodigo) {

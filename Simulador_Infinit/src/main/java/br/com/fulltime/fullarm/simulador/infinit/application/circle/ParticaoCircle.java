@@ -35,7 +35,8 @@ public class ParticaoCircle extends CircleStatus {
             return  "Armação Cancelada";
     }
 
-    private boolean armarParticao(String zonaaberta){
+
+    public boolean armarParticao(String zonaaberta){
 
         if(condicaoArma(zonaaberta) != null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

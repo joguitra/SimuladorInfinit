@@ -26,4 +26,9 @@ public abstract class CircleStatus {
         return numeroidentificador;
     }
 
+    public String getNumeroidentificadorString(){
+        return String.valueOf(numeroidentificador);
+    }
+
+
 }

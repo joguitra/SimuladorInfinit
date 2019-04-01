@@ -1,4 +1,4 @@
-package br.com.fulltime.fullarm.simulador.infinit;
+package br.com.fulltime.fullarm.simulador.infinit.application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public  class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Parent root = FXMLLoader.load(getClass().getResource("../../../../../../../resources/Interface.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../../../../../../../../resources/Interface.fxml"));
         Scene scene =new Scene(root, 720, 650);
         primaryStage.setTitle("Simulador de Painel");
         primaryStage.setScene(scene);

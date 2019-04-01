@@ -91,7 +91,7 @@ public class Conexao {
 
     public void recebendoResposta ()  {
         Thread recebercomando = new Thread( ()-> {
-            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,particao1,particao2,pgm);
+            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,particao1,particao2,pgm,saida);
             recebendoComando.receberResposta();
     });
         recebercomando.start();
@@ -110,7 +110,7 @@ public class Conexao {
         Thread keeplive = new Thread(()->{
             try {
                 Thread.sleep(millis);
-            while (!desconetado) {
+                while (!desconetado) {
                     saida.print("@");
                     terminal.printTerminal("@");
                     Thread.sleep(millis);

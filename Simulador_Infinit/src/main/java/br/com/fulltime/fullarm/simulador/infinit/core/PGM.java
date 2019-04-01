@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class PGM {
     private PGMCircle pgmcircle;
     private ArrayList<PGMCircle> listapgm = new ArrayList();
-    private Boolean acionado;
+    private Boolean acionado = false;
     private String numeroidentificador;
 
     public void adicionarPGM(Circle circle , int numeropgm){
@@ -16,18 +16,41 @@ public class PGM {
         listapgm.add(pgmcircle);
     }
 
-    public String alterarStatus(Circle circle){
-        for (PGMCircle pgm:listapgm) {
-            if(circle.equals(pgm.getCircle())) {
-                acionado = pgm.alterarStatusPGM(circle);
+    public String alterarStatus(Circle circle) {
+        for (PGMCircle pgm : listapgm) {
+            if (circle.equals(pgm.getCircle())) {
+                acionado = pgm.alterarStatusPGM();
                 numeroidentificador = String.valueOf(pgm);
+                return statusPGM(String.valueOf(numeroidentificador));
+            }
+        }
+
+        return null;
+    }
+
+    public String alterarStatusServidor(String numeroidentificador){
+         for (PGMCircle  pgm : listapgm) {
+            if (numeroidentificador.equals(pgm.getNumeroidentificadorString())) {
+                pgm.alterarStatusPGM();
+                return  "W"+numeroidentificador+"RP";
+            }
+        }
+         return null;
+    }
+
+    public String statusPGM(String numeroidentificador){
+        for (PGMCircle pgm :listapgm) {
+            if(numeroidentificador.equals(pgm.getNumeroidentificadorString())){
+                acionado = pgm.getAcionado();
                 break;
             }
         }
-        if(acionado) return "W"+numeroidentificador+"OR";
 
-        if(!acionado) return  "W"+numeroidentificador+"CR";
-                return null;
+        if(acionado) { return "W"+numeroidentificador+"OP";}
+
+        if(!acionado){ return "W"+numeroidentificador+"CP";}
+
+        return null;
     }
 
     public void  resetPGM(){

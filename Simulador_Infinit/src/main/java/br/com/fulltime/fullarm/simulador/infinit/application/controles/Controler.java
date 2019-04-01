@@ -302,13 +302,6 @@ public class Controler implements Initializable {
 
     @FXML
     void digitarImei(KeyEvent event) {
-        String regexNumero = "\\d+";
-        tfimei.textProperty().addListener( (observableList, valorAntigo, novoValor) -> {
-            boolean ehNumero = novoValor.matches(regexNumero);
-            if( !ehNumero ){
-                tfimei.setText(valorAntigo);
-            }
-        });
     }
 
     @FXML
@@ -813,8 +806,8 @@ public class Controler implements Initializable {
             String codigo =formarcontactid.formacodigoCompleto(particao1.alterarStatusParticao(),particao1.toString());
             if(codigo.length()>3) {
 
-                if(codigo.substring(4,5).equals("3")) { imagemview1.setImage(new Image("fechado.jpg"));}
-                if(codigo.substring(4,5).equals("1")) {imagemview1.setImage(new Image("cadeado.jpg"));}
+//                if(codigo.substring(4,5).equals("3")) { imagemview1.setImage(new Image("fechado.jpg"));}
+//                if(codigo.substring(4,5).equals("1")) {imagemview1.setImage(new Image("cadeado.jpg"));}
                 conexao.printSaida(codigo);
                 terminal.printTerminal(codigo);
             }
@@ -823,8 +816,8 @@ public class Controler implements Initializable {
         if(trocarzona == 2){
             String codigo =formarcontactid.formacodigoCompleto(particao2.alterarStatusParticao(),particao2.toString());
             if(codigo.length()>3) {
-                if(codigo.substring(4,5).equals("3")) { imagemview2.setImage(new Image("fechado.jpg"));}
-                if(codigo.substring(4,5).equals("1")) {imagemview2.setImage(new Image("cadeado.jpg"));}
+//                if(codigo.substring(4,5).equals("3")) { imagemview2.setImage(new Image("fechado.jpg"));}
+//                if(codigo.substring(4,5).equals("1")) {imagemview2.setImage(new Image("cadeado.jpg"));}
                 conexao.printSaida(codigo);
                 terminal.printTerminal(codigo);
             }
@@ -863,8 +856,8 @@ public class Controler implements Initializable {
         statusconectar = new ConectadoCircle(efzconectado,1);
         statusconectar.definirLabel(lconctado);
 
-        particao1 = new Particao(efparticao,1);
-        particao2= new Particao(efparticao2,2);
+        particao1 = new Particao(efparticao,1,imagemview1);
+        particao2= new Particao(efparticao2,2,imagemview2);
 
         pgm1.adicionarPGM(efzp1,1);
         pgm1.adicionarPGM(efzp2,2);
