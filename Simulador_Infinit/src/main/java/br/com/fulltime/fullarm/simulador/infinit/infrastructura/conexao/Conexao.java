@@ -2,6 +2,7 @@ package br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao;
 
 import br.com.fulltime.fullarm.simulador.infinit.core.PGM;
 import br.com.fulltime.fullarm.simulador.infinit.core.Particao;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ConectadoCircle;
 import br.com.fulltime.fullarm.simulador.infinit.application.controles.EsconderPane;
@@ -29,6 +30,8 @@ public class Conexao {
     private Particao particao1;
     private Particao particao2;
     private PGM pgm;
+    private Button btndesconectar;
+    private boolean conectaservidor;
     private ChoiceBox<String> tipodconexao;
     private  int portanumerica;
     private  String ipnumerico;
@@ -44,7 +47,7 @@ public class Conexao {
     public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
                           EsconderPane esconderPane, Label labeldesconectado, ConectadoCircle conectado,
                           TextField imei , ChoiceBox<String> tipodeconexao,
-                          Particao particao1,Particao particao2, PGM pgm){
+                          Particao particao1,Particao particao2, PGM pgm, Button btndesconectar){
         this.tipodconexao = tipodeconexao;
         this.ip = ip;
         this.porta = porta;
@@ -58,6 +61,8 @@ public class Conexao {
         this.particao2 = particao2;
         this.particao1 = particao1;
         this.pgm = pgm;
+        this.btndesconectar = btndesconectar;
+        this.conectaservidor = conectaservidor;
         this.tipodconexao = tipodconexao;
     }
 
@@ -91,7 +96,7 @@ public class Conexao {
 
     public void recebendoResposta ()  {
         Thread recebercomando = new Thread( ()-> {
-            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,particao1,particao2,pgm,saida);
+            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,particao1,particao2,pgm,saida,btndesconectar);
             recebendoComando.receberResposta();
     });
         recebercomando.start();
@@ -127,6 +132,7 @@ public class Conexao {
         esconderPane.esconderIniciacao();
         conectado.alterarStatusDesconectado();
         socket.close();
+        setConectaservidor(false);
         return false;
     }
     public String convertohexdecimal(String codigodesconvertido){
@@ -134,4 +140,18 @@ public class Conexao {
 //        return  tradutor.formatHexString(tradutor.hexStringToBytes(codigodesconvertido));
     }
 
+    public boolean getConectarservidor(){
+        return recebendoComando.getConectarservidor();
+    }
+
+    public void setConectaservidor(boolean conectaservidor){
+        recebendoComando.setConectarservidor(conectaservidor);
+    }
+    public boolean getReconectar(){
+        return recebendoComando.getReconectar();
+    }
+
+    public void setReconectar(boolean reconectar){
+        recebendoComando.setReconctar(reconectar);
+    }
 }

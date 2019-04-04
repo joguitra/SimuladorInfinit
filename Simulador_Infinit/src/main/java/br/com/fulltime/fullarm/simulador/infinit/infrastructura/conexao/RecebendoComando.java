@@ -5,6 +5,7 @@ import br.com.fulltime.fullarm.simulador.infinit.application.terminal.Terminal;
 import br.com.fulltime.fullarm.simulador.infinit.core.PGM;
 import br.com.fulltime.fullarm.simulador.infinit.core.Particao;
 import javafx.application.Platform;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import br.com.fulltime.fullarm.simulador.infinit.application.controles.EsconderPane;
 import br.com.fulltime.fullarm.simulador.infinit.application.controles.Mensagem;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 public class RecebendoComando {
 
 
-    private boolean desconetado;
+    private boolean conectarservidor,reconctar = true;
     private HexTraducao tradutor = new HexTraducao();
     private InputStream entrada;
     private Terminal terminal;
@@ -28,6 +29,7 @@ public class RecebendoComando {
     private Particao particao1;
     private Particao particao2;
     private PrintStream saida;
+    private Button desconectar;
     private PGM pgm;
     private String primeirodigito,seguendodigito;
     private String linha;
@@ -37,9 +39,10 @@ public class RecebendoComando {
     private int i;
 
 
+
     public void definirResposta (InputStream entrada, Terminal terminal, EsconderPane esconderPane,
                                  ConectadoCircle conectado, Label labeldesconectado, Particao particao1,
-                                 Particao particao2, PGM pgm , PrintStream saida) {
+                                 Particao particao2, PGM pgm , PrintStream saida, Button btndesconectar) {
         this.entrada = entrada;
         this.terminal = terminal;
         this.esconderPane = esconderPane;
@@ -48,6 +51,7 @@ public class RecebendoComando {
         this.particao1 = particao1;
         this.particao2 = particao2;
         this.saida = saida;
+        this.desconectar = btndesconectar;
         listaparticao.add(particao1);
         listaparticao.add(particao2);
         this.pgm = pgm;
@@ -55,7 +59,7 @@ public class RecebendoComando {
 
     public void receberResposta(){
         try {
-            while (!desconetado) {
+            while (!conectarservidor) {
 
 
                 int qtdBytesDisponiveis = entrada.available();
@@ -80,7 +84,7 @@ public class RecebendoComando {
                                 break;
                             }
                     }catch (Exception ignorarr){}
-
+                    break;
                 }
             }
 
@@ -91,11 +95,13 @@ public class RecebendoComando {
 
 
     public void desconecteServidor(){
-        desconetado = true;
+        conectarservidor = false;
+        reconctar=true;
         terminal.limparTerminal();
         esconderPane.esconderIniciacao();
         labeldesconectado.setVisible(true);
         Platform.runLater(() -> {
+            desconectar.setText("Conectar");
             conectado.alterarStatusDesconectado();
             Mensagem mensagem = new Mensagem();
             mensagem.mensagemDesconectado();
@@ -144,7 +150,6 @@ public class RecebendoComando {
         terminal.printTerminal(resposta);
         saida.print(resposta);
     }
-
 
 
     public void armaParticao(){
@@ -224,6 +229,17 @@ public class RecebendoComando {
         }
     }
 
-
+    public boolean getConectarservidor() {
+        return conectarservidor;
+    }
+    public void setConectarservidor(boolean conectarservidor){
+        this.conectarservidor=conectarservidor;
+    }
+    public boolean getReconectar() {
+        return reconctar;
+    }
+    public void setReconctar(boolean reconctar){
+        this.reconctar=reconctar;
+    }
 
 }

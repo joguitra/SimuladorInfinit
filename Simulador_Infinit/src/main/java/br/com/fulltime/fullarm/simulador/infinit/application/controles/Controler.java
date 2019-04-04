@@ -43,6 +43,7 @@ public class Controler implements Initializable {
     private PGM pgm1 = new PGM();
     private ConectadoCircle statusconectar;
     private Mensagem mensagem = new Mensagem();
+    private  boolean primeiro = true;
 
     @FXML
     private TextField tfimei;
@@ -763,12 +764,15 @@ public class Controler implements Initializable {
     void btconectar(ActionEvent event)  {
         try {
 
-            if(!conectado) {
+            if(!conexao.getConectarservidor()) {
 
-                conectado = conexao.conectarServidor();
-                conexao.recebendoResposta();
-                conexao.enviarIMEI();
-                conectado = conexao.auntetificarConta();
+                if(conexao.getReconectar()) {
+                    conectado = conexao.conectarServidor();
+                    conexao.recebendoResposta();
+                    conexao.enviarIMEI();
+                    conectado = conexao.auntetificarConta();
+                    conexao.setReconectar(false);
+                }
 
                 if(conectado){
                     esconderpane.mostarPaneConexao();
@@ -781,21 +785,23 @@ public class Controler implements Initializable {
                     statusconectar.alterarStatusConectado();
                     terminal.limparTerminal();
                     btnconectar.setText("Desconectar");
+                    conexao.setReconectar(false);
+                    conectado=false;
 
                 }else {
-                    conectado=false;
-                    mensagem.messagemErroAuntetificar();
-                    conectado =conexao.desconectarServidor();
+                    conexao.setReconectar(true);
+                    conexao.desconectarServidor();
                     btnconectar.setText("Conectar");
+                    mensagem.mensagemDesconectado();
                 }
             }else {
+                conexao.setReconectar(true);
                 mensagem.mensagemDesconectado();
-                conectado = conexao.desconectarServidor();
+                conexao.desconectarServidor();
                 btnconectar.setText("Conectar");
 
             }
         } catch (IOException erroservidor) {
-            conectado = false;
             mensagem.mensagemErroConectar();
         }
 }
@@ -877,7 +883,7 @@ public class Controler implements Initializable {
 
         terminal.definirTerminal(taterminal);
 
-        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao,particao1,particao2,pgm1);
+        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao,particao1,particao2,pgm1,btnconectar);
 
         esconderpane.definirPane(paneprincipal,panelog,panepesquisa);
         esconderpane.definirParticao(panezona,panezona2,lparticao,imagemview1,imagemview2,efzping);
