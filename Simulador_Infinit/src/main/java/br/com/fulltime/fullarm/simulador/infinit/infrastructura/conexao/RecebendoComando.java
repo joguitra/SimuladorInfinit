@@ -125,22 +125,24 @@ public class RecebendoComando {
 
     public void pedirStatusParticao(){
         separaNumeroIdetificador();
-
+        String resposta = "";
+        boolean iniciocomando = true;
         for (Particao particao: listaparticao) {
             if(numeroidentificador.equals("0")) {
-                String resposta= particao.statusParticao();
-                terminal.printTerminal(resposta);
-                saida.print(resposta);
+                resposta += particao.statusParticao(iniciocomando);
+                iniciocomando = false;
             }
             else{
                 i++;
                 if (i == Integer.valueOf(numeroidentificador)) {
-                    String resposta= particao.statusParticao();
+                    resposta= particao.statusParticao(iniciocomando);
                    terminal.printTerminal(resposta);
                    saida.print(resposta);
                 }
             }
         }
+        terminal.printTerminal(resposta);
+        saida.print(resposta);
     }
 
 

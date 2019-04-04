@@ -33,8 +33,15 @@ public class Particao  {
     }
 
 
-    public String statusParticao(){
-        String codigo = "S";
+    public String statusParticao(boolean primeiro){
+        String codigo = new  String();
+        if(primeiro) {
+           codigo = "S";
+        }
+        else {
+            codigo ="";
+        }
+
         for (DuplaZona duplazona:listaduplazonas) {
             byte[] dado =(duplazona.statusZonaHexDecimalCompleto());
             codigo += hextraducao.formatHexString(dado);
