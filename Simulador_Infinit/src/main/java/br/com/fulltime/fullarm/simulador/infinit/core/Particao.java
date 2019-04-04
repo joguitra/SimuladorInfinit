@@ -2,6 +2,7 @@ package br.com.fulltime.fullarm.simulador.infinit.core;
 
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ParticaoCircle;
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ZonaCircle;
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao.HexTraducao;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.DuplaZona;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,7 +20,7 @@ public class Particao  {
     private ParticaoCircle particaocircle;
     private ImageView image;
     private Boolean statusarmada =false,statusmemoria =false,statushabilitar=true, statuspronta=true;
-
+    private HexTraducao hextraducao= new HexTraducao();
 
     public Particao (Circle circle ,int numeroindetificador , ImageView image){
         this.image = image;
@@ -32,21 +33,24 @@ public class Particao  {
     }
 
 
-    public void statusParticao(){
-
-        BitSet bitSet = BitSet.valueOf(new byte[4]);
-        bitSet.set(0, statusarmada);
-        bitSet.set(1, statushabilitar);
-        bitSet.set(2, statuspronta);
-        bitSet.set(3, statusmemoria);
-
-        System.out.print(bitSet.toString());
-
+    public String statusParticao(){
+        String codigo = "S";
         for (DuplaZona duplazona:listaduplazonas) {
-            System.out.print(duplazona.statusZonaHexDecimalCompleto());
-
+            byte[] dado =(duplazona.statusZonaHexDecimalCompleto());
+            codigo += hextraducao.formatHexString(dado);
         }
+        return  codigo;
     }
+
+    public String erroArmeDesarme (){
+        String codigo = new String();
+        for (DuplaZona duplazona:listaduplazonas) {
+            byte[] dado =(duplazona.statusZonaHexDecimalCompleto());
+            codigo += hextraducao.formatHexString(dado);
+        }
+        return codigo;
+    }
+
 
     public void alterarZonaInibida(Circle circle){
         for (DuplaZona duplaZona:listaduplazonas) {
@@ -86,6 +90,7 @@ public class Particao  {
         for (DuplaZona duplazona :listaduplazonas) {
             for (ZonaCircle zona:duplazona.getZona()){
               zona.alterarStatusEspecificoZona(statuszona);
+
             }
         }
     }
@@ -107,6 +112,33 @@ public class Particao  {
         return zonasstatusaberta;
     }
 
+    public String printStatus(Particao particao){
+        String codigo = new String();
+        if(particao.getStatusarmada()){
+            codigo = "1" ;
+        }else {
+            codigo ="0";
+        }
+        if(particao.getStatushabilitar()){
+            codigo += "1" ;
+        }else {
+            codigo +="0";
+        }
+        if(particao.getStatuspronta()){
+            codigo += "1" ;
+        }else {
+            codigo +="0";
+        }
+        if(particao.getStatusmemoria()){
+            codigo += "1" ;
+        }else {
+            codigo +="0";
+        }
+
+        return codigo;
+
+    }
+
 
 
     public  Boolean alterarStatusParticao(){
@@ -124,7 +156,7 @@ public class Particao  {
        return  null;
     }
 
-    public String armarParticao(){
+    public boolean armarParticao(){
         boolean armado =particaocircle.armarParticao(checkoutZonaAberta());
         if(armado) {
             image.setImage(new Image("fechado.jpg"));
@@ -134,10 +166,9 @@ public class Particao  {
                     zona.zonaDesarmada();
                 }
             }
-            return "Armado";
+            return true;
         }
-        return null;
-
+        return false;
     }
 
     public String desarmaParticao(){
@@ -203,6 +234,16 @@ public class Particao  {
             }
     }
 
+    public String mapParticao (){
+        String maparticao = "";
+        for (DuplaZona duplazona:listaduplazonas) {
+            for (ZonaCircle zona:duplazona.getZona()) {
+                maparticao+=particaocircle.getNumeroidentificador();
+            }
+
+        }
+        return maparticao;
+    }
     @Override
     public String toString() {
         return String.valueOf(particaocircle);

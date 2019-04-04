@@ -1,0 +1,298 @@
+﻿
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: ╔══════════════════════════════╗
+
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: Executando a sequência desarmar. Pedindo status da partição...
+
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: Enviando comando pedir status das partições: [57 45 00 41] WE0A
+
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: Recebido pacote de resposta de status das partições: [57 53 01 01 01 00] WS1110
+
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: Partição está armada. Enviando comando de desarmar...
+
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: Enviando comando desarmar partição: [57 44 01 46] WD1F
+
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: Recebido pacote de resposta OK de desarmar partição: [44 4F 01 00 01 00] DO1010
+
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: Solicitando status das zonas...
+
+11:19:17
+28/03/2019 14:19:17 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46] WS0F
+
+11:19:18
+28/03/2019 14:19:18 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00] S 32 e 0
+
+11:19:18
+28/03/2019 14:19:18 Painel 1,E: Sequência desarmar bem-sucedida. Partição desarmada.
+
+11:19:18
+28/03/2019 14:19:18 Painel 1,E: ╚══════════════════════════════╝
+
+11:19:22
+28/03/2019 14:19:22 Painel 1,E: ╔══════════════════════════════╗
+
+11:19:22
+28/03/2019 14:19:22 Painel 1,E: Executando a sequência arme com checagens. Pedindo status das partições...
+
+11:19:22
+28/03/2019 14:19:22 Painel 1,E: Enviando comando pedir status das partições: [57 45 00 41] WE0A
+
+11:19:22
+28/03/2019 14:19:22 Painel 1,E: Recebido pacote de resposta de status das partições: [57 53 01 00 01 00] WS1010
+
+11:19:22
+28/03/2019 14:19:22 Painel 1,E: A partição encontra-se desarmada.
+
+11:19:22
+28/03/2019 14:19:22 Painel 1,E: Pedindo status das zonas...
+
+11:19:22
+28/03/2019 14:19:22 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46] WS0F
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00] S 32 0
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Condição verificada: nem todas as zonas ficarão inibidas. Verificando se existem zonas abertas que não serão inibidas...
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Condição verificada: nenhuma zona aberta e que não ficará inibida.
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Solicitando arme da partição...
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Enviando comando armar partição: [57 41 01 46]WA1F
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Recebido pacote de resposta OK de armar partição: [41 4F 01 01 01 00]AO1110
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Solicitando status das zonas...
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46]WS0F
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]  S 32 0
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: Sequência arme com checagens bem-sucedida. Partição armada.
+
+11:19:23
+28/03/2019 14:19:23 Painel 1,E: ╚══════════════════════════════╝
+
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: ╔══════════════════════════════╗
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Executando a sequência arme inibindo setores. Pedindo status das partições...
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Enviando comando pedir status das partições: [57 45 00 41] WE0A
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Recebido pacote de resposta de status das partições: [57 53 01 00 01 00] WS1010
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: A partição encontra-se desarmada.
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Pedindo status das zonas...
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46]WS0F
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]S 32 e 0
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Condição verificada: nem todas as zonas ficarão inibidas. Verificando se existem zonas abertas que não serão inibidas...
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Condição verificada: nenhuma zona aberta e que não ficará inibida.
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Solicitando inibição das zonas [1, 56]... 1 V
+
+11:21:33
+28/03/2019 14:21:33 Painel 1,E: Enviando comando inibir zonas: [57 42 01 00 00 00 00 00 80 00 46] WB100000 80 0F
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Recebido pacote de resposta de inibir zonas: [42] B
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Zonas (talvez) inibidas. Verificando...
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46] WS0F
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]S2 31 e0
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: As seguintes zonas não puderam ser inibidas: [56]. V
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Desinibindo setores [1, 56] (rollback)... 0V
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Enviando comando desinibir zonas: [57 55 01 00 00 00 00 00 80 00 46] WB10000 80 0F
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Recebido pacote de resposta de desinibir zonas: [55] U
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46] WS0F
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00] S 32 e0
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: Erro. Nem todas as zonas puderam ser inibidas.
+
+11:21:34
+28/03/2019 14:21:34 Painel 1,E: ╚══════════════════════════════╝
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: ╔══════════════════════════════╗
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Executando a sequência arme inibindo setores. Pedindo status das partições...
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Enviando comando pedir status das partições: [57 45 00 41] WE0A
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Recebido pacote de resposta de status das partições: [57 53 01 00 01 00] WS1010
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: A partição encontra-se desarmada.
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Pedindo status das zonas...
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46]WS0F
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00] S 32e0
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Condição verificada: nem todas as zonas ficarão inibidas. Verificando se existem zonas abertas que não serão inibidas...
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Condição verificada: nenhuma zona aberta e que não ficará inibida.
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Solicitando inibição das zonas [1, 4]...1,4
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Enviando comando inibir zonas: [57 42 09 00 00 00 00 00 00 00 46] WB900000046
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Recebido pacote de resposta de inibir zonas: [42]B
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Zonas (talvez) inibidas. Verificando...
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46]WS0F
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 02 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00] S 2 31e0
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Todas as zonas foram inibidas.
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Solicitando arme da partição...
+
+11:21:52
+28/03/2019 14:21:52 Painel 1,E: Enviando comando armar partição: [57 41 01 46]WA1F
+
+11:21:53
+28/03/2019 14:21:53 Painel 1,E: Recebido pacote de resposta OK de armar partição: [41 4F 01 01 01 00]AO1110
+
+11:21:53
+28/03/2019 14:21:53 Painel 1,E: Solicitando status das zonas...
+
+11:21:53
+28/03/2019 14:21:53 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46]WS0F
+
+11:21:53
+28/03/2019 14:21:53 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 02 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]S2 31e0
+
+11:21:53
+28/03/2019 14:21:53 Painel 1,E: Sequência arme inibindo setores bem-sucedida. Partição armada.
+
+11:21:53
+28/03/2019 14:21:53 Painel 1,E: ╚══════════════════════════════╝
+
+11:21:53
+28/03/2019 14:21:53 Painel 1,E: Recebido pacote de evento: [25 34 37 34 31 31 35 37 30 30 31 30 30 31 34 B6]%47411570010014
+
+11:21:53
+28/03/2019 14:21:53 Painel 1,E: Qualif. 1 Evento 570 partição 1 usuário/zona 1 contador 4
+
+11:21:54
+28/03/2019 14:21:54 Painel 1,E: Recebido pacote de evento: [25 34 37 34 31 31 35 37 30 30 31 30 30 34 35 B6]%47411570010045
+
+11:21:54
+28/03/2019 14:21:54 Painel 1,E: Qualif. 1 Evento 570 partição 1 usuário/zona 4 contador 5
+
+11:22:39
+28/03/2019 14:22:39 Painel 1,E: ╔══════════════════════════════╗
+
+11:22:39
+28/03/2019 14:22:39 Painel 1,E: Executando a sequência arme stay. Pedindo status das partições...
+
+11:22:39
+28/03/2019 14:22:39 Painel 1,E: Enviando comando pedir status das partições: [57 45 00 41]WE0A
+
+11:22:39
+28/03/2019 14:22:39 Painel 1,E: Recebido pacote de resposta de status das partições: [57 53 01 00 01 00]WS1010
+
+11:22:39
+28/03/2019 14:22:39 Painel 1,E: A partição encontra-se desarmada.
+
+11:22:39
+28/03/2019 14:22:39 Painel 1,E: Pedindo status das zonas...
+
+11:22:39
+28/03/2019 14:22:39 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46]WS0F
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]S 32e0
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: Condição verificada: nenhuma zona externa aberta e que não ficará inibida.
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: Solicitando arme stay da partição...
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: Recebido pacote de resposta OK de armar partição stay: [49 4F 01 01 01 00]IO1110
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: Solicitando status das zonas...
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: Enviando comando pedir status das zonas: [57 53 00 46]WS0F
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: Recebido pacote de resposta de status das zonas: [53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]S 32e0
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: Sequência arme stay bem-sucedida. Partição armada.
+
+11:22:40
+28/03/2019 14:22:40 Painel 1,E: ╚══════════════════════════════╝

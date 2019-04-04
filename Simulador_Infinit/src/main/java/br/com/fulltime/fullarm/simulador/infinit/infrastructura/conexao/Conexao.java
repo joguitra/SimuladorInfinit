@@ -81,12 +81,12 @@ public class Conexao {
             if (tipodconexao.getSelectionModel().getSelectedItem().equals("G - GPRS"))
                 usuariocompleto = "#" + usuario.getText() + "G";
         }catch (NullPointerException e) {return false;}
-        saida.print(usuariocompleto);
+        saida.print(convertohexdecimal(usuariocompleto));
         return true;
     }
 
     public void printSaida(String saidacodigo){
-        saida.print(saidacodigo);
+        saida.print(convertohexdecimal(saidacodigo));
     }
 
     public void recebendoResposta ()  {
@@ -99,7 +99,7 @@ public class Conexao {
     }
     public void enviarIMEI(){
         imei.getText();
-        saida.print("I"+imei.getText());
+        saida.print(convertohexdecimal("I"+imei.getText()));
     }
 
 
@@ -111,7 +111,7 @@ public class Conexao {
             try {
                 Thread.sleep(millis);
                 while (!desconetado) {
-                    saida.print("@");
+                    saida.print(convertohexdecimal("@"));
                     terminal.printTerminal("@");
                     Thread.sleep(millis);
 
@@ -128,6 +128,10 @@ public class Conexao {
         conectado.alterarStatusDesconectado();
         socket.close();
         return false;
+    }
+    public String convertohexdecimal(String codigodesconvertido){
+            return  codigodesconvertido;
+//        return  tradutor.formatHexString(tradutor.hexStringToBytes(codigodesconvertido));
     }
 
 }

@@ -1,5 +1,7 @@
 package br.com.fulltime.fullarm.simulador.infinit.application;
 
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao.HexTraducao;
+import com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

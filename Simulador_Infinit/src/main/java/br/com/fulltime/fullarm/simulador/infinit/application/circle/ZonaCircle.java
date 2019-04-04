@@ -79,6 +79,8 @@ public class ZonaCircle extends CircleStatus {
             case Aberto:
                 setarcor.alterarCorVermelha(circle);
                 status= Aberto;
+                statusinibido =false;
+                statusaberto =true;
                 break;
             case Inibido:
                 setarcor.alterarCorBranca(circle);
@@ -87,6 +89,8 @@ public class ZonaCircle extends CircleStatus {
             case Fechado:
                 setarcor.alterarCorVerde(circle);
                 status = Fechado;
+                statusinibido =false;
+                statusaberto = false;
                 break;
             }
     }
@@ -121,4 +125,6 @@ public class ZonaCircle extends CircleStatus {
     public Boolean getStatusaberto() {
         return statusaberto;
     }
+
+
 }

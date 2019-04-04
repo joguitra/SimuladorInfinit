@@ -65,7 +65,6 @@ public class RecebendoComando {
                     entrada.read(dado);
 
                     linha = new String(dado);
-                    linha = tradutor.traduzirCodigoHex(linha);
 
                     terminal.printResposta(linha);
 
@@ -126,24 +125,48 @@ public class RecebendoComando {
 
     public void pedirStatusParticao(){
         separaNumeroIdetificador();
+
         for (Particao particao: listaparticao) {
-            i++;
-            if(i==Integer.valueOf(numeroidentificador)){
-                particao.statusParticao();
+            if(numeroidentificador.equals("0")) {
+                String resposta= particao.statusParticao();
+                terminal.printTerminal(resposta);
+                saida.print(resposta);
+            }
+            else{
+                i++;
+                if (i == Integer.valueOf(numeroidentificador)) {
+                    String resposta= particao.statusParticao();
+                   terminal.printTerminal(resposta);
+                   saida.print(resposta);
+                }
             }
         }
     }
+
+
+
     public void armaParticao(){
         separaNumeroIdetificador();
         for (Particao particao: listaparticao) {
-            i++;
-            if(i==Integer.valueOf(numeroidentificador)){
-                particao.armarParticao();
-                break;
-            }
-        }
+              i++;
+              if(i==Integer.valueOf(numeroidentificador)){
+                    Boolean armacomsucesso = particao.armarParticao();
+                    String resposta = new String();
+                        if(armacomsucesso) {
+                            resposta ="AO" + particao.printStatus(particao);
+                            saida.print(resposta);
+                            terminal.printTerminal(resposta);
+                        }
+                        if(!armacomsucesso) {
+                            resposta = "AE" + particao.erroArmeDesarme();
+                            saida.print(resposta);
+                          terminal.printTerminal(resposta);
+                        }
+                    break;
+                    }
 
-    }
+              }
+        }
     public void alterarPGM(){
         if(linha.length() == 4){
             numeroidentificador = linha.substring(1,2);
@@ -171,6 +194,9 @@ public class RecebendoComando {
         for (Particao particao: listaparticao) {
             i++;
             if(i==Integer.valueOf(numeroidentificador)){
+                String resposta = "DO"+particao.printStatus(particao);
+                saida.print(resposta);
+                terminal.printTerminal(resposta);
                 particao.desarmaParticao();
                 break;
             }
@@ -178,9 +204,12 @@ public class RecebendoComando {
     }
 
     public void mapaParticaoSetor(){
+        String mapaparticao= "P";
         for (Particao particao: listaparticao) {
-            particao.statusParticao();
+            mapaparticao +=particao.mapParticao();
         }
+        terminal.printTerminal(mapaparticao);
+        saida.print(mapaparticao);
     }
 
     public void separaNumeroIdetificador() {
@@ -192,5 +221,7 @@ public class RecebendoComando {
             numeroidentificador = linha.substring(2,4);
         }
     }
+
+
 
 }
