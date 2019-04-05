@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Circle;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.BitSet;
 
@@ -33,29 +34,25 @@ public class Particao  {
     }
 
 
-    public String statusParticao(boolean primeiro){
-        String codigo = new  String();
-        if(primeiro) {
-           codigo = "S";
-        }
-        else {
-            codigo ="";
-        }
+    public byte[] statusParticao(){
+        ByteBuffer buffer = ByteBuffer.allocate(4);
 
         for (DuplaZona duplazona:listaduplazonas) {
             byte[] dado =(duplazona.statusZonaHexDecimalCompleto());
-            codigo += hextraducao.formatHexString(dado);
+            buffer.put(dado);
         }
+        byte[] codigo = buffer.array();
         return  codigo;
     }
 
-    public String erroArmeDesarme (){
-        String codigo = new String();
+    public byte[] erroArmeDesarme (){
+        ByteBuffer buffer = ByteBuffer.allocate(4);
         for (DuplaZona duplazona:listaduplazonas) {
             byte[] dado =(duplazona.statusZonaHexDecimalCompleto());
-            codigo += hextraducao.formatHexString(dado);
+            buffer.put(dado);
         }
-        return codigo;
+        byte[] codigo = buffer.array();
+        return  codigo;
     }
 
 
@@ -241,15 +238,16 @@ public class Particao  {
             }
     }
 
-    public String mapParticao (){
-        String maparticao = "";
+    public byte[] mapParticao (){
+        ByteBuffer buffer = ByteBuffer.allocate(8);
         for (DuplaZona duplazona:listaduplazonas) {
             for (ZonaCircle zona:duplazona.getZona()) {
-                maparticao+=particaocircle.getNumeroidentificador();
+                buffer.put(((Integer)particaocircle.getNumeroidentificador()).byteValue());
             }
 
         }
-        return maparticao;
+        byte[] resultado = buffer.array();
+        return  resultado;
     }
     @Override
     public String toString() {

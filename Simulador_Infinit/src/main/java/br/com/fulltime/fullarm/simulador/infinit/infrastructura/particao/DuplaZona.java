@@ -4,6 +4,7 @@ import br.com.fulltime.fullarm.simulador.infinit.application.circle.ZonaCircle;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.BitSet;
 
@@ -30,7 +31,7 @@ public class DuplaZona {
 
     public byte[] statusZonaHexDecimalCompleto() {
 
-        BitSet bitSet = BitSet.valueOf(new byte[8]);
+        BitSet bitSet = BitSet.valueOf(new byte[32]);
         bitSet.set(0, zona1.getStatusmemoria());
         bitSet.set(1, zona1.getStatusinibido());
         bitSet.set(2, zona1.getStatustamper());
@@ -41,6 +42,12 @@ public class DuplaZona {
         bitSet.set(7, zona2.getStatusaberto());
 
          byte[] pacoteAEnviar = bitSet.toByteArray();
+         if(pacoteAEnviar.length ==0){
+                 ByteBuffer buffer = ByteBuffer.allocate(1);
+                 buffer.put(((Integer)0).byteValue());
+                 pacoteAEnviar = buffer.array();
+
+         }
          return  pacoteAEnviar;
 
     }

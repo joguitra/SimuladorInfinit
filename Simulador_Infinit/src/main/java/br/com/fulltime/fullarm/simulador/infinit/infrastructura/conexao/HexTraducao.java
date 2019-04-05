@@ -1,5 +1,7 @@
 package br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao;
 
+import java.nio.ByteBuffer;
+
 import static javax.xml.bind.DatatypeConverter.printHexBinary;
 
 public class HexTraducao {
@@ -19,19 +21,54 @@ public class HexTraducao {
 
     public  byte[] hexStringToBytes(String rawData) {
         int len = rawData.length();
-        byte[] data = new byte[len / 2];
-        for (int i = 0; i < len; i += 2) {
-            data[i / 2] = (byte) ((Character.digit(rawData.charAt(i), 16) << 4)
-                    + Character.digit(rawData.charAt(i + 1), 16));
+        ByteBuffer buffer = ByteBuffer.allocate(len);
+        for (int i = 0; i < len; i += 1) {
+            String bytestring =rawData.substring(i,i+1);
+
+            switch (bytestring) {
+                case "0":
+                    buffer.put(((Integer)0).byteValue());
+                    break;
+                case "1":
+                    buffer.put(((Integer)1).byteValue());
+                    break;
+                case "2":
+                    buffer.put(((Integer)2).byteValue());
+                    break;
+                case "3":
+                    buffer.put(((Integer)3).byteValue());
+                    break;
+                case "4":
+                    buffer.put(((Integer)4).byteValue());
+                    break;
+                case "5":
+                    buffer.put(((Integer)5).byteValue());
+                    break;
+                case "6":
+                    buffer.put(((Integer)6).byteValue());
+                    break;
+                case "7":
+                    buffer.put(((Integer)7).byteValue());
+                    break;
+                case "8":
+                    buffer.put(((Integer)8).byteValue());
+                    break;
+                case "9":
+                    buffer.put(((Integer)9).byteValue());
+                    break;
+
+                default:
+                   buffer.put(bytestring.getBytes());
+            }
         }
-        return data;
+         byte[] result = buffer.array();
+        return result;
     }
 
-    public String hexdecimal(String codigo){
-        byte[] bithex = hexStringToBytes(codigo);
-        codigo =formatHexString(bithex);
-        return codigo;
+    public String traduzirforHexDecimal(String codigodecimal){
+            return formatHexString(hexStringToBytes(codigodecimal));
     }
 
 
 }
+

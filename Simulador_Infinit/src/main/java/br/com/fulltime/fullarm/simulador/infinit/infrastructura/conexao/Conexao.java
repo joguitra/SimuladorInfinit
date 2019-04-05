@@ -86,25 +86,38 @@ public class Conexao {
             if (tipodconexao.getSelectionModel().getSelectedItem().equals("G - GPRS"))
                 usuariocompleto = "#" + usuario.getText() + "G";
         }catch (NullPointerException e) {return false;}
-        saida.print(convertohexdecimal(usuariocompleto));
+        printHexDecimal(usuariocompleto);
         return true;
     }
 
     public void printSaida(String saidacodigo){
-        saida.print(convertohexdecimal(saidacodigo));
+        printHexDecimal(saidacodigo);
     }
 
     public void recebendoResposta ()  {
         Thread recebercomando = new Thread( ()-> {
-            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,particao1,particao2,pgm,saida,btndesconectar);
-            recebendoComando.receberResposta();
+            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,particao1,particao2,pgm,btndesconectar);
+            while (true) {
+                try {
+                    int qtdBytesDisponiveis = entrada.available();
+                    if (qtdBytesDisponiveis > 0) {
+                        byte[] dado = new byte[qtdBytesDisponiveis];
+                        entrada.read(dado);
+                        String linha = new String(dado);
+                        terminal.printResposta(linha);
+                        byte[] resposta = recebendoComando.receberResposta(linha);
+                        saida.print(resposta);
+                        terminal.printTerminalBits(resposta);
+                    }
+                }catch (Exception ignorar) {}
+            }
     });
         recebercomando.start();
 
     }
     public void enviarIMEI(){
         imei.getText();
-        saida.print(convertohexdecimal("I"+imei.getText()));
+        printHexDecimal("I"+imei.getText());
     }
 
 
@@ -116,7 +129,7 @@ public class Conexao {
             try {
                 Thread.sleep(millis);
                 while (!desconetado) {
-                    saida.print(convertohexdecimal("@"));
+                    printHexDecimal("@");
                     terminal.printTerminal("@");
                     Thread.sleep(millis);
 
@@ -135,10 +148,6 @@ public class Conexao {
         setConectaservidor(false);
         return false;
     }
-    public String convertohexdecimal(String codigodesconvertido){
-            return  codigodesconvertido;
-//        return  tradutor.formatHexString(tradutor.hexStringToBytes(codigodesconvertido));
-    }
 
     public boolean getConectarservidor(){
         return recebendoComando.getConectarservidor();
@@ -153,5 +162,9 @@ public class Conexao {
 
     public void setReconectar(boolean reconectar){
         recebendoComando.setReconctar(reconectar);
+    }
+
+    public void printHexDecimal(String codigodecimal){
+        saida.print(tradutor.hexStringToBytes(codigodecimal));
     }
 }
