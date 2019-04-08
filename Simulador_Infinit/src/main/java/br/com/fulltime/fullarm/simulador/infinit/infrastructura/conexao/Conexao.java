@@ -106,7 +106,7 @@ public class Conexao {
                         String linha = new String(dado);
                         terminal.printResposta(linha);
                         byte[] resposta = recebendoComando.receberResposta(linha);
-                        saida.print(resposta);
+                        saida.write(resposta);
                         terminal.printTerminalBits(resposta);
                     }
                 }catch (Exception ignorar) {}
@@ -165,6 +165,8 @@ public class Conexao {
     }
 
     public void printHexDecimal(String codigodecimal){
-        saida.print(tradutor.hexStringToBytes(codigodecimal));
+        try {
+            saida.write(tradutor.hexStringToBytes(codigodecimal));
+        } catch (IOException ignorar) { }
     }
 }

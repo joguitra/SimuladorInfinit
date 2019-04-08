@@ -108,22 +108,25 @@ public class RecebendoComando {
     public byte[] pedirStatusParticao(){
         separaNumeroIdetificador();
 
-        for (Particao particao: listaparticao) {
-            if(numeroidentificador.equals("0")) {
-                buffer = ByteBuffer.allocate(9);
-                String cabecario = "S";
-                buffer.put(cabecario.getBytes());
-                buffer.put(particao.statusParticao());
+        if(numeroidentificador.equals("0")) {
+            buffer = ByteBuffer.allocate(9);
+        }
+        else {
+            buffer = ByteBuffer.allocate(5);
+        }
+        String cabecario = "S";
+        buffer.put(cabecario.getBytes());
 
+        for (Particao particao: listaparticao) {
+            if (numeroidentificador.equals("0")) {
+                buffer.put(particao.statusParticao());
             }
-            else{
+            else {
                 i++;
-                if (i == Integer.valueOf(numeroidentificador)) {
-                    buffer = ByteBuffer.allocate(5);
-                    String cabecario = "S";
-                    buffer.put(cabecario.getBytes());
+                if(numeroidentificador.equals(i)) {
                     buffer.put(particao.statusParticao());
                 }
+
             }
         }
 

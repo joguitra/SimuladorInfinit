@@ -770,8 +770,10 @@ public class Controler implements Initializable {
                     conectado = conexao.conectarServidor();
                     conexao.recebendoResposta();
                     conexao.enviarIMEI();
-                    conectado = conexao.auntetificarConta();
-                    conexao.setReconectar(false);
+                    if(conectado) {
+                        conectado = conexao.auntetificarConta();
+                        conexao.setReconectar(false);
+                    }
                 }
 
                 if(conectado){
