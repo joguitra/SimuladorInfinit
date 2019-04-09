@@ -124,7 +124,7 @@ public class RecebendoComando {
 
                         }
                         if(!armacomsucesso) {
-                            ByteBuffer buffer = ByteBuffer.allocate(34);
+                            ByteBuffer buffer = ByteBuffer.allocate(64);
                             String cabecario = "AE";
                             buffer.put(cabecario.getBytes());
                             buffer.put(todasparticao.statusZonas());
@@ -161,6 +161,7 @@ public class RecebendoComando {
         for (Particao particao: todasparticao.getListaparticao()) {
             i++;
             if(i==Integer.valueOf(numeroidentificador)){
+                particao.desarmaParticao();
                 ByteBuffer buffer = ByteBuffer.allocate(6);
                 String cabecario = "DO";
                 buffer.put(cabecario.getBytes());

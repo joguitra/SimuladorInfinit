@@ -394,7 +394,7 @@ public class Controler implements Initializable {
         String codigo =tfenviarcomando.getText();
         byte[] resposta = conexao.textReposta(codigo);
         conexao.mandaByts(resposta);
-        terminal.printTerminal(HexTraducao.formatHexString(resposta));
+        terminal.printTerminalBits(resposta);
 
     }
     @FXML

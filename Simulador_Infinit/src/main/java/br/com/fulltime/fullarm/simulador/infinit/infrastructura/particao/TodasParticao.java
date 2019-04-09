@@ -102,7 +102,7 @@ public class TodasParticao {
 
 
     public byte[] statusZonas(){
-        ByteBuffer buffer = ByteBuffer.allocate(64);
+        ByteBuffer buffer = ByteBuffer.allocate(32);
         for (Particao particao:listaparticao) {
             buffer.put(particao.erroArmeDesarme());
         }
