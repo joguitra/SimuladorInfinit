@@ -36,10 +36,10 @@ public class FormarContactID {
         if(condicao()){
 
             if (qualificador.getSelectionModel().getSelectedItem().equals("E 3")) {
-                codigo = "$" + usuario.getText() + "3" + evento.getText() + particacao.getText() + setor.getText()+sequencia+"¶";
+                codigo = "$" + usuario.getText() + "3" + evento.getText() + particacao.getText() + setor.getText()+sequencia+"]";
             }
             if (qualificador.getSelectionModel().getSelectedItem().equals("R 1")) {
-                codigo = "$" + usuario.getText() + "1" + evento.getText() + particacao.getText() + setor.getText()+sequencia+"¶";
+                codigo = "$" + usuario.getText() + "1" + evento.getText() + particacao.getText() + setor.getText()+sequencia+"]";
             }
             sequenciaCodigo();
             return codigo;

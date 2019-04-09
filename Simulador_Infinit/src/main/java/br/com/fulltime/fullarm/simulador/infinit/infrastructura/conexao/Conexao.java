@@ -2,6 +2,7 @@ package br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao;
 
 import br.com.fulltime.fullarm.simulador.infinit.core.PGM;
 import br.com.fulltime.fullarm.simulador.infinit.core.Particao;
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.TodasParticao;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ConectadoCircle;
@@ -27,11 +28,9 @@ public class Conexao {
     private Label labeldesconectado;
     private ConectadoCircle conectado;
     private TextField imei;
-    private Particao particao1;
-    private Particao particao2;
+    private TodasParticao todasparticao;
     private PGM pgm;
     private Button btndesconectar;
-    private boolean conectaservidor;
     private ChoiceBox<String> tipodconexao;
     private  int portanumerica;
     private  String ipnumerico;
@@ -46,8 +45,8 @@ public class Conexao {
 
     public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
                           EsconderPane esconderPane, Label labeldesconectado, ConectadoCircle conectado,
-                          TextField imei , ChoiceBox<String> tipodeconexao,
-                          Particao particao1,Particao particao2, PGM pgm, Button btndesconectar){
+                          TextField imei , ChoiceBox<String> tipodeconexao, PGM pgm,
+                          Button btndesconectar, TodasParticao todasparticao){
         this.tipodconexao = tipodeconexao;
         this.ip = ip;
         this.porta = porta;
@@ -58,12 +57,10 @@ public class Conexao {
         this.labeldesconectado = labeldesconectado;
         this.conectado = conectado;
         this.imei = imei;
-        this.particao2 = particao2;
-        this.particao1 = particao1;
+        this.todasparticao = todasparticao;
         this.pgm = pgm;
         this.btndesconectar = btndesconectar;
-        this.conectaservidor = conectaservidor;
-        this.tipodconexao = tipodconexao;
+
     }
 
 
@@ -86,17 +83,29 @@ public class Conexao {
             if (tipodconexao.getSelectionModel().getSelectedItem().equals("G - GPRS"))
                 usuariocompleto = "#" + usuario.getText() + "G";
         }catch (NullPointerException e) {return false;}
-        printHexDecimal(usuariocompleto);
+        saida.print(usuariocompleto);
         return true;
     }
 
     public void printSaida(String saidacodigo){
         printHexDecimal(saidacodigo);
     }
+    public  void mandaByts(byte[] resposta){
+        try {
+            saida.write(resposta);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public byte[] textReposta(String comando) throws IOException {
+        return recebendoComando.receberResposta(comando);
+    }
+
 
     public void recebendoResposta ()  {
         Thread recebercomando = new Thread( ()-> {
-            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,particao1,particao2,pgm,btndesconectar);
+            recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,pgm,btndesconectar,todasparticao);
             while (true) {
                 try {
                     int qtdBytesDisponiveis = entrada.available();
@@ -117,7 +126,7 @@ public class Conexao {
     }
     public void enviarIMEI(){
         imei.getText();
-        printHexDecimal("I"+imei.getText());
+        saida.print("I"+imei.getText());
     }
 
 
@@ -129,7 +138,7 @@ public class Conexao {
             try {
                 Thread.sleep(millis);
                 while (!desconetado) {
-                    printHexDecimal("@");
+                    saida.print("@");
                     terminal.printTerminal("@");
                     Thread.sleep(millis);
 

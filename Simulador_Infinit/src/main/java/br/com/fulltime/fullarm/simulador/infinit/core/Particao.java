@@ -116,34 +116,6 @@ public class Particao  {
         return zonasstatusaberta;
     }
 
-    public String printStatus(Particao particao){
-        String codigo = new String();
-        if(particao.getStatusarmada()){
-            codigo = "1" ;
-        }else {
-            codigo ="0";
-        }
-        if(particao.getStatushabilitar()){
-            codigo += "1" ;
-        }else {
-            codigo +="0";
-        }
-        if(particao.getStatuspronta()){
-            codigo += "1" ;
-        }else {
-            codigo +="0";
-        }
-        if(particao.getStatusmemoria()){
-            codigo += "1" ;
-        }else {
-            codigo +="0";
-        }
-
-        return codigo;
-
-    }
-
-
 
     public  Boolean alterarStatusParticao(){
        Boolean armado =particaocircle.armarParticao(checkoutZonaAberta());

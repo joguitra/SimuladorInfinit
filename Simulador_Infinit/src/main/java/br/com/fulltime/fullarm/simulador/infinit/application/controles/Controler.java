@@ -3,7 +3,9 @@ package br.com.fulltime.fullarm.simulador.infinit.application.controles;
 ;
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ConectadoCircle;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao.Conexao;
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao.RecebendoComando;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.enviocontactid.FormarContactID;
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.TodasParticao;
 import javafx.scene.shape.Line;
 import br.com.fulltime.fullarm.simulador.infinit.core.StatusZona;
 import br.com.fulltime.fullarm.simulador.infinit.core.PGM;
@@ -43,7 +45,7 @@ public class Controler implements Initializable {
     private PGM pgm1 = new PGM();
     private ConectadoCircle statusconectar;
     private Mensagem mensagem = new Mensagem();
-    private  boolean primeiro = true;
+    private TodasParticao todasparticao = new TodasParticao();
 
     @FXML
     private TextField tfimei;
@@ -387,10 +389,10 @@ public class Controler implements Initializable {
     }
 
     @FXML
-    void enviarcomando(ActionEvent event) throws InterruptedException {
+    void enviarcomando(ActionEvent event) throws InterruptedException, IOException {
         String codigo =tfenviarcomando.getText();
-        Thread.sleep(1000);
-        conexao.printSaida(codigo);
+        byte[] resposta = conexao.textReposta(codigo);
+        conexao.mandaByts(resposta);
         terminal.printTerminal(codigo);
 
     }
@@ -872,7 +874,6 @@ public class Controler implements Initializable {
         pgm1.adicionarPGM(efzp7,7);
         pgm1.adicionarPGM(efzp8,8);
 
-
         particao1.adicionarDuplaZonas(efz1,1,efz2,2,zonataper1,zonataper2);
         particao1.adicionarDuplaZonas(efz3,3,efz4,4,zonataper3,zonataper4);
         particao1.adicionarDuplaZonas(efz5,5,efz6,6,zonataper5,zonataper6);
@@ -883,9 +884,12 @@ public class Controler implements Initializable {
         particao2.adicionarDuplaZonas(efz13,13,efz14,14,zonataper13,zonataper14);
         particao2.adicionarDuplaZonas(efz15,15,efz16,16,zonataper15,zonataper16);
 
+        todasparticao.adicionarParticao(particao1);
+        todasparticao.adicionarParticao(particao2);
+
         terminal.definirTerminal(taterminal);
 
-        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao,particao1,particao2,pgm1,btnconectar);
+        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao,pgm1,btnconectar,todasparticao);
 
         esconderpane.definirPane(paneprincipal,panelog,panepesquisa);
         esconderpane.definirParticao(panezona,panezona2,lparticao,imagemview1,imagemview2,efzping);
