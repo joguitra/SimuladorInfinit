@@ -9,7 +9,6 @@ import java.time.ZoneId;
 public class Terminal {
 
     private TextArea terminal;
-    private HexTraducao hextraducao= new HexTraducao();
 
     private String newLine = System.getProperty("line.separator");
 
@@ -18,7 +17,7 @@ public class Terminal {
     }
     public void printTerminal (String comando){
         LocalDateTime c = LocalDateTime.now(ZoneId.of("Brazil/East") );
-        terminal.appendText(c + " -[PAINEL] >> "+ hextraducao.traduzirforHexDecimal(comando) +newLine);
+        terminal.appendText(c + " -[PAINEL] >> "+ HexTraducao.traduzirforHexDecimal(comando) +newLine);
     }
     public void printResposta (String comando ){
         LocalDateTime c = LocalDateTime.now(ZoneId.of("Brazil/East") );
@@ -26,7 +25,7 @@ public class Terminal {
     }
     public void printTerminalBits (byte[] comando){
         LocalDateTime c = LocalDateTime.now(ZoneId.of("Brazil/East") );
-        terminal.appendText(c + " -[PAINEL] >> "+ hextraducao.formatHexString(comando) +newLine);
+        terminal.appendText(c + " -[PAINEL] >> "+ HexTraducao.formatHexString(comando) +newLine);
     }
 
     public void  limparTerminal(){

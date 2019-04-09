@@ -14,9 +14,7 @@ import br.com.fulltime.fullarm.simulador.infinit.application.controles.Mensagem;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintStream;
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
 
 public class RecebendoComando {
 
@@ -35,7 +33,6 @@ public class RecebendoComando {
     private String numeroidentificador;
     private String pedidoservidorpgm;
     private int i;
-    private HexTraducao hexTraducao = new HexTraducao();
     private ByteBuffer buffer;
 
 
@@ -101,10 +98,10 @@ public class RecebendoComando {
     }
 
     public byte[] pedirStatusParticao(){
-        buffer = ByteBuffer.allocate(5);
+        buffer = ByteBuffer.allocate(33);
         String cabecario = "S";
         buffer.put(cabecario.getBytes());
-        buffer.put(todasparticao.statusParticao());
+        buffer.put(todasparticao.statusZonas());
         byte[] resultado = buffer.array();
         return  resultado;
     }
@@ -118,14 +115,19 @@ public class RecebendoComando {
                     Boolean armacomsucesso = particao.armarParticao();
                     byte[] resposta = new byte[]{};
                         if(armacomsucesso) {
-                            resposta = hexTraducao.hexStringToBytes("AO" + todasparticao.statusParticao());
+                            ByteBuffer buffer = ByteBuffer.allocate(6);
+                            String cabecario = "AO";
+                            buffer.put(cabecario.getBytes());
+                            buffer.put(todasparticao.statusParticao());
+                            byte[] resultado = buffer.array();
+                            return  resultado;
 
                         }
                         if(!armacomsucesso) {
-                            ByteBuffer buffer = ByteBuffer.allocate(6);
+                            ByteBuffer buffer = ByteBuffer.allocate(34);
                             String cabecario = "AE";
                             buffer.put(cabecario.getBytes());
-                            buffer.put(particao.erroArmeDesarme());
+                            buffer.put(todasparticao.statusZonas());
                             byte[] resultado = buffer.array();
                             return  resultado;
 
@@ -147,9 +149,9 @@ public class RecebendoComando {
         }
         switch (pedidoservidorpgm){
             case "S":
-                return hexTraducao.hexStringToBytes(pgm.statusPGM(numeroidentificador));
+                return HexTraducao.hexStringToBytes(pgm.statusPGM(numeroidentificador));
             case "E":
-                return hexTraducao.hexStringToBytes(pgm.alterarStatusServidor(numeroidentificador));
+                return HexTraducao.hexStringToBytes(pgm.alterarStatusServidor(numeroidentificador));
 
         }
         return null;
@@ -159,9 +161,12 @@ public class RecebendoComando {
         for (Particao particao: todasparticao.getListaparticao()) {
             i++;
             if(i==Integer.valueOf(numeroidentificador)){
-                byte[] resposta = hexTraducao.hexStringToBytes("DO"+todasparticao.statusParticao());
-                particao.desarmaParticao();
-                return resposta;
+                ByteBuffer buffer = ByteBuffer.allocate(6);
+                String cabecario = "DO";
+                buffer.put(cabecario.getBytes());
+                buffer.put(todasparticao.statusParticao());
+                byte[] resultado = buffer.array();
+                return  resultado;
             }
         }
         return null;
@@ -171,11 +176,7 @@ public class RecebendoComando {
         ByteBuffer buffer = ByteBuffer.allocate(65);
         String cabecario = "P";
         buffer.put(cabecario.getBytes());
-
-        for (Particao particao: todasparticao.getListaparticao() ) {
-            buffer.put(particao.mapParticao());
-        }
-
+        buffer.put(todasparticao.mapaZonas());
         byte[] resultado = buffer.array();
         return  resultado;
     }

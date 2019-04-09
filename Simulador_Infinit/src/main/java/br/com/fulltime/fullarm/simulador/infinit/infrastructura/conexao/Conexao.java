@@ -39,7 +39,6 @@ public class Conexao {
     private Socket socket;
     private boolean desconetado;
     private InputStream entrada;
-    private HexTraducao tradutor = new HexTraducao();
     private  RecebendoComando recebendoComando = new RecebendoComando();
 
 
@@ -93,8 +92,7 @@ public class Conexao {
     public  void mandaByts(byte[] resposta){
         try {
             saida.write(resposta);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignorar) {
         }
     }
 
@@ -173,9 +171,9 @@ public class Conexao {
         recebendoComando.setReconctar(reconectar);
     }
 
-    public void printHexDecimal(String codigodecimal){
+    public void printHexDecimal(String ascii){
         try {
-            saida.write(tradutor.hexStringToBytes(codigodecimal));
+            saida.write(HexTraducao.hexStringToBytes(ascii));
         } catch (IOException ignorar) { }
     }
 }

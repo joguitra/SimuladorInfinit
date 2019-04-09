@@ -3,6 +3,7 @@ package br.com.fulltime.fullarm.simulador.infinit.application.controles;
 ;
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ConectadoCircle;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao.Conexao;
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao.HexTraducao;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao.RecebendoComando;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.enviocontactid.FormarContactID;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.TodasParticao;
@@ -393,7 +394,7 @@ public class Controler implements Initializable {
         String codigo =tfenviarcomando.getText();
         byte[] resposta = conexao.textReposta(codigo);
         conexao.mandaByts(resposta);
-        terminal.printTerminal(codigo);
+        terminal.printTerminal(HexTraducao.formatHexString(resposta));
 
     }
     @FXML

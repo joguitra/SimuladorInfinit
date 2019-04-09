@@ -96,7 +96,30 @@ public class TodasParticao {
             buffer.put(statusPronta());
             buffer.put(statusMemoria());
             byte[] resultado = buffer.array();
-            System.out.println(new HexTraducao().formatHexString(resultado));
             return  resultado;
     }
+
+
+
+    public byte[] statusZonas(){
+        ByteBuffer buffer = ByteBuffer.allocate(64);
+        for (Particao particao:listaparticao) {
+            buffer.put(particao.erroArmeDesarme());
+        }
+
+        byte[] resultado = buffer.array();
+
+        return  resultado;
+    }
+
+
+    public byte[] mapaZonas(){
+        ByteBuffer buffer = ByteBuffer.allocate(64);
+        for (Particao particao:listaparticao) {
+            buffer.put(particao.mapParticao());
+        }
+        byte[] resultado = buffer.array();
+        return  resultado;
+    }
 }
+

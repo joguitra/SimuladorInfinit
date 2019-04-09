@@ -4,10 +4,10 @@ import java.nio.ByteBuffer;
 
 import static javax.xml.bind.DatatypeConverter.printHexBinary;
 
-public class HexTraducao {
+public final class   HexTraducao {
 
 
-    public  String formatHexString(final byte[] data) {
+    public static String formatHexString(final byte[] data) {
         StringBuilder stringBuilder = new StringBuilder();
         for (byte b : data) {
             stringBuilder
@@ -19,7 +19,7 @@ public class HexTraducao {
     }
 
 
-    public  byte[] hexStringToBytes(String rawData) {
+    public static byte[] hexStringToBytes(String rawData) {
         int len = rawData.length();
         ByteBuffer buffer = ByteBuffer.allocate(len);
         for (int i = 0; i < len; i += 1) {
@@ -31,7 +31,7 @@ public class HexTraducao {
         return result;
     }
 
-    public String traduzirforHexDecimal(String codigodecimal){
+    public static String traduzirforHexDecimal(String codigodecimal){
             return formatHexString(hexStringToBytes(codigodecimal));
     }
 
