@@ -110,8 +110,9 @@ public class Conexao {
                     if (qtdBytesDisponiveis > 0) {
                         byte[] dado = new byte[qtdBytesDisponiveis];
                         entrada.read(dado);
-                        String linha = new String(dado);
-                        terminal.printResposta(linha);
+
+                        String linha = HexTraducao.formatHexString(dado);
+                        terminal.printResposta(HexTraducao.formatHexString(dado));
                         byte[] resposta = recebendoComando.receberResposta(linha);
                         saida.write(resposta);
                         terminal.printTerminalBits(resposta);

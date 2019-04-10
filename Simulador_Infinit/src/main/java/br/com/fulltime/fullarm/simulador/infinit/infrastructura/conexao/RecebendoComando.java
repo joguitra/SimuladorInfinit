@@ -53,13 +53,13 @@ public class RecebendoComando {
     public byte[] receberResposta(String linha) throws IOException {
         this.linha = linha;
         try {
-            primeirodigito = linha.substring(0,1);
+            primeirodigito = linha.substring(0,2);
             i=0;
             switch (primeirodigito) {
-                case "-":
+                case "2D":
                     desconecteServidor();
                     break;
-                    case "W":
+                    case "57":
                         return diferenciadorPGMParticao();
             }
         }catch (Exception ignorarr){}
@@ -81,22 +81,74 @@ public class RecebendoComando {
     }
 
     public byte[] diferenciadorPGMParticao(){
-        seguendodigito = linha.substring(1,2);
+        seguendodigito = linha.substring(3,5);
 
         switch (seguendodigito){
-            case "S":
+            case "53":
                 return pedirStatusParticao();
-            case "A":
-                return armaParticao();
-            case "D":
-                return desarmeParticao();
-            case "P":
-                return mapaParticaoSetor();
+            case "41":
+                return armaParticaoComando();
+            case "44":
+                return desarmeParticaoComando();
+            case "45":
+                return armedesarmeParticao();
             default:
                 return alterarPGM();
         }
     }
 
+    public byte[] armedesarmeParticao(){
+        separaNumeroIdetificador();
+        for (Particao particao: todasparticao.getListaparticao()){
+            i++;
+            if (numeroidentificador.equals("0")) {
+                armedesarmeParticaoUnica(particao);
+            }
+            if(numeroidentificador.equals(String.valueOf(i))){
+                armedesarmeParticaoUnica(particao);
+            }
+        }
+        buffer = ByteBuffer.allocate(6);
+        String cabecario="WS";
+        buffer.put(cabecario.getBytes());
+        buffer.put(todasparticao.statusParticao());
+        byte[] resultado =buffer.array();
+        return  resultado;
+    }
+
+    public byte[] armedesarmeParticaoUnica(Particao particao){
+        if(!particao.getStatusarmada()){
+            byte[] resultado =armeParticao(particao);
+
+            if(resultado.length == 4){
+                buffer = ByteBuffer.allocate(6);
+                String cabecario ="WS";
+                buffer.put(cabecario.getBytes());
+                buffer.put(resultado);
+                byte[] resposta = buffer.array();
+                return  resposta;
+            }
+            if(resultado.length == 64){
+                buffer = ByteBuffer.allocate(66);
+                String cabecario = "AE";
+                buffer.put(cabecario.getBytes());
+                buffer.put(resultado);
+                byte[] resposta = buffer.array();
+                return  resposta;
+            }
+        }
+        if(particao.getStatusarmada()){
+            buffer = ByteBuffer.allocate(6);
+            byte[] resultado =desarmeParticao(particao);
+            String cabecario ="WS";
+            buffer.put(cabecario.getBytes());
+            buffer.put(resultado);
+            byte[] resposta = buffer.array();
+            return  resposta;
+
+        }
+        return null;
+    }
     public byte[] pedirStatusParticao(){
         buffer = ByteBuffer.allocate(33);
         String cabecario = "S";
@@ -105,90 +157,108 @@ public class RecebendoComando {
         byte[] resultado = buffer.array();
         return  resultado;
     }
+    public byte[] desarmeParticao(Particao particao){
+        particao.desarmaParticao();
+        ByteBuffer buffer = ByteBuffer.allocate(4);
+        buffer.put(todasparticao.statusParticao());
+        byte[] resultado = buffer.array();
+        return  resultado;
+    }
+
+    public byte[] armeParticao(Particao particao){
+        Boolean armacomsucesso = particao.armarParticao();
+
+        if(armacomsucesso) {
+            ByteBuffer buffer = ByteBuffer.allocate(4);
+            buffer.put(todasparticao.statusParticao());
+            byte[] resultado = buffer.array();
+            return  resultado;
+        }
+        if(!armacomsucesso) {
+            ByteBuffer buffer = ByteBuffer.allocate(32);
+            buffer.put(todasparticao.statusZonas());
+            byte[] resultado = buffer.array();
+            return  resultado;
+
+        }
+        return  null;
+    }
 
 
-    public byte[] armaParticao(){
+    public byte[] armaParticaoComando(){
         separaNumeroIdetificador();
         for (Particao particao: todasparticao.getListaparticao()) {
               i++;
               if(i==Integer.valueOf(numeroidentificador)){
-                    Boolean armacomsucesso = particao.armarParticao();
-                    byte[] resposta = new byte[]{};
-                        if(armacomsucesso) {
-                            ByteBuffer buffer = ByteBuffer.allocate(6);
-                            String cabecario = "AO";
-                            buffer.put(cabecario.getBytes());
-                            buffer.put(todasparticao.statusParticao());
-                            byte[] resultado = buffer.array();
-                            return  resultado;
 
-                        }
-                        if(!armacomsucesso) {
-                            ByteBuffer buffer = ByteBuffer.allocate(64);
-                            String cabecario = "AE";
-                            buffer.put(cabecario.getBytes());
-                            buffer.put(todasparticao.statusZonas());
-                            byte[] resultado = buffer.array();
-                            return  resultado;
-
-                        }
-                        return resposta;
+                       byte[] resultado = armeParticao(particao);
+                       if(resultado.length ==4){
+                           buffer = ByteBuffer.allocate(6);
+                           String cabecario = "AO";
+                           buffer.put(cabecario.getBytes());
+                           buffer.put(resultado);
+                           byte[] resposta = buffer.array();
+                           return  resposta;
+                       }
+                       if(resultado.length == 32){
+                           buffer = ByteBuffer.allocate(34);
+                           String cabecario = "AE";
+                           buffer.put(cabecario.getBytes());
+                           buffer.put(resultado);
+                           byte[] resposta = buffer.array();
+                           return  resposta;
+                       }
                     }
 
               }
         return null;
         }
     public byte[] alterarPGM(){
-        if(linha.length() == 4){
-            numeroidentificador = linha.substring(1,2);
-            pedidoservidorpgm = linha.substring(2,3);
+        if(linha.length() == 12){
+            numeroidentificador = linha.substring(4,5);
+            pedidoservidorpgm = linha.substring(6,8);
         }
         else {
-            numeroidentificador = linha.substring (1,3);
-            pedidoservidorpgm = linha.substring(3,4);
+
+
+            numeroidentificador = linha.substring (4,5) + linha.substring(7,8);
+            pedidoservidorpgm = linha.substring(9,11);
         }
         switch (pedidoservidorpgm){
-            case "S":
+            case "53":
                 return HexTraducao.hexStringToBytes(pgm.statusPGM(numeroidentificador));
-            case "E":
+            case "45":
                 return HexTraducao.hexStringToBytes(pgm.alterarStatusServidor(numeroidentificador));
 
         }
         return null;
     }
-    public byte [] desarmeParticao(){
+    public byte [] desarmeParticaoComando(){
         separaNumeroIdetificador();
         for (Particao particao: todasparticao.getListaparticao()) {
             i++;
             if(i==Integer.valueOf(numeroidentificador)){
-                particao.desarmaParticao();
-                ByteBuffer buffer = ByteBuffer.allocate(6);
-                String cabecario = "DO";
-                buffer.put(cabecario.getBytes());
-                buffer.put(todasparticao.statusParticao());
-                byte[] resultado = buffer.array();
-                return  resultado;
+               byte[] resultado = desarmeParticao(particao);
+               buffer =  ByteBuffer.allocate(6);
+               String cabecario = "DO";
+               buffer.put(cabecario.getBytes());
+               buffer.put(resultado);
+               byte[]resposta = buffer.array();
+               return  resposta;
             }
         }
         return null;
     }
 
-    public byte[] mapaParticaoSetor(){
-        ByteBuffer buffer = ByteBuffer.allocate(65);
-        String cabecario = "P";
-        buffer.put(cabecario.getBytes());
-        buffer.put(todasparticao.mapaZonas());
-        byte[] resultado = buffer.array();
-        return  resultado;
-    }
 
     public void separaNumeroIdetificador() {
-        if(linha.length() == 4){
-            numeroidentificador = linha.substring(2,3);
+        if(linha.length() == 12){
+            numeroidentificador = linha.substring(7,8);
+            System.out.print(numeroidentificador);
 
         }
         else {
-            numeroidentificador = linha.substring(2,4);
+            numeroidentificador = linha.substring(7,8) + linha.substring(10,11);
         }
     }
 
