@@ -95,9 +95,31 @@ public class RecebendoComando {
                 return armedesarmeParticao();
             case "42":
                 return inibidoZona();
+            case "55":
+                return deseinibirZona();
+            case "49":
+                return armaParticaoComando();
             default:
                 return alterarPGM();
         }
+    }
+
+    private byte[] deseinibirZona() {
+        int I = 6;
+        int F = 8;
+        for (Particao particao: todasparticao.getListaparticao()) {
+
+            particao.deseinibirzona(linha.substring(I,F));
+            I+=3;
+            F+=3;
+
+        }
+
+
+        buffer =ByteBuffer.allocate(1);
+        buffer.put("U".getBytes());
+        byte[] resultado = buffer.array();
+        return resultado;
     }
 
     public byte[] inibidoZona(){

@@ -251,30 +251,57 @@ public class Particao  {
     }
 
     public void inibirzona(String zonasInibidas) {
+
         int digito1 = HexTraducao.hexTraducaoInteger(zonasInibidas.substring(0,1));
         int digito2 = HexTraducao.hexTraducaoInteger(zonasInibidas.substring(1,2));
 
         int divisor1 = 8;
         int divisor2 = 8;
 
-            for (ZonaCircle zona: listaInvertida()) {
-                if(divisor1 != 0) {
-                    if (digito1 / divisor1 > 0) {
-                        digito1 -= divisor1;
-                        zona.alterarStatusEspecificoZona(StatusZona.Inibido);
-                    }
-                    divisor1 /= 2;
+        for (ZonaCircle zona: listaInvertida()) {
+            if(divisor1 != 0) {
+                if (digito1 / divisor1 > 0) {
+                    digito1 -= divisor1;
+                    zona.alterarStatusEspecificoZona(StatusZona.Inibido);
                 }
+                divisor1 /= 2;
+            }
 
-                else {
-                    if (digito2 / divisor2 > 0) {
-                        digito2 -= divisor2;
-                        zona.alterarStatusEspecificoZona(StatusZona.Inibido);
-                    }
-                    divisor2 /= 2;
+            else {
+                if (digito2 / divisor2 > 0) {
+                    digito2 -= divisor2;
+                    zona.alterarStatusEspecificoZona(StatusZona.Inibido);
                 }
+                divisor2 /= 2;
             }
         }
     }
+
+    public void deseinibirzona(String zonasDeseInibidas) {
+        int digito1 = HexTraducao.hexTraducaoInteger(zonasDeseInibidas.substring(0,1));
+        int digito2 = HexTraducao.hexTraducaoInteger(zonasDeseInibidas.substring(1,2));
+
+        int divisor1 = 8;
+        int divisor2 = 8;
+
+        for (ZonaCircle zona: listaInvertida()) {
+            if(divisor1 != 0) {
+                if (digito1 / divisor1 > 0) {
+                    digito1 -= divisor1;
+                    zona.alterarStatusEspecificoZona(StatusZona.Fechado);
+                }
+                divisor1 /= 2;
+            }
+
+            else {
+                if (digito2 / divisor2 > 0) {
+                    digito2 -= divisor2;
+                    zona.alterarStatusEspecificoZona(StatusZona.Fechado);
+                }
+                divisor2 /= 2;
+            }
+        }
+    }
+}
 
 
