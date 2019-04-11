@@ -1,7 +1,10 @@
 package br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao;
 
+import br.com.fulltime.fullarm.simulador.infinit.application.circle.ZonaCircle;
 import br.com.fulltime.fullarm.simulador.infinit.core.PGM;
 import br.com.fulltime.fullarm.simulador.infinit.core.Particao;
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.enviocontactid.FormarContactID;
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.DuplaZona;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.TodasParticao;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -40,6 +43,7 @@ public class Conexao {
     private boolean desconetado;
     private InputStream entrada;
     private  RecebendoComando recebendoComando = new RecebendoComando();
+    private  FormarContactID formarcontactid = new FormarContactID();
 
 
     public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
@@ -116,6 +120,19 @@ public class Conexao {
                         byte[] resposta = recebendoComando.receberResposta(linha);
                         saida.write(resposta);
                         terminal.printTerminalBits(resposta);
+                        if(HexTraducao.formatHexString(resposta).equals("42 ")){
+                            for (Particao particao: todasparticao.getListaparticao()) {
+                                for (DuplaZona duplazona: particao.getListaduplazonas()) {
+                                    for (ZonaCircle zona : duplazona.getZona()) {
+                                        if(zona.getStatusinibido()){
+                                            String respostainibida =(formarcontactid.eventoInibido(zona.getNumeroidentificador(),particao.getNumeroidentificador()));
+                                            saida.print(respostainibida);
+                                            terminal.printTerminal(respostainibida);
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }catch (Exception ignorar) {}
             }

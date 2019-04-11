@@ -124,7 +124,7 @@
 28/03/2019 14:21:33 Painel 1,E: Solicitando inibição das zonas [1, 56]... 1 V
 
 11:21:33
-28/03/2019 14:21:33 Painel 1,E: Enviando comando inibir zonas: [57 42 01 00 00 00 00 00 80 00 46] WB100000 80 0F
+28/03/2019 14:21:33 Painel 1,E: Enviando comando inibir zonas: [57 42 01 00 00 00 00 00 80 00 46] WB 100000 80 0F
 
 11:21:34
 28/03/2019 14:21:34 Painel 1,E: Recebido pacote de resposta de inibir zonas: [42] B
@@ -145,7 +145,7 @@
 28/03/2019 14:21:34 Painel 1,E: Desinibindo setores [1, 56] (rollback)... 0V
 
 11:21:34
-28/03/2019 14:21:34 Painel 1,E: Enviando comando desinibir zonas: [57 55 01 00 00 00 00 00 80 00 46] WB10000 80 0F
+28/03/2019 14:21:34 Painel 1,E: Enviando comando desinibir zonas: [57 55 01 00 00 00 00 00 80 00 46] WB 10000 80 0F
 
 11:21:34
 28/03/2019 14:21:34 Painel 1,E: Recebido pacote de resposta de desinibir zonas: [55] U

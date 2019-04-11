@@ -183,7 +183,10 @@ public class Controler implements Initializable {
     private Button btnavnacarparticao;
 
     @FXML
-    private Label lparticao;
+    private Label lparticao1;
+
+    @FXML
+    private Label lparticao2;
 
     @FXML
     private ImageView imagemview1;
@@ -824,7 +827,7 @@ public class Controler implements Initializable {
         if(trocarzona == 2){
             String codigo =formarcontactid.formacodigoCompleto(particao2.alterarStatusParticao(),particao2.toString());
             if(codigo.length()>3) {
-//
+
                 conexao.printSaida(codigo);
                 terminal.printTerminal(codigo);
             }
@@ -893,7 +896,7 @@ public class Controler implements Initializable {
         conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao,pgm1,btnconectar,todasparticao);
 
         esconderpane.definirPane(paneprincipal,panelog,panepesquisa);
-        esconderpane.definirParticao(panezona,panezona2,lparticao,imagemview1,imagemview2,efzping);
+        esconderpane.definirParticao(panezona,panezona2,lparticao1,lparticao2,imagemview1,imagemview2,efzping);
         esconderpane.esconderIniciacao();
 
         formarcontactid.definirContatctID(tfconta, lvqualificador,tfevento,tfevento1,tfevento2);

@@ -21,7 +21,6 @@ public class Particao  {
     private ParticaoCircle particaocircle;
     private ImageView image;
     private Boolean statusarmada =false,statusmemoria =false,statushabilitar=true, statuspronta=true;
-    private HexTraducao hextraducao= new HexTraducao();
 
     public Particao (Circle circle ,int numeroindetificador , ImageView image){
         this.image = image;
@@ -33,6 +32,9 @@ public class Particao  {
         listaduplazonas.add(duplazona);
     }
 
+    public ArrayList<DuplaZona> getListaduplazonas() {
+        return listaduplazonas;
+    }
 
     public byte[] statusParticao(){
         ByteBuffer buffer = ByteBuffer.allocate(4);
@@ -221,9 +223,58 @@ public class Particao  {
         byte[] resultado = buffer.array();
         return  resultado;
     }
+
+
+    public ArrayList<ZonaCircle> listaInvertida() {
+        ArrayList<ZonaCircle> listainvertida = new ArrayList<>();
+        for (int i = 4; i >= 0; i--) {
+            int n = 0;
+            for (DuplaZona duplaZona : listaduplazonas) {
+                n++;
+                if (i == n) {
+                    for (ZonaCircle zonainvertida : duplaZona.getZonaOrdemInvertida()) {
+                        listainvertida.add(zonainvertida);
+                    }
+                }
+            }
+        }
+        return listainvertida;
+    }
+
     @Override
     public String toString() {
         return String.valueOf(particaocircle);
     }
-}
+
+    public int getNumeroidentificador(){
+        return particaocircle.getNumeroidentificador();
+    }
+
+    public void inibirzona(String zonasInibidas) {
+        int digito1 = HexTraducao.hexTraducaoInteger(zonasInibidas.substring(0,1));
+        int digito2 = HexTraducao.hexTraducaoInteger(zonasInibidas.substring(1,2));
+
+        int divisor1 = 8;
+        int divisor2 = 8;
+
+            for (ZonaCircle zona: listaInvertida()) {
+                if(divisor1 != 0) {
+                    if (digito1 / divisor1 > 0) {
+                        digito1 -= divisor1;
+                        zona.alterarStatusEspecificoZona(StatusZona.Inibido);
+                    }
+                    divisor1 /= 2;
+                }
+
+                else {
+                    if (digito2 / divisor2 > 0) {
+                        digito2 -= divisor2;
+                        zona.alterarStatusEspecificoZona(StatusZona.Inibido);
+                    }
+                    divisor2 /= 2;
+                }
+            }
+        }
+    }
+
 

@@ -21,7 +21,7 @@ public class Terminal {
     }
     public void printResposta (String comando ){
         LocalDateTime c = LocalDateTime.now(ZoneId.of("Brazil/East") );
-        terminal.appendText(c + "-[BROKER] <<" + comando + newLine);
+        terminal.appendText(c + "-[BROKER] << " + comando + newLine);
     }
     public void printTerminalBits (byte[] comando){
         LocalDateTime c = LocalDateTime.now(ZoneId.of("Brazil/East") );

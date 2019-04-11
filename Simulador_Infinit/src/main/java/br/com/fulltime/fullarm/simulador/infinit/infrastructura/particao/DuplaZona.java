@@ -28,6 +28,14 @@ public class DuplaZona {
         return zona;
     }
 
+    public ArrayList<ZonaCircle> getZonaOrdemInvertida(){
+        ArrayList<ZonaCircle> listainvertida= new ArrayList<>();
+        listainvertida.add(zona2);
+        listainvertida.add(zona1);
+        return  listainvertida;
+    }
+
+
 
     public byte[] statusZonaHexDecimalCompleto() {
 

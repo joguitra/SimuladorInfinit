@@ -13,6 +13,7 @@ public class EsconderPane {
     private Pane zona1;
     private Pane zona2;
     private Label labelparticao;
+    private Label labelparticao2;
     private ImageView imagem1;
     private ImageView imagem2;
     private Circle efzping;
@@ -42,6 +43,7 @@ public class EsconderPane {
         imagem2.setVisible(false);
         efzping.setVisible(false);
         imagem1.setVisible(true);
+        labelparticao2.setVisible(false);
     }
     public  void definirPane(Pane principal,Pane log ,Pane pesquisa){
 
@@ -50,10 +52,11 @@ public class EsconderPane {
         this.pesquisa = pesquisa;
     }
 
-    public void definirParticao(Pane zona1 , Pane zona2, Label labelparticao,  ImageView imagem1, ImageView imagem2,Circle efzping){
+    public void definirParticao(Pane zona1 , Pane zona2, Label labelparticao,Label labelparticao2,  ImageView imagem1, ImageView imagem2,Circle efzping){
         this.zona1 = zona1;
         this.zona2 = zona2;
         this.labelparticao = labelparticao;
+        this.labelparticao2 = labelparticao2;
 
         this.imagem1 = imagem1;
         this.imagem2 = imagem2;
@@ -69,7 +72,8 @@ public class EsconderPane {
         }
         if (zona == 1) {
             zona1.setVisible(true);
-            labelparticao.setText("1");
+            labelparticao.setVisible(true);
+            labelparticao2.setVisible(false);
             zona2.setVisible(false);
             imagem1.setVisible(true);
             imagem2.setVisible(false);
@@ -77,7 +81,8 @@ public class EsconderPane {
         }
         else if (zona == 2) {
             zona2.setVisible(true);
-            labelparticao.setText("2");
+            labelparticao.setVisible(false);
+            labelparticao2.setVisible(true);
             zona1.setVisible(false);
             imagem1.setVisible(false);
             imagem2.setVisible(true);
@@ -93,8 +98,8 @@ public class EsconderPane {
 
     }
 
-//    public void mostrarPing(){ efzping.setVisible(true);}
-//    public void escondePing(){ efzping.setVisible(false);}
+    public void mostrarPing(){ efzping.setVisible(true);}
+    public void escondePing(){ efzping.setVisible(false);}
 
     public void mostrarPesquisa(){
         pesquisa.setVisible(true);

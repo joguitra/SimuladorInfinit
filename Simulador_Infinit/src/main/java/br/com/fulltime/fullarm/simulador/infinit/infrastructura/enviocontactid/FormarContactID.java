@@ -54,6 +54,13 @@ public class FormarContactID {
         }
         return sequencia;
     }
+
+    public String eventoInibido (int numeroidentificadorSetor,int numeroidentificadorParticao){
+        if(numeroidentificadorSetor>10){
+            return  "$"+ usuario.getText() +"1"+"5070"+numeroidentificadorParticao +"0"+numeroidentificadorSetor +sequencia+"]";
+        }
+        return  "$"+ "0001" +"1"+"5070"+numeroidentificadorParticao +"00"+numeroidentificadorSetor +sequencia+"]";
+    }
     public String formacodigoCompleto(Boolean estaarmado,String particao){
         try {
             if (estaarmado) {

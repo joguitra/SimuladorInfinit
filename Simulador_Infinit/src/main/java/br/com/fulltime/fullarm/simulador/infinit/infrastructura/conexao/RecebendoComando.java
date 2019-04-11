@@ -4,6 +4,7 @@ import br.com.fulltime.fullarm.simulador.infinit.application.circle.ConectadoCir
 import br.com.fulltime.fullarm.simulador.infinit.application.terminal.Terminal;
 import br.com.fulltime.fullarm.simulador.infinit.core.PGM;
 import br.com.fulltime.fullarm.simulador.infinit.core.Particao;
+import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.DuplaZona;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.TodasParticao;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
@@ -92,10 +93,31 @@ public class RecebendoComando {
                 return desarmeParticaoComando();
             case "45":
                 return armedesarmeParticao();
+            case "42":
+                return inibidoZona();
             default:
                 return alterarPGM();
         }
     }
+
+    public byte[] inibidoZona(){
+        int I = 6;
+        int F = 8;
+        for (Particao particao: todasparticao.getListaparticao()) {
+
+            particao.inibirzona(linha.substring(I,F));
+            I+=3;
+            F+=3;
+
+        }
+
+        buffer =ByteBuffer.allocate(1);
+        buffer.put("B".getBytes());
+        byte[] resultado = buffer.array();
+        return resultado;
+    }
+
+
 
     public byte[] armedesarmeParticao(){
         separaNumeroIdetificador();
@@ -254,8 +276,6 @@ public class RecebendoComando {
     public void separaNumeroIdetificador() {
         if(linha.length() == 12){
             numeroidentificador = linha.substring(7,8);
-            System.out.print(numeroidentificador);
-
         }
         else {
             numeroidentificador = linha.substring(7,8) + linha.substring(10,11);

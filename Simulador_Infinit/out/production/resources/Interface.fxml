@@ -163,7 +163,7 @@
                         <Font name="Corbel Light" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lparticao" layoutX="134.0" layoutY="45.0" text="1">
+                  <Label fx:id="lparticao1" layoutX="134.0" layoutY="45.0" text="1">
                      <font>
                         <Font size="19.0" />
                      </font>
@@ -181,6 +181,11 @@
                         <Image url="@cadeado.jpg" />
                      </image>
                   </ImageView>
+                  <Label fx:id="lparticao2" layoutX="134.0" layoutY="46.0" text="2">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Button fx:id="btnescoderlog" layoutX="40.0" layoutY="240.0" mnemonicParsing="false" onAction="#esconderlog" text="Esconder Log" />
@@ -255,7 +260,7 @@
                   <Line fx:id="zonataper16" endX="12.0" layoutX="227.5" layoutY="65.0" startX="-7.0" />
                </children>
             </Pane>
-            <Pane fx:id="panepesquisa" layoutX="50.0" prefHeight="280.0" prefWidth="380.0" style="-fx-background-color: #C0C0C0;">
+            <Pane fx:id="panepesquisa" layoutX="200.0" prefHeight="280.0" prefWidth="380.0" style="-fx-background-color: #C0C0C0;">
                <children>
                   <Pane layoutX="10.0" layoutY="220.0" prefHeight="50.0" prefWidth="360.0" style="-fx-background-color: #FFFAFA;">
                      <children>
