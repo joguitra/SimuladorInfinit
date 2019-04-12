@@ -11,6 +11,7 @@ public class PGM {
     private Boolean acionado = false;
     private String numeroidentificador;
 
+
     public void adicionarPGM(Circle circle , int numeropgm){
         pgmcircle = new PGMCircle(circle, numeropgm);
         listapgm.add(pgmcircle);

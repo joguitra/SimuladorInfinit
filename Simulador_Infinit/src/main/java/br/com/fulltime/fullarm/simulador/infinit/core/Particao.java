@@ -22,6 +22,7 @@ public class Particao  {
     private ImageView image;
     private Boolean statusarmada =false,statusmemoria =false,statushabilitar=true, statuspronta=true;
 
+
     public Particao (Circle circle ,int numeroindetificador , ImageView image){
         this.image = image;
         particaocircle = new ParticaoCircle(circle,numeroindetificador);
@@ -67,7 +68,7 @@ public class Particao  {
         }
     }
 
-    public void alterarZona(Circle circle){
+    public boolean alterarZona(Circle circle){
         for (DuplaZona duplazona:listaduplazonas) {
             for (ZonaCircle zona:duplazona.getZona()) {
                 if(zona.getCircle().equals(circle)) {
@@ -76,11 +77,13 @@ public class Particao  {
                         zona.zonaArmada();
                         statusmemoria=true;
                         image.setImage(new Image("megafone.jpg"));
+                        return true;
                     }
                 }
 
             }
         }
+        return  false;
     }
 
     public void alterarTamper(Circle circle) {
@@ -120,12 +123,12 @@ public class Particao  {
 
 
     public  Boolean alterarStatusParticao(){
-       Boolean armado =particaocircle.armarParticao(checkoutZonaAberta());
-        if(armado) {
-            if (!statusarmada) {
+
+
+        if (!statusarmada) {
                 armarParticao();
                 return statusarmada;
-            }
+
         }
         if (statusarmada) {
             desarmaParticao();
@@ -249,6 +252,7 @@ public class Particao  {
     public int getNumeroidentificador(){
         return particaocircle.getNumeroidentificador();
     }
+
 
     public void inibirzona(String zonasInibidas) {
 

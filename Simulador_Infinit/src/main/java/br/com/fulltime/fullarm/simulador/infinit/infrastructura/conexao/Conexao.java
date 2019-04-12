@@ -6,13 +6,10 @@ import br.com.fulltime.fullarm.simulador.infinit.core.Particao;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.enviocontactid.FormarContactID;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.DuplaZona;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.TodasParticao;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.*;
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ConectadoCircle;
 import br.com.fulltime.fullarm.simulador.infinit.application.controles.EsconderPane;
 import br.com.fulltime.fullarm.simulador.infinit.application.terminal.Terminal;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,6 +31,7 @@ public class Conexao {
     private TodasParticao todasparticao;
     private PGM pgm;
     private Button btndesconectar;
+    private CheckBox chbCID;
     private ChoiceBox<String> tipodconexao;
     private  int portanumerica;
     private  String ipnumerico;
@@ -41,6 +39,7 @@ public class Conexao {
     private  String usuariocompleto;
     private Socket socket;
     private boolean desconetado;
+    private boolean enviarcid;
     private InputStream entrada;
     private  RecebendoComando recebendoComando = new RecebendoComando();
     private  FormarContactID formarcontactid = new FormarContactID();
@@ -49,7 +48,7 @@ public class Conexao {
     public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
                           EsconderPane esconderPane, Label labeldesconectado, ConectadoCircle conectado,
                           TextField imei , ChoiceBox<String> tipodeconexao, PGM pgm,
-                          Button btndesconectar, TodasParticao todasparticao){
+                          Button btndesconectar, TodasParticao todasparticao, CheckBox chbCID){
         this.tipodconexao = tipodeconexao;
         this.ip = ip;
         this.porta = porta;
@@ -63,7 +62,7 @@ public class Conexao {
         this.todasparticao = todasparticao;
         this.pgm = pgm;
         this.btndesconectar = btndesconectar;
-
+        this.chbCID = chbCID;
     }
 
 
@@ -103,7 +102,14 @@ public class Conexao {
     public byte[] textReposta(String comando) throws IOException {
         return recebendoComando.receberResposta(comando);
     }
-
+    public boolean enviarCID () {
+        if (chbCID.isSelected()) {
+            enviarcid = true;
+        } else {
+            enviarcid = false;
+        }
+        return enviarcid;
+    }
 
     public void recebendoResposta ()  {
         Thread recebercomando = new Thread( ()-> {
@@ -120,12 +126,14 @@ public class Conexao {
                         byte[] resposta = recebendoComando.receberResposta(linha);
                         saida.write(resposta);
                         terminal.printTerminalBits(resposta);
-                        if(HexTraducao.formatHexString(resposta).equals("42 ")){
-                            for (Particao particao: todasparticao.getListaparticao()) {
-                                for (DuplaZona duplazona: particao.getListaduplazonas()) {
+                        String reposta = HexTraducao.formatHexString(resposta);
+
+                        if ("42 ".equals(reposta)|| "49".equals(linha.substring(3,5))) {
+                            for (Particao particao : todasparticao.getListaparticao()) {
+                                for (DuplaZona duplazona : particao.getListaduplazonas()) {
                                     for (ZonaCircle zona : duplazona.getZona()) {
-                                        if(zona.getStatusinibido()){
-                                            String respostainibida =(formarcontactid.eventoInibido(zona.getNumeroidentificador(),particao.getNumeroidentificador()));
+                                        if (zona.getStatusinibido()) {
+                                            String respostainibida = (formarcontactid.eventoInibido(zona.getNumeroidentificador(), particao.getNumeroidentificador()));
                                             saida.print(respostainibida);
                                             terminal.printTerminal(respostainibida);
                                         }
@@ -133,13 +141,52 @@ public class Conexao {
                                 }
                             }
                         }
+                        if (enviarCID()) {
+                            if ("52".equals(reposta.substring(6, 8))) {
+                                saida.print(formarcontactid.pgmCID());
+                                terminal.printTerminal(formarcontactid.pgmCID());
+                            }
+                        }
+                        if ("4F".equals(reposta.substring(3, 5))) {
+                            if("41".equals(linha.substring(3,5))){
+                                saida.print(formarcontactid.armeCID(linha.substring(7,8)));
+                                terminal.printTerminal(formarcontactid.armeCID(linha.substring(7,8)));
+                            }
+
+                            if("44".equals(linha.substring(3,5))){
+                                saida.print(formarcontactid.desarmeCID(linha.substring(7,8)));
+                                terminal.printTerminal(formarcontactid.desarmeCID(linha.substring(7,8)));
+                            }
+                            if("49".equals(linha.substring(3,5))){
+                                saida.print(formarcontactid.stayCID(linha.substring(7,8)));
+                                terminal.printTerminal(formarcontactid.stayCID(linha.substring(7,8)));
+                            }
+                        }
+
                     }
-                }catch (Exception ignorar) {}
+
+                }catch (Exception reconectar) {
+//                    reconectar.printStackTrace();
+//                    reconectar();
+                }
             }
     });
         recebercomando.start();
 
     }
+
+    private void reconectar() {
+        try {
+            desconectarServidor();
+            Thread.sleep(10000);
+            conectarServidor();
+            enviarIMEI();
+            auntetificarConta();
+
+        } catch (Exception ignorar) {
+        }
+    }
+
     public void enviarIMEI(){
         imei.getText();
         saida.print("I"+imei.getText());
@@ -168,8 +215,6 @@ public class Conexao {
     }
     public boolean desconectarServidor() throws IOException {
         esconderPane.esconderIniciacao();
-        conectado.alterarStatusDesconectado();
-        socket.close();
         setConectaservidor(false);
         return false;
     }

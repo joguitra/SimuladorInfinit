@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 
 public class FormarContactID {
 
+
     private TextField usuario;
     private ListView<String> qualificador;
     private TextField evento;
@@ -47,6 +48,16 @@ public class FormarContactID {
         return null;
     }
 
+    public String enviarTamper(int numeroidentificadorSetor,int numeroidentificadorParticao){
+
+        if(numeroidentificadorSetor >=10){
+            return  "$"+ "0001" +"1"+"1440"+numeroidentificadorParticao +"0"+numeroidentificadorSetor +sequencia+"]";
+        }
+        return  "$"+ "0001" +"1"+"1440"+numeroidentificadorParticao +"00"+numeroidentificadorSetor +sequencia+"]";
+    }
+
+
+
     public int sequenciaCodigo(){
         sequencia++;
         if (sequencia >= 10){
@@ -54,6 +65,11 @@ public class FormarContactID {
         }
         return sequencia;
     }
+
+    public String pgmCID (){
+        return  "$"+ "0001" +"1"+"422"+"01"+"001"+sequencia+"]";
+    }
+
 
     public String eventoInibido (int numeroidentificadorSetor,int numeroidentificadorParticao){
         if(numeroidentificadorSetor >=10){
@@ -73,6 +89,25 @@ public class FormarContactID {
             }
             return codigo;
         }catch (NullPointerException ignorar){return null;}
+    }
+
+    public String armeCID(String particao) {
+
+        String codigo= "$" + "0001" + "3" + "4010" + particao + "001" + sequencia + "]";
+        return  codigo;
+    }
+    public String desarmeCID(String particao) {
+        return "$" + "0001" + "1" + "4010" + particao + "001" + sequencia + "]";
+    }
+    public String stayCID(String particao){
+        return  "$" + "0001" + "1" + "4410" +particao +"001" + sequencia + "]";
+    }
+
+    public String disparar(int  particao,int setor) {
+        if (setor > 10) {
+            return "$" + "0001" + "1" + "130"+"0" + particao + "0"+setor + sequencia + "]";
+        }
+        return "$" + "0001" + "1"+"130" + "0" + particao + "00"+setor + sequencia + "]";
     }
 
 }

@@ -1,9 +1,11 @@
 package br.com.fulltime.fullarm.simulador.infinit.infrastructura.conexao;
 
 import br.com.fulltime.fullarm.simulador.infinit.application.circle.ConectadoCircle;
+import br.com.fulltime.fullarm.simulador.infinit.application.circle.ZonaCircle;
 import br.com.fulltime.fullarm.simulador.infinit.application.terminal.Terminal;
 import br.com.fulltime.fullarm.simulador.infinit.core.PGM;
 import br.com.fulltime.fullarm.simulador.infinit.core.Particao;
+import br.com.fulltime.fullarm.simulador.infinit.core.StatusZona;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.DuplaZona;
 import br.com.fulltime.fullarm.simulador.infinit.infrastructura.particao.TodasParticao;
 import javafx.application.Platform;
@@ -92,16 +94,59 @@ public class RecebendoComando {
             case "44":
                 return desarmeParticaoComando();
             case "45":
-                return armedesarmeParticao();
+                return statusTodasParticao();
             case "42":
                 return inibidoZona();
             case "55":
                 return deseinibirZona();
             case "49":
-                return armaParticaoComando();
+                return stayParticaoComando();
             default:
                 return alterarPGM();
         }
+    }
+
+    private byte[] stayParticaoComando() {
+        separaNumeroIdetificador();
+        i=0;
+        for (Particao particao : todasparticao.getListaparticao()) {
+            i++;
+            if (i == Integer.valueOf(numeroidentificador)) {
+                i=0;
+                if(particao.getNumeroidentificador() == 1){
+                    for (DuplaZona duplazona: particao.getListaduplazonas() ) {
+                        if (i<2) {
+                            for (ZonaCircle zona : duplazona.getZona()) {
+                                zona.alterarStatusEspecificoZona(StatusZona.Inibido);
+                            }
+                        }
+                        i++;
+                    }
+                }
+                if(particao.getNumeroidentificador() == 2){
+                    for (DuplaZona duplazona: particao.getListaduplazonas() ) {
+                        if (i>=2) {
+                            for (ZonaCircle zona : duplazona.getZona()) {
+                                zona.alterarStatusEspecificoZona(StatusZona.Inibido);
+                            }
+                        }
+                        i++;
+                    }
+
+                }
+            }
+        }
+
+        return armaParticaoComando();
+    }
+
+    private byte[] statusTodasParticao() {
+        buffer = ByteBuffer.allocate(6);
+        String cabecario="WS";
+        buffer.put(cabecario.getBytes());
+        buffer.put(todasparticao.statusParticao());
+        byte[] resultado =buffer.array();
+        return  resultado;
     }
 
     private byte[] deseinibirZona() {
@@ -139,60 +184,6 @@ public class RecebendoComando {
         return resultado;
     }
 
-
-
-    public byte[] armedesarmeParticao(){
-        separaNumeroIdetificador();
-        for (Particao particao: todasparticao.getListaparticao()){
-            i++;
-            if (numeroidentificador.equals("0")) {
-                armedesarmeParticaoUnica(particao);
-            }
-            if(numeroidentificador.equals(String.valueOf(i))){
-                armedesarmeParticaoUnica(particao);
-            }
-        }
-        buffer = ByteBuffer.allocate(6);
-        String cabecario="WS";
-        buffer.put(cabecario.getBytes());
-        buffer.put(todasparticao.statusParticao());
-        byte[] resultado =buffer.array();
-        return  resultado;
-    }
-
-    public byte[] armedesarmeParticaoUnica(Particao particao){
-        if(!particao.getStatusarmada()){
-            byte[] resultado =armeParticao(particao);
-
-            if(resultado.length == 4){
-                buffer = ByteBuffer.allocate(6);
-                String cabecario ="WS";
-                buffer.put(cabecario.getBytes());
-                buffer.put(resultado);
-                byte[] resposta = buffer.array();
-                return  resposta;
-            }
-            if(resultado.length == 64){
-                buffer = ByteBuffer.allocate(66);
-                String cabecario = "AE";
-                buffer.put(cabecario.getBytes());
-                buffer.put(resultado);
-                byte[] resposta = buffer.array();
-                return  resposta;
-            }
-        }
-        if(particao.getStatusarmada()){
-            buffer = ByteBuffer.allocate(6);
-            byte[] resultado =desarmeParticao(particao);
-            String cabecario ="WS";
-            buffer.put(cabecario.getBytes());
-            buffer.put(resultado);
-            byte[] resposta = buffer.array();
-            return  resposta;
-
-        }
-        return null;
-    }
     public byte[] pedirStatusParticao(){
         buffer = ByteBuffer.allocate(33);
         String cabecario = "S";
@@ -231,6 +222,7 @@ public class RecebendoComando {
 
     public byte[] armaParticaoComando(){
         separaNumeroIdetificador();
+        i=0;
         for (Particao particao: todasparticao.getListaparticao()) {
               i++;
               if(i==Integer.valueOf(numeroidentificador)){
@@ -279,6 +271,7 @@ public class RecebendoComando {
     }
     public byte [] desarmeParticaoComando(){
         separaNumeroIdetificador();
+        i=0;
         for (Particao particao: todasparticao.getListaparticao()) {
             i++;
             if(i==Integer.valueOf(numeroidentificador)){

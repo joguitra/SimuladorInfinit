@@ -13,27 +13,29 @@ public class ParticaoCircle extends CircleStatus {
         super(circle, numeroidentificador);
     }
 
-    public boolean armarParticao(String zonaaberta){
+    public boolean armarParticao(String zonaaberta) {
 
-        if(condicaoArma(zonaaberta) != null){
-            try {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Armação de partição cancelado");
-                alert.setHeaderText("Armação foi cancelada devido " + statusarmado);
-                alert.showAndWait().ifPresent(rs -> {
-                    if (rs == ButtonType.OK) {
-                        alert.close();
-                    }
-                });
-            }catch (Exception ignora){ return  false;}
+            if (condicaoArma(zonaaberta) != null) {
+                try {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Armação de partição cancelado");
+                    alert.setHeaderText("Armação foi cancelada devido " + statusarmado);
+                    alert.showAndWait().ifPresent(rs -> {
+                        if (rs == ButtonType.OK) {
+                            alert.close();
+                        }
+                    });
+                } catch (Exception ignora) {
+                    return false;
+                }
 
+            } else {
+                return true;
+            }
+
+            return false;
         }
-        else {
-            return true;
-        }
 
-        return  false;
-    }
 
     public String condicaoArma(String zonaaberta  ){
         statusarmado= null;

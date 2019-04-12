@@ -47,6 +47,7 @@ public class Controler implements Initializable {
     private ConectadoCircle statusconectar;
     private Mensagem mensagem = new Mensagem();
     private TodasParticao todasparticao = new TodasParticao();
+    private boolean enviarcid =false;
 
     @FXML
     private TextField tfimei;
@@ -213,6 +214,9 @@ public class Controler implements Initializable {
     private Pane panezona2;
 
     @FXML
+    private CheckBox chbPGMCID;
+
+    @FXML
     private Circle efz9;
 
     @FXML
@@ -309,6 +313,16 @@ public class Controler implements Initializable {
 
     @FXML
     void digitarImei(KeyEvent event) {
+    }
+
+    @FXML
+    void cbgPGMativado(ActionEvent event) {
+        if(chbPGMCID.isSelected()){
+            enviarcid = true;
+        }
+        else {
+            enviarcid = false;
+        }
     }
 
     @FXML
@@ -421,8 +435,11 @@ public class Controler implements Initializable {
 
 
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao1.alterarZona(efz1);
-
+            boolean memoria =particao1.alterarZona(efz1);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(1, 1));
+                terminal.printTerminal(formarcontactid.disparar(1, 1));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz1);
         }
@@ -432,8 +449,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona2(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao1.alterarZona(efz2);
-
+            boolean memoria =particao1.alterarZona(efz2);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(1, 2));
+                terminal.printTerminal(formarcontactid.disparar(1, 2));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz2);
         }
@@ -443,8 +463,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona3(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao1.alterarZona(efz3);
-
+            boolean memoria =particao1.alterarZona(efz3);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(1, 3));
+                terminal.printTerminal(formarcontactid.disparar(1, 3));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz3);
         }
@@ -454,8 +477,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona4(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao1.alterarZona(efz4);
-
+            boolean memoria =particao1.alterarZona(efz4);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(1, 4));
+                terminal.printTerminal(formarcontactid.disparar(1, 4));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz4);
         }
@@ -465,7 +491,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona5(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao1.alterarZona(efz5);
+            boolean memoria =particao1.alterarZona(efz5);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(1, 5));
+                terminal.printTerminal(formarcontactid.disparar(1, 5));
+            }
 
         }else if(event.getButton() == MouseButton.SECONDARY) {
             particao1.alterarZonaInibida(efz5);
@@ -475,8 +505,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona6(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao1.alterarZona(efz6);
-
+            boolean memoria =particao1.alterarZona(efz6);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(1, 6));
+                terminal.printTerminal(formarcontactid.disparar(1, 6));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz6);
         }
@@ -486,8 +519,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona7(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao1.alterarZona(efz7);
-
+            boolean memoria =particao1.alterarZona(efz7);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(1, 7));
+                terminal.printTerminal(formarcontactid.disparar(1, 7));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz7);
         }
@@ -497,8 +533,12 @@ public class Controler implements Initializable {
     @FXML
     void alterzona8(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao1.alterarZona(efz8);
+            boolean memoria =particao1.alterarZona(efz8);
 
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(1, 8));
+                terminal.printTerminal(formarcontactid.disparar(1, 8));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz8);
         }
@@ -508,8 +548,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona9(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ){
-            particao2.alterarZona(efz9);
-
+            boolean memoria =particao2.alterarZona(efz9);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(2, 9));
+                terminal.printTerminal(formarcontactid.disparar(2, 9));
+            }
         }
         else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz9);
@@ -520,8 +563,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona10(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao2.alterarZona(efz10);
-
+            boolean memoria =particao2.alterarZona(efz10);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(2, 10));
+                terminal.printTerminal(formarcontactid.disparar(2, 10));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz10);
         }
@@ -531,7 +577,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona11(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao2.alterarZona(efz11);
+            boolean memoria =particao2.alterarZona(efz11);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(2, 11));
+                terminal.printTerminal(formarcontactid.disparar(2, 11));
+            }
 
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz11);
@@ -542,7 +592,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona12(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao2.alterarZona(efz12);
+            boolean memoria =particao2.alterarZona(efz12);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(2, 12));
+                terminal.printTerminal(formarcontactid.disparar(2, 12));
+            }
 
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz12);
@@ -553,7 +607,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona13(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao2.alterarZona(efz13);
+            boolean memoria =particao2.alterarZona(efz13);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(2, 13));
+                terminal.printTerminal(formarcontactid.disparar(2, 13));
+            }
 
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz13);
@@ -564,7 +622,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona14(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao2.alterarZona(efz14);
+            boolean memoria =particao2.alterarZona(efz14);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(2, 14));
+                terminal.printTerminal(formarcontactid.disparar(2, 14));
+            }
 
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz14);
@@ -575,8 +637,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona15(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao2.alterarZona(efz15);
-
+            boolean memoria =particao2.alterarZona(efz15);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(2, 15));
+                terminal.printTerminal(formarcontactid.disparar(2, 15));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz15);
         }
@@ -586,8 +651,11 @@ public class Controler implements Initializable {
     @FXML
     void alterarzona16(MouseEvent event) {
         if( event.getButton() == MouseButton.PRIMARY ) {
-            particao2.alterarZona(efz16);
-
+            boolean memoria =particao2.alterarZona(efz16);
+            if(memoria) {
+                conexao.printSaida(formarcontactid.disparar(2, 16));
+                terminal.printTerminal(formarcontactid.disparar(2, 16));
+            }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz16);
         }
@@ -598,6 +666,9 @@ public class Controler implements Initializable {
     void taperzona1(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao1.alterarTamper(efz1);
+            String evento =(formarcontactid.enviarTamper(1,1));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
 
     }
@@ -605,6 +676,9 @@ public class Controler implements Initializable {
     void taperzona2(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao1.alterarTamper(efz2);
+            String evento =(formarcontactid.enviarTamper(2,1));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -612,6 +686,9 @@ public class Controler implements Initializable {
     void taperzona3(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao1.alterarTamper(efz3);
+            String evento =(formarcontactid.enviarTamper(3,1));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -619,6 +696,9 @@ public class Controler implements Initializable {
     void taperzona4(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao1.alterarTamper(efz4);
+            String evento =(formarcontactid.enviarTamper(4,1));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -626,6 +706,9 @@ public class Controler implements Initializable {
     void taperzona5(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao1.alterarTamper(efz5);
+            String evento =(formarcontactid.enviarTamper(5,1));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -633,6 +716,9 @@ public class Controler implements Initializable {
     void taperzona6(MouseEvent event) {
        if(event.getButton() == MouseButton.MIDDLE) {
             particao1.alterarTamper(efz6);
+           String evento =(formarcontactid.enviarTamper(6,1));
+           conexao.printSaida(evento);
+           terminal.printTerminal(evento);
         }
     }
 
@@ -640,18 +726,28 @@ public class Controler implements Initializable {
     void taperzona7(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao1.alterarTamper(efz7);
-        }    }
+            String evento =(formarcontactid.enviarTamper(7,1));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
+        }
+    }
 
     @FXML
     void taperzona8(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao1.alterarTamper(efz8);
-        }    }
+            String evento =(formarcontactid.enviarTamper(8,1));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);        }
+    }
 
     @FXML
     void taperzona9(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao2.alterarTamper(efz9);
+            String evento =(formarcontactid.enviarTamper(9,2));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -659,6 +755,9 @@ public class Controler implements Initializable {
     void taperzona10(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao2.alterarTamper(efz10);
+            String evento =(formarcontactid.enviarTamper(10,2));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -666,6 +765,9 @@ public class Controler implements Initializable {
     void taperzona11(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao2.alterarTamper(efz11);
+            String evento =formarcontactid.enviarTamper(11,2) ;
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -673,6 +775,9 @@ public class Controler implements Initializable {
     void taperzona12(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao2.alterarTamper(efz12);
+            String evento = (formarcontactid.enviarTamper(12, 2));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -680,13 +785,18 @@ public class Controler implements Initializable {
     void taperzona13(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao2.alterarTamper(efz13);
-        }
+            String evento =(formarcontactid.enviarTamper(13,2));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);        }
     }
 
     @FXML
     void taperzona14(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao2.alterarTamper(efz14);
+            String evento =(formarcontactid.enviarTamper(14,2));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -694,6 +804,9 @@ public class Controler implements Initializable {
     void taperzona15(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao2.alterarTamper(efz15);
+            String evento =(formarcontactid.enviarTamper(15,2));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -701,6 +814,9 @@ public class Controler implements Initializable {
     void taperzona16(MouseEvent event) {
         if(event.getButton() == MouseButton.MIDDLE) {
             particao2.alterarTamper(efz16);
+            String evento =(formarcontactid.enviarTamper(16,2));
+            conexao.printSaida(evento);
+            terminal.printTerminal(evento);
         }
     }
 
@@ -716,6 +832,10 @@ public class Controler implements Initializable {
       String codigo =pgm1.alterarStatus(efzp1);
       conexao.printSaida(codigo);
       terminal.printTerminal(codigo);
+      if(enviarcid){
+          conexao.printSaida(formarcontactid.pgmCID());
+          terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+      }
     }
 
     @FXML
@@ -723,6 +843,10 @@ public class Controler implements Initializable {
         String codigo =pgm1.alterarStatus(efzp2);
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
+        if(enviarcid){
+            conexao.printSaida(formarcontactid.pgmCID());
+            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+        }
     }
 
     @FXML
@@ -730,6 +854,10 @@ public class Controler implements Initializable {
         String codigo =pgm1.alterarStatus(efzp3);
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
+        if(enviarcid){
+            conexao.printSaida(formarcontactid.pgmCID());
+            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+        }
     }
 
     @FXML
@@ -737,6 +865,10 @@ public class Controler implements Initializable {
         String codigo =pgm1.alterarStatus(efzp4);
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
+        if(enviarcid){
+            conexao.printSaida(formarcontactid.pgmCID());
+            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+        }
     }
 
     @FXML
@@ -744,6 +876,10 @@ public class Controler implements Initializable {
         String codigo =pgm1.alterarStatus(efzp5);
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
+        if(enviarcid){
+            conexao.printSaida(formarcontactid.pgmCID());
+            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+        }
     }
 
     @FXML
@@ -751,12 +887,20 @@ public class Controler implements Initializable {
         String codigo=pgm1.alterarStatus(efzp6);
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
+        if(enviarcid){
+            conexao.printSaida(formarcontactid.pgmCID());
+            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+        }
     }
     @FXML
     void alterarpgm7(MouseEvent event) {
         String codigo =pgm1.alterarStatus(efzp7);
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
+        if(enviarcid){
+            conexao.printSaida(formarcontactid.pgmCID());
+            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+        }
     }
 
     @FXML
@@ -764,6 +908,10 @@ public class Controler implements Initializable {
         String codigo =pgm1.alterarStatus(efzp8);
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
+        if(enviarcid){
+            conexao.printSaida(formarcontactid.pgmCID());
+            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+        }
     }
 
     @FXML
@@ -893,7 +1041,7 @@ public class Controler implements Initializable {
 
         terminal.definirTerminal(taterminal);
 
-        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao,pgm1,btnconectar,todasparticao);
+        conexao.setConexa(tfip,tfporta,tfmac,tftimekeepalive,terminal,esconderpane,ldesconectado, statusconectar,tfimei,cbtipoconexao,pgm1,btnconectar,todasparticao,chbPGMCID);
 
         esconderpane.definirPane(paneprincipal,panelog,panepesquisa);
         esconderpane.definirParticao(panezona,panezona2,lparticao1,lparticao2,imagemview1,imagemview2,efzping);
