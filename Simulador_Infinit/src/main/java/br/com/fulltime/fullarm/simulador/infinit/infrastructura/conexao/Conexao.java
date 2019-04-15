@@ -72,7 +72,7 @@ public class Conexao {
         socket = new Socket(ipnumerico,portanumerica);
 
         desconetado = false;
-        saida=new PrintStream(socket.getOutputStream());
+        saida =new PrintStream(socket.getOutputStream());
         entrada= socket.getInputStream();
         labeldesconectado.setVisible(false);
         return true;
@@ -96,12 +96,10 @@ public class Conexao {
         try {
             saida.write(resposta);
         } catch (IOException ignorar) {
+            reconectar();
         }
     }
 
-    public byte[] textReposta(String comando) throws IOException {
-        return recebendoComando.receberResposta(comando);
-    }
     public boolean enviarCID () {
         if (chbCID.isSelected()) {
             enviarcid = true;
@@ -128,7 +126,7 @@ public class Conexao {
                         terminal.printTerminalBits(resposta);
                         String reposta = HexTraducao.formatHexString(resposta);
 
-                        if ("42 ".equals(reposta)|| "49".equals(linha.substring(3,5))) {
+                        if ("42 ".equals(reposta) || "49".equals(linha.substring(3, 5))) {
                             for (Particao particao : todasparticao.getListaparticao()) {
                                 for (DuplaZona duplazona : particao.getListaduplazonas()) {
                                     for (ZonaCircle zona : duplazona.getZona()) {
@@ -148,26 +146,26 @@ public class Conexao {
                             }
                         }
                         if ("4F".equals(reposta.substring(3, 5))) {
-                            if("41".equals(linha.substring(3,5))){
-                                saida.print(formarcontactid.armeCID(linha.substring(7,8)));
-                                terminal.printTerminal(formarcontactid.armeCID(linha.substring(7,8)));
+                            if ("41".equals(linha.substring(3, 5))) {
+                                saida.print(formarcontactid.armeCID(linha.substring(7, 8)));
+                                terminal.printTerminal(formarcontactid.armeCID(linha.substring(7, 8)));
                             }
 
-                            if("44".equals(linha.substring(3,5))){
-                                saida.print(formarcontactid.desarmeCID(linha.substring(7,8)));
-                                terminal.printTerminal(formarcontactid.desarmeCID(linha.substring(7,8)));
+                            if ("44".equals(linha.substring(3, 5))) {
+                                saida.print(formarcontactid.desarmeCID(linha.substring(7, 8)));
+                                terminal.printTerminal(formarcontactid.desarmeCID(linha.substring(7, 8)));
                             }
-                            if("49".equals(linha.substring(3,5))){
-                                saida.print(formarcontactid.stayCID(linha.substring(7,8)));
-                                terminal.printTerminal(formarcontactid.stayCID(linha.substring(7,8)));
+                            if ("49".equals(linha.substring(3, 5))) {
+                                saida.print(formarcontactid.stayCID(linha.substring(7, 8)));
+                                terminal.printTerminal(formarcontactid.stayCID(linha.substring(7, 8)));
                             }
                         }
 
                     }
-
+                }catch (IOException reconectar){
+                    reconectar.printStackTrace();
+                    reconectar();
                 }catch (Exception reconectar) {
-//                    reconectar.printStackTrace();
-//                    reconectar();
                 }
             }
     });
@@ -178,11 +176,11 @@ public class Conexao {
     private void reconectar() {
         try {
             desconectarServidor();
-            Thread.sleep(10000);
+            Thread.sleep(1000);
             conectarServidor();
             enviarIMEI();
             auntetificarConta();
-
+            esconderPane.mostarPaneConexao();
         } catch (Exception ignorar) {
         }
     }
@@ -201,10 +199,9 @@ public class Conexao {
             try {
                 Thread.sleep(millis);
                 while (!desconetado) {
-                    saida.print("@");
+                    printHexDecimal("@");
                     terminal.printTerminal("@");
                     Thread.sleep(millis);
-
                 }
             } catch (Exception ignorar) {
             }
@@ -235,8 +232,13 @@ public class Conexao {
     }
 
     public void printHexDecimal(String ascii){
+
         try {
             saida.write(HexTraducao.hexStringToBytes(ascii));
-        } catch (IOException ignorar) { }
+        } catch (IOException reconectar) {
+            reconectar.printStackTrace();
+            reconectar();
+        }
+
     }
 }

@@ -408,11 +408,7 @@ public class Controler implements Initializable {
 
     @FXML
     void enviarcomando(ActionEvent event) throws InterruptedException, IOException {
-        String codigo =tfenviarcomando.getText();
-        byte[] resposta = conexao.textReposta(codigo);
-        conexao.mandaByts(resposta);
-        terminal.printTerminalBits(resposta);
-
+        conexao.printSaida("#");
     }
     @FXML
     void limparterminal(ActionEvent event) {
@@ -834,7 +830,7 @@ public class Controler implements Initializable {
       terminal.printTerminal(codigo);
       if(enviarcid){
           conexao.printSaida(formarcontactid.pgmCID());
-          terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+          terminal.printTerminal((formarcontactid.pgmCID()));
       }
     }
 
@@ -845,7 +841,7 @@ public class Controler implements Initializable {
         terminal.printTerminal(codigo);
         if(enviarcid){
             conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+            terminal.printTerminal((formarcontactid.pgmCID()));
         }
     }
 
@@ -856,7 +852,7 @@ public class Controler implements Initializable {
         terminal.printTerminal(codigo);
         if(enviarcid){
             conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+            terminal.printTerminal((formarcontactid.pgmCID()));
         }
     }
 
@@ -867,7 +863,7 @@ public class Controler implements Initializable {
         terminal.printTerminal(codigo);
         if(enviarcid){
             conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+            terminal.printTerminal((formarcontactid.pgmCID()));
         }
     }
 
@@ -878,7 +874,7 @@ public class Controler implements Initializable {
         terminal.printTerminal(codigo);
         if(enviarcid){
             conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+            terminal.printTerminal((formarcontactid.pgmCID()));
         }
     }
 
@@ -889,7 +885,7 @@ public class Controler implements Initializable {
         terminal.printTerminal(codigo);
         if(enviarcid){
             conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+            terminal.printTerminal((formarcontactid.pgmCID()));
         }
     }
     @FXML
@@ -899,7 +895,7 @@ public class Controler implements Initializable {
         terminal.printTerminal(codigo);
         if(enviarcid){
             conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+            terminal.printTerminal((formarcontactid.pgmCID()));
         }
     }
 
@@ -910,7 +906,7 @@ public class Controler implements Initializable {
         terminal.printTerminal(codigo);
         if(enviarcid){
             conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal(HexTraducao.traduzirforHexDecimal(formarcontactid.pgmCID()));
+            terminal.printTerminal((formarcontactid.pgmCID()));
         }
     }
 
