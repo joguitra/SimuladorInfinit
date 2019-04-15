@@ -17,8 +17,12 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.util.concurrent.TimeUnit;
 
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 public class Conexao {
 
+    private static final long TIMEOUT_TIME = MILLISECONDS.convert(70, SECONDS);
     private TextField ip;
     private TextField porta;
     private TextField usuario;
@@ -43,6 +47,7 @@ public class Conexao {
     private InputStream entrada;
     private  RecebendoComando recebendoComando = new RecebendoComando();
     private  FormarContactID formarcontactid = new FormarContactID();
+    private long proximoTimeout = 0L;
 
 
     public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
@@ -112,10 +117,19 @@ public class Conexao {
     public void recebendoResposta ()  {
         Thread recebercomando = new Thread( ()-> {
             recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,pgm,btndesconectar,todasparticao);
+            proximoTimeout = calcularProximoTimeout();
             while (true) {
                 try {
+                    boolean excedeuTimeout = veriqueSeExcedeuTimeout(proximoTimeout);
+
+                    if (excedeuTimeout) {
+                        reconectar();
+                        proximoTimeout = calcularProximoTimeout();
+                    }
+
                     int qtdBytesDisponiveis = entrada.available();
                     if (qtdBytesDisponiveis > 0) {
+                        proximoTimeout = calcularProximoTimeout();
                         byte[] dado = new byte[qtdBytesDisponiveis];
                         entrada.read(dado);
 
@@ -176,7 +190,7 @@ public class Conexao {
     private void reconectar() {
         try {
             desconectarServidor();
-            Thread.sleep(1000);
+            Thread.sleep(10000);
             conectarServidor();
             enviarIMEI();
             auntetificarConta();
@@ -241,5 +255,13 @@ public class Conexao {
             reconectar();
         }
 
+    }
+
+    private long calcularProximoTimeout() {
+        return System.currentTimeMillis() + TIMEOUT_TIME;
+    }
+
+    private boolean veriqueSeExcedeuTimeout(long proximoTimeout) {
+        return System.currentTimeMillis() > proximoTimeout;
     }
 }
