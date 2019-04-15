@@ -204,6 +204,7 @@ public class Conexao {
                     Thread.sleep(millis);
                 }
             } catch (Exception ignorar) {
+                ignorar.printStackTrace();
             }
         });
         if(!keeplive.isAlive()) {

@@ -44,6 +44,8 @@ public class EsconderPane {
         efzping.setVisible(false);
         imagem1.setVisible(true);
         labelparticao2.setVisible(false);
+        labelparticao.setVisible(true);
+        zona1.setVisible(true);
     }
     public  void definirPane(Pane principal,Pane log ,Pane pesquisa){
 
