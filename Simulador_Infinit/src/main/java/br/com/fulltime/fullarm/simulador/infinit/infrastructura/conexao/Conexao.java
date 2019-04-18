@@ -13,6 +13,7 @@ import br.com.fulltime.fullarm.simulador.infinit.application.terminal.Terminal;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
 import java.util.concurrent.TimeUnit;
@@ -39,7 +40,7 @@ public class Conexao {
     private ChoiceBox<String> tipodconexao;
     private  int portanumerica;
     private  String ipnumerico;
-    private PrintStream saida;
+    private OutputStream saida;
     private  String usuariocompleto;
     private Socket socket;
     private boolean desconetado;
@@ -48,6 +49,7 @@ public class Conexao {
     private  RecebendoComando recebendoComando = new RecebendoComando();
     private  FormarContactID formarcontactid = new FormarContactID();
     private long proximoTimeout = 0L;
+    private boolean keepalive;
 
 
     public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
@@ -77,7 +79,7 @@ public class Conexao {
         socket = new Socket(ipnumerico,portanumerica);
 
         desconetado = false;
-        saida =new PrintStream(socket.getOutputStream());
+        saida = socket.getOutputStream();
         entrada= socket.getInputStream();
         labeldesconectado.setVisible(false);
         return true;
@@ -90,7 +92,7 @@ public class Conexao {
             if (tipodconexao.getSelectionModel().getSelectedItem().equals("G - GPRS"))
                 usuariocompleto = "#" + usuario.getText() + "G";
         }catch (NullPointerException e) {return false;}
-        saida.print(usuariocompleto);
+       printHexDecimal(usuariocompleto);
         return true;
     }
 
@@ -129,12 +131,22 @@ public class Conexao {
 
                     int qtdBytesDisponiveis = entrada.available();
                     if (qtdBytesDisponiveis > 0) {
+
+                        keepalive=true;
                         proximoTimeout = calcularProximoTimeout();
                         byte[] dado = new byte[qtdBytesDisponiveis];
                         entrada.read(dado);
 
                         String linha = HexTraducao.formatHexString(dado);
                         terminal.printResposta(HexTraducao.formatHexString(dado));
+                        while (keepalive){
+                            if(linha.substring(0,3).equals("40 ")){
+                                linha = linha.substring(3,linha.length());
+                            }
+                            else {
+                                keepalive = false;
+                            }
+                        }
                         byte[] resposta = recebendoComando.receberResposta(linha);
                         saida.write(resposta);
                         terminal.printTerminalBits(resposta);
@@ -146,7 +158,7 @@ public class Conexao {
                                     for (ZonaCircle zona : duplazona.getZona()) {
                                         if (zona.getStatusinibido()) {
                                             String respostainibida = (formarcontactid.eventoInibido(zona.getNumeroidentificador(), particao.getNumeroidentificador()));
-                                            saida.print(respostainibida);
+                                            printHexDecimal(respostainibida);
                                             terminal.printTerminal(respostainibida);
                                         }
                                     }
@@ -155,29 +167,32 @@ public class Conexao {
                         }
                         if (enviarCID()) {
                             if ("52".equals(reposta.substring(6, 8))) {
-                                saida.print(formarcontactid.pgmCID());
-                                terminal.printTerminal(formarcontactid.pgmCID());
+                                String codigo  =formarcontactid.pgmCID(linha.substring(4,5));
+                                printHexDecimal(codigo);
+                                terminal.printTerminal(codigo);
                             }
                         }
                         if ("4F".equals(reposta.substring(3, 5))) {
                             if ("41".equals(linha.substring(3, 5))) {
-                                saida.print(formarcontactid.armeCID(linha.substring(7, 8)));
-                                terminal.printTerminal(formarcontactid.armeCID(linha.substring(7, 8)));
+                                String codigo = formarcontactid.armeCID(linha.substring(7, 8));
+                                printHexDecimal(codigo);
+                                terminal.printTerminal(codigo);
                             }
 
                             if ("44".equals(linha.substring(3, 5))) {
-                                saida.print(formarcontactid.desarmeCID(linha.substring(7, 8)));
-                                terminal.printTerminal(formarcontactid.desarmeCID(linha.substring(7, 8)));
+                                String codigo = formarcontactid.desarmeCID(linha.substring(7, 8));
+                                printHexDecimal(codigo);
+                                terminal.printTerminal(codigo);
                             }
                             if ("49".equals(linha.substring(3, 5))) {
-                                saida.print(formarcontactid.stayCID(linha.substring(7, 8)));
-                                terminal.printTerminal(formarcontactid.stayCID(linha.substring(7, 8)));
+                                String codigo = formarcontactid.stayCID(linha.substring(7, 8));
+                                printHexDecimal(codigo);
+                                terminal.printTerminal(codigo);
                             }
                         }
 
                     }
                 }catch (IOException reconectar){
-                    reconectar.printStackTrace();
                     reconectar();
                 }catch (Exception reconectar) {
                 }
@@ -189,8 +204,6 @@ public class Conexao {
 
     private void reconectar() {
         try {
-            desconectarServidor();
-            Thread.sleep(10000);
             conectarServidor();
             enviarIMEI();
             auntetificarConta();
@@ -201,7 +214,7 @@ public class Conexao {
 
     public void enviarIMEI(){
         imei.getText();
-        saida.print("I"+imei.getText());
+        printHexDecimal("I"+imei.getText());
     }
 
 
@@ -218,7 +231,6 @@ public class Conexao {
                     Thread.sleep(millis);
                 }
             } catch (Exception ignorar) {
-                ignorar.printStackTrace();
             }
         });
         if(!keeplive.isAlive()) {
@@ -251,7 +263,6 @@ public class Conexao {
         try {
             saida.write(HexTraducao.hexStringToBytes(ascii));
         } catch (IOException reconectar) {
-            reconectar.printStackTrace();
             reconectar();
         }
 

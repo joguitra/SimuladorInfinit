@@ -433,8 +433,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao1.alterarZona(efz1);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(1, 1));
-                terminal.printTerminal(formarcontactid.disparar(1, 1));
+                String codigo = formarcontactid.disparar(1, 1);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz1);
@@ -447,8 +448,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao1.alterarZona(efz2);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(1, 2));
-                terminal.printTerminal(formarcontactid.disparar(1, 2));
+                String codigo = formarcontactid.disparar(1, 2);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz2);
@@ -461,8 +463,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao1.alterarZona(efz3);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(1, 3));
-                terminal.printTerminal(formarcontactid.disparar(1, 3));
+                String codigo = formarcontactid.disparar(1, 3);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz3);
@@ -475,8 +478,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao1.alterarZona(efz4);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(1, 4));
-                terminal.printTerminal(formarcontactid.disparar(1, 4));
+                String codigo = formarcontactid.disparar(1, 4);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz4);
@@ -489,8 +493,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao1.alterarZona(efz5);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(1, 5));
-                terminal.printTerminal(formarcontactid.disparar(1, 5));
+                String codigo = formarcontactid.disparar(1, 5);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
 
         }else if(event.getButton() == MouseButton.SECONDARY) {
@@ -503,8 +508,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao1.alterarZona(efz6);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(1, 6));
-                terminal.printTerminal(formarcontactid.disparar(1, 6));
+                String codigo = formarcontactid.disparar(1, 6);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz6);
@@ -517,8 +523,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao1.alterarZona(efz7);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(1, 7));
-                terminal.printTerminal(formarcontactid.disparar(1, 7));
+                String codigo = formarcontactid.disparar(1, 7);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz7);
@@ -532,8 +539,9 @@ public class Controler implements Initializable {
             boolean memoria =particao1.alterarZona(efz8);
 
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(1, 8));
-                terminal.printTerminal(formarcontactid.disparar(1, 8));
+                String codigo = formarcontactid.disparar(1, 8);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao1.alterarZonaInibida(efz8);
@@ -546,8 +554,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ){
             boolean memoria =particao2.alterarZona(efz9);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(2, 9));
-                terminal.printTerminal(formarcontactid.disparar(2, 9));
+                String codigo = formarcontactid.disparar(2, 9);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }
         else if(event.getButton() == MouseButton.SECONDARY){
@@ -561,8 +570,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao2.alterarZona(efz10);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(2, 10));
-                terminal.printTerminal(formarcontactid.disparar(2, 10));
+                String codigo = formarcontactid.disparar(2, 10);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz10);
@@ -575,8 +585,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao2.alterarZona(efz11);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(2, 11));
-                terminal.printTerminal(formarcontactid.disparar(2, 11));
+                String codigo = formarcontactid.disparar(2, 11);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
 
         }else if(event.getButton() == MouseButton.SECONDARY){
@@ -590,8 +601,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao2.alterarZona(efz12);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(2, 12));
-                terminal.printTerminal(formarcontactid.disparar(2, 12));
+                String codigo = formarcontactid.disparar(2, 12);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
 
         }else if(event.getButton() == MouseButton.SECONDARY){
@@ -605,8 +617,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao2.alterarZona(efz13);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(2, 13));
-                terminal.printTerminal(formarcontactid.disparar(2, 13));
+                String codigo = formarcontactid.disparar(2, 13);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
 
         }else if(event.getButton() == MouseButton.SECONDARY){
@@ -620,8 +633,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao2.alterarZona(efz14);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(2, 14));
-                terminal.printTerminal(formarcontactid.disparar(2, 14));
+                String codigo = formarcontactid.disparar(2, 14);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
 
         }else if(event.getButton() == MouseButton.SECONDARY){
@@ -635,8 +649,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao2.alterarZona(efz15);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(2, 15));
-                terminal.printTerminal(formarcontactid.disparar(2, 15));
+                String codigo = formarcontactid.disparar(2, 15);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz15);
@@ -649,8 +664,9 @@ public class Controler implements Initializable {
         if( event.getButton() == MouseButton.PRIMARY ) {
             boolean memoria =particao2.alterarZona(efz16);
             if(memoria) {
-                conexao.printSaida(formarcontactid.disparar(2, 16));
-                terminal.printTerminal(formarcontactid.disparar(2, 16));
+                String codigo = formarcontactid.disparar(2, 16);
+                conexao.printSaida(codigo);
+                terminal.printTerminal(codigo);
             }
         }else if(event.getButton() == MouseButton.SECONDARY){
             particao2.alterarZonaInibida(efz16);
@@ -829,8 +845,9 @@ public class Controler implements Initializable {
       conexao.printSaida(codigo);
       terminal.printTerminal(codigo);
       if(enviarcid){
-          conexao.printSaida(formarcontactid.pgmCID());
-          terminal.printTerminal((formarcontactid.pgmCID()));
+          String codigopgm = formarcontactid.pgmCID("1");
+          conexao.printSaida(codigopgm);
+          terminal.printTerminal(codigopgm);
       }
     }
 
@@ -840,8 +857,9 @@ public class Controler implements Initializable {
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
         if(enviarcid){
-            conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal((formarcontactid.pgmCID()));
+            String codigopgm = formarcontactid.pgmCID("2");
+            conexao.printSaida(codigopgm);
+            terminal.printTerminal(codigopgm);
         }
     }
 
@@ -851,8 +869,9 @@ public class Controler implements Initializable {
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
         if(enviarcid){
-            conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal((formarcontactid.pgmCID()));
+            String codigopgm = formarcontactid.pgmCID("3");
+            conexao.printSaida(codigopgm);
+            terminal.printTerminal(codigopgm);
         }
     }
 
@@ -862,8 +881,9 @@ public class Controler implements Initializable {
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
         if(enviarcid){
-            conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal((formarcontactid.pgmCID()));
+            String codigopgm = formarcontactid.pgmCID("4");
+            conexao.printSaida(codigopgm);
+            terminal.printTerminal(codigopgm);
         }
     }
 
@@ -873,8 +893,9 @@ public class Controler implements Initializable {
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
         if(enviarcid){
-            conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal((formarcontactid.pgmCID()));
+            String codigopgm = formarcontactid.pgmCID("5");
+            conexao.printSaida(codigopgm);
+            terminal.printTerminal(codigopgm);
         }
     }
 
@@ -884,8 +905,9 @@ public class Controler implements Initializable {
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
         if(enviarcid){
-            conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal((formarcontactid.pgmCID()));
+            String codigopgm = formarcontactid.pgmCID("6");
+            conexao.printSaida(codigopgm);
+            terminal.printTerminal(codigopgm);
         }
     }
     @FXML
@@ -894,8 +916,9 @@ public class Controler implements Initializable {
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
         if(enviarcid){
-            conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal((formarcontactid.pgmCID()));
+            String codigopgm = formarcontactid.pgmCID("7");
+            conexao.printSaida(codigopgm);
+            terminal.printTerminal(codigopgm);
         }
     }
 
@@ -905,8 +928,9 @@ public class Controler implements Initializable {
         conexao.printSaida(codigo);
         terminal.printTerminal(codigo);
         if(enviarcid){
-            conexao.printSaida(formarcontactid.pgmCID());
-            terminal.printTerminal((formarcontactid.pgmCID()));
+            String codigopgm = formarcontactid.pgmCID("8");
+            conexao.printSaida(codigopgm);
+            terminal.printTerminal(codigopgm);
         }
     }
 

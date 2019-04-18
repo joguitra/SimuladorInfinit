@@ -122,6 +122,7 @@ public class RecebendoComando {
                         }
                         i++;
                     }
+                    particao.stayIcon();
                 }
                 if(particao.getNumeroidentificador() == 2){
                     for (DuplaZona duplazona: particao.getListaduplazonas() ) {
@@ -134,6 +135,7 @@ public class RecebendoComando {
                     }
 
                 }
+                particao.stayIcon();
             }
         }
 

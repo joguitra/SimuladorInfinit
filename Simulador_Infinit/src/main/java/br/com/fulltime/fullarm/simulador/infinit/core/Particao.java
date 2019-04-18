@@ -140,7 +140,9 @@ public class Particao  {
     public boolean armarParticao(){
         boolean armado =particaocircle.armarParticao(checkoutZonaAberta());
         if(armado) {
-            image.setImage(new Image("fechado.jpg"));
+            if("stay.jpg".equals(image.getImage())) {
+                image.setImage(new Image("fechado.jpg"));
+            }
             statusarmada = true;
             for (DuplaZona duplazona : listaduplazonas) {
                 for (ZonaCircle zona : duplazona.getZona()) {
@@ -305,6 +307,10 @@ public class Particao  {
                 divisor2 /= 2;
             }
         }
+    }
+
+    public void stayIcon() {
+        image.setImage(new Image("stay.jpg"));
     }
 }
 
