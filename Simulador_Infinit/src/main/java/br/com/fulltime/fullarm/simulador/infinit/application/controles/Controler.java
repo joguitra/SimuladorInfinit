@@ -408,7 +408,8 @@ public class Controler implements Initializable {
 
     @FXML
     void enviarcomando(ActionEvent event) throws InterruptedException, IOException {
-        conexao.printSaida("#");
+        conexao.printSaida((tfenviarcomando.getText()));
+        terminal.printTerminal(tfenviarcomando.getText());
     }
     @FXML
     void limparterminal(ActionEvent event) {

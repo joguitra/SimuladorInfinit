@@ -140,7 +140,7 @@ public class Particao  {
     public boolean armarParticao(){
         boolean armado =particaocircle.armarParticao(checkoutZonaAberta());
         if(armado) {
-            if("stay.jpg".equals(image.getImage())) {
+            if(!"stay.jpg".equals(image.getImage())) {
                 image.setImage(new Image("fechado.jpg"));
             }
             statusarmada = true;

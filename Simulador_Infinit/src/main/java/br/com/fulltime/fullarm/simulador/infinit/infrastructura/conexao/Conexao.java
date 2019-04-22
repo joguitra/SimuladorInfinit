@@ -23,7 +23,6 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Conexao {
 
-    private static final long TIMEOUT_TIME = MILLISECONDS.convert(70, SECONDS);
     private TextField ip;
     private TextField porta;
     private TextField usuario;
@@ -50,7 +49,6 @@ public class Conexao {
     private  FormarContactID formarcontactid = new FormarContactID();
     private long proximoTimeout = 0L;
     private boolean keepalive;
-
 
     public void setConexa(TextField ip , TextField porta , TextField usuario, TextField keeplive, Terminal terminal,
                           EsconderPane esconderPane, Label labeldesconectado, ConectadoCircle conectado,
@@ -99,13 +97,6 @@ public class Conexao {
     public void printSaida(String saidacodigo){
         printHexDecimal(saidacodigo);
     }
-    public  void mandaByts(byte[] resposta){
-        try {
-            saida.write(resposta);
-        } catch (IOException ignorar) {
-            reconectar();
-        }
-    }
 
     public boolean enviarCID () {
         if (chbCID.isSelected()) {
@@ -119,21 +110,14 @@ public class Conexao {
     public void recebendoResposta ()  {
         Thread recebercomando = new Thread( ()-> {
             recebendoComando.definirResposta(entrada,terminal,esconderPane,conectado,labeldesconectado,pgm,btndesconectar,todasparticao);
-            proximoTimeout = calcularProximoTimeout();
+
             while (true) {
                 try {
-                    boolean excedeuTimeout = veriqueSeExcedeuTimeout(proximoTimeout);
-
-                    if (excedeuTimeout) {
-                        reconectar();
-                        proximoTimeout = calcularProximoTimeout();
-                    }
 
                     int qtdBytesDisponiveis = entrada.available();
                     if (qtdBytesDisponiveis > 0) {
 
                         keepalive=true;
-                        proximoTimeout = calcularProximoTimeout();
                         byte[] dado = new byte[qtdBytesDisponiveis];
                         entrada.read(dado);
 
@@ -156,7 +140,7 @@ public class Conexao {
                             for (Particao particao : todasparticao.getListaparticao()) {
                                 for (DuplaZona duplazona : particao.getListaduplazonas()) {
                                     for (ZonaCircle zona : duplazona.getZona()) {
-                                        if (zona.getStatusinibido()) {
+                                            if (zona.getStatusinibido()) {
                                             String respostainibida = (formarcontactid.eventoInibido(zona.getNumeroidentificador(), particao.getNumeroidentificador()));
                                             printHexDecimal(respostainibida);
                                             terminal.printTerminal(respostainibida);
@@ -268,11 +252,4 @@ public class Conexao {
 
     }
 
-    private long calcularProximoTimeout() {
-        return System.currentTimeMillis() + TIMEOUT_TIME;
-    }
-
-    private boolean veriqueSeExcedeuTimeout(long proximoTimeout) {
-        return System.currentTimeMillis() > proximoTimeout;
-    }
 }
