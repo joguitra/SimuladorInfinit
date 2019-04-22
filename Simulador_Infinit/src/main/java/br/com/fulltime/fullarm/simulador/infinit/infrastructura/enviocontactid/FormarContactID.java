@@ -67,7 +67,7 @@ public class FormarContactID {
     }
 
     public String pgmCID (String numeropgm){
-        return  "$"+ "0001" +"1"+"422"+"01"+"00"+numeropgm+sequenciaCodigo()+"]";
+        return  "$"+ "0001" +"1"+"432"+"01"+"00"+numeropgm+sequenciaCodigo()+"]";
     }
 
 

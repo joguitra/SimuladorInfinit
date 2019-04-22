@@ -956,8 +956,8 @@ public class Controler implements Initializable {
                     conexao.ativarKeepAlive();
                     particao1.reiniciarParticao();
                     particao2.reiniciarParticao();
-                    imagemview1.setImage(new Image("cadeado.jpg"));
-                    imagemview2.setImage(new Image("cadeado.jpg"));
+                    imagemview1.setImage(new Image("desbloqueado.png"));
+                    imagemview2.setImage(new Image("desbloqueado.png"));
                     pgm1.resetPGM();
                     statusconectar.alterarStatusConectado();
                     terminal.limparTerminal();

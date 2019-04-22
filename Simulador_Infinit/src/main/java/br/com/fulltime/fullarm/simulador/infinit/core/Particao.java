@@ -140,8 +140,8 @@ public class Particao  {
     public boolean armarParticao(){
         boolean armado =particaocircle.armarParticao(checkoutZonaAberta());
         if(armado) {
-            if(!"stay.jpg".equals(image.getImage())) {
-                image.setImage(new Image("fechado.jpg"));
+            if(!"stay.png".equals(image.getImage())) {
+                image.setImage(new Image("bloqueado.png"));
             }
             statusarmada = true;
             for (DuplaZona duplazona : listaduplazonas) {
@@ -155,7 +155,7 @@ public class Particao  {
     }
 
     public String desarmaParticao(){
-        image.setImage(new Image("cadeado.jpg"));
+        image.setImage(new Image("desbloqueado.png"));
         for (DuplaZona duplazona:listaduplazonas) {
             for (ZonaCircle zona: duplazona.getZona()) {
                 zona.zonaDesarmada();
@@ -198,7 +198,7 @@ public class Particao  {
 
 
     public  void reiniciarParticao(){
-        image.setImage(new Image("cadeado.jpg"));
+        image.setImage(new Image("desbloqueado.png"));
         statusarmada =false;
         statusmemoria =false;
         statushabilitar=true;
@@ -310,7 +310,7 @@ public class Particao  {
     }
 
     public void stayIcon() {
-        image.setImage(new Image("stay.jpg"));
+        image.setImage(new Image("stay.png"));
     }
 }
 
