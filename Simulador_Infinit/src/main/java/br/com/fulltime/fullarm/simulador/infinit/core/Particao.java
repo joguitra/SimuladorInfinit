@@ -86,13 +86,16 @@ public class Particao  {
         return  false;
     }
 
-    public void alterarTamper(Circle circle) {
+    public boolean alterarTamper(Circle circle) {
         for (DuplaZona duplazona : listaduplazonas) {
             for (ZonaCircle zona : duplazona.getZona()) {
-                if (zona.getCircle().equals(circle))
+                if (zona.getCircle().equals(circle)) {
                     zona.alterarTamper();
+                    return zona.getStatustamper();
+                }
             }
         }
+        return false;
     }
 
     public  void alterarTodasZonas(StatusZona statuszona){
@@ -140,9 +143,9 @@ public class Particao  {
     public boolean armarParticao(){
         boolean armado =particaocircle.armarParticao(checkoutZonaAberta());
         if(armado) {
-            if(!"stay.png".equals(image.getImage())) {
-                image.setImage(new Image("bloqueado.png"));
-            }
+
+            image.setImage(new Image("bloqueado.png"));
+
             statusarmada = true;
             for (DuplaZona duplazona : listaduplazonas) {
                 for (ZonaCircle zona : duplazona.getZona()) {

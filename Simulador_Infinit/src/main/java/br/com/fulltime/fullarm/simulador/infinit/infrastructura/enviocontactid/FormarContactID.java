@@ -48,12 +48,22 @@ public class FormarContactID {
         return null;
     }
 
-    public String enviarTamper(int numeroidentificadorSetor,int numeroidentificadorParticao){
+    public String enviarTamper(int numeroidentificadorSetor,int numeroidentificadorParticao,boolean estaemtaper) {
 
-        if(numeroidentificadorSetor >=10){
-            return  "$"+ "0001" +"1"+"1440"+numeroidentificadorParticao +"0"+numeroidentificadorSetor +sequenciaCodigo()+"]";
+        if (estaemtaper) {
+            if (numeroidentificadorSetor >= 10) {
+                return "$" + "0001" + "1" + "1440" + numeroidentificadorParticao + "0" + numeroidentificadorSetor + sequenciaCodigo() + "]";
+            }
+            return "$" + "0001" + "1" + "1440" + numeroidentificadorParticao + "00" + numeroidentificadorSetor + sequenciaCodigo() + "]";
         }
-        return  "$"+ "0001" +"1"+"1440"+numeroidentificadorParticao +"00"+numeroidentificadorSetor +sequenciaCodigo()+"]";
+
+        else {
+            if (numeroidentificadorSetor >= 10) {
+                return "$" + "0001" + "3" + "1440" + numeroidentificadorParticao + "0" + numeroidentificadorSetor + sequenciaCodigo() + "]";
+            }
+            return "$" + "0001" + "3" + "1440" + numeroidentificadorParticao + "00" + numeroidentificadorSetor + sequenciaCodigo() + "]";
+        }
+
     }
 
 
