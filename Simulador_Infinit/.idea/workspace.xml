@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05764392-188c-4b98-9ad2-b9618fcea8de" name="Default Changelist" comment="">
+      <change afterPath="$USER_HOME$/Servidor_Infinit/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Servidor_Infinit/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Servidor_Infinit/src/main/java/br/com/fulltime/fullarm/servidor/infinit/ConexaoServidor.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Servidor_Infinit/src/main/java/br/com/fulltime/fullarm/servidor/infinit/leitorCID/ValidacaoEvento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fulltime/fullarm/simulador/infinit/core/Particao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fulltime/fullarm/simulador/infinit/core/Particao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/Interface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/Interface.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Interface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Interface.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/br.com.fulltime.fullarm.simuladorinifinit.simuladorinfinit.main.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/circle/ParticaoCircle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/controles/EsconderPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/controles/EsconderPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/terminal/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/application/terminal/Terminal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/PGM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/PGM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/Particao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/core/Particao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/Conexao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/Conexao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/RecebendoComando.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/enviocontactid/FormarContactID.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/br/com/fulltime/fullarm/simulador/infinit/infrastructura/particao/DuplaZona.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -48,11 +59,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+            <state relative-caret-position="680">
+              <caret line="53" column="68" lean-forward="true" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
               <folding>
                 <element signature="e#5526#5527#0" expanded="true" />
                 <element signature="e#5561#5562#0" expanded="true" />
@@ -60,9 +71,11 @@
                 <element signature="e#5637#5638#0" expanded="true" />
                 <element signature="e#5679#5680#0" expanded="true" />
                 <element signature="e#5724#5725#0" expanded="true" />
+                <element signature="e#7720#7721#0" expanded="true" />
                 <element signature="e#7773#7774#0" expanded="true" />
                 <element signature="e#7815#7816#0" expanded="true" />
                 <element signature="e#7877#7878#0" expanded="true" />
+                <element signature="e#9605#9606#0" expanded="true" />
                 <element signature="e#9658#9659#0" expanded="true" />
               </folding>
             </state>
@@ -70,15 +83,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/stay.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="67">
               <caret line="690" column="47" selection-start-line="690" selection-start-column="47" selection-end-line="690" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,10 +190,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="20" />
-    <option name="y" value="35" />
+    <option name="x" value="112" />
+    <option name="y" value="80" />
     <option name="width" value="1322" />
-    <option name="height" value="777" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -183,8 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,64 +243,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="circle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="controles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="pesquisacid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="terminal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="infinit" type="462c0819:PsiDirectoryNode" />
               <item name="infrastructura" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -295,43 +255,18 @@
               <item name="infrastructura" type="462c0819:PsiDirectoryNode" />
               <item name="conexao" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="infrastructura" type="462c0819:PsiDirectoryNode" />
-              <item name="enviocontactid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="infrastructura" type="462c0819:PsiDirectoryNode" />
-              <item name="particao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simuladorinfinit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simulador_Infinit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554208072692" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Projeto_Simples_Serve/Projeto_Simples_Serve/projeto-completo" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Servidor_Infinit" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -454,7 +389,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.497545" visible="true" weight="0.23676248" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.497545" visible="true" weight="0.24432677" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.42389524" />
@@ -511,46 +446,6 @@
     </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java</url>
-          <line>690</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java</url>
-          <line>691</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java</url>
-          <line>692</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java</url>
-          <line>680</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java</url>
-          <line>681</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java</url>
-          <line>682</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="statuszona1" language="JAVA" />
@@ -583,9 +478,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/megafone.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fechado.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fechado.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/StatusPGM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -808,19 +701,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cadeado.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/stay.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cadeado.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/stay.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/Interface.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="-1944">
           <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/bloqueado.png">
       <provider selected="true" editor-type-id="images" />
@@ -843,16 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="205" column="48" selection-start-line="205" selection-start-column="48" selection-end-line="205" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -883,20 +762,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/megafone.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/stay.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="690" column="47" selection-start-line="690" selection-start-column="47" selection-end-line="690" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/core/Particao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="680">
+          <caret line="53" column="68" lean-forward="true" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
           <folding>
             <element signature="e#5526#5527#0" expanded="true" />
             <element signature="e#5561#5562#0" expanded="true" />
@@ -904,10 +773,32 @@
             <element signature="e#5637#5638#0" expanded="true" />
             <element signature="e#5679#5680#0" expanded="true" />
             <element signature="e#5724#5725#0" expanded="true" />
+            <element signature="e#7720#7721#0" expanded="true" />
             <element signature="e#7773#7774#0" expanded="true" />
             <element signature="e#7815#7816#0" expanded="true" />
             <element signature="e#7877#7878#0" expanded="true" />
+            <element signature="e#9605#9606#0" expanded="true" />
             <element signature="e#9658#9659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/stay.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/application/controles/Controler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="690" column="47" selection-start-line="690" selection-start-column="47" selection-end-line="690" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/fulltime/fullarm/simulador/infinit/infrastructura/conexao/HexTraducao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

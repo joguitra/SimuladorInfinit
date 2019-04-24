@@ -42,7 +42,6 @@ public class FormarContactID {
             if (qualificador.getSelectionModel().getSelectedItem().equals("R 1")) {
                 codigo = "$" + usuario.getText() + "1" + evento.getText() + particacao.getText() + setor.getText()+sequenciaCodigo()+"]";
             }
-            sequenciaCodigo();
             return codigo;
         }
         return null;
